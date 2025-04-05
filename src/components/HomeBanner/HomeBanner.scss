@@ -1,0 +1,174 @@
+@use "../../styles/responsive.scss" as *;
+
+.homeBanner {
+  background: #121212;
+  position: relative;
+  border-radius: 0px 0px 30px 30px;
+  padding-bottom: 100px;
+  img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    display: block;
+  }
+
+  .homeBanner-video {
+    display: flex;
+    top: 50%;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+
+    @include xl {
+      max-width: 1100px;
+    }
+
+    @include lg {
+      flex-direction: column;
+      max-width: 800px;
+      gap: 40px;
+      padding: 0px 10px;
+    }
+
+    .homeBanner-video-left {
+      color: #fff;
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 18px;
+        .dot {
+          height: 10px;
+          width: 10px;
+          background: $primary-color;
+          border-radius: 50%;
+        }
+      }
+
+      h3 {
+        font-size: 50px;
+        margin-top: 10px;
+        font-family: $heading-font;
+
+        @include lg {
+          font-size: 40px;
+          margin-top: 20px;
+        }
+
+        @include sm{
+          font-size: 30px;
+        }
+      }
+    }
+    .homeBanner-video-right {
+      background: #fff;
+      border-radius: 5px;
+      img {
+        width: 300px;
+        height: 200px;
+        @include lg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .homeBanner-desc {
+    max-width: 1000px;
+    margin: auto;
+
+    @include lg {
+      max-width: 800px;
+      padding: 0px 10px;
+    }
+
+    h2 {
+      font-size: 40px;
+      color: #fff;
+      margin-top: 70px;
+      font-weight: 400;
+      line-height: 1.5;
+
+      @include sm{
+        font-size: 30px;
+      }
+    }
+
+    .homeBanner-desc-bottom {
+      display: flex;
+      color: #b3b3b3;
+      margin-top: 70px;
+      align-items: flex-start;
+
+      @include md {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        flex: 3;
+        font-size: 18px;
+        .dot {
+          height: 10px;
+          width: 10px;
+          background: $primary-color;
+          border-radius: 50%;
+        }
+      }
+
+      .homeBanner-desc-bottom-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 7;
+
+        p {
+          font-size: 18px;
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  .homeBanner-cards-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: 70px;
+    &:hover .homeBanner-cards-track {
+      animation-play-state: paused;
+    }
+  }
+
+  .homeBanner-cards-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .homeBanner-card {
+    flex-shrink: 0;
+    width: 200px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
