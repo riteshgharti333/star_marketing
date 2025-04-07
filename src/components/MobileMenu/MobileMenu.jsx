@@ -68,7 +68,7 @@ const MobileMenu = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             {menuItems.map((item, i) => (
-              <li key={i}>
+              <li key={i} className="mobile-link">
                 {item.submenu ? (
                   <>
                     <div
