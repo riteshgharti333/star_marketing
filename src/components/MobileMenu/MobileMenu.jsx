@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./MobileMenu.scss";
+import { Link } from "react-router-dom";
 
 const menuItems = [
   { title: "Home", link: "/" },
@@ -70,9 +71,7 @@ const MobileMenu = () => {
                     >
                       {item.title}
                       <span
-                        className={`plus ${
-                          activeSubmenu === i ? "open" : ""
-                        }`}
+                        className={`plus ${activeSubmenu === i ? "open" : ""}`}
                       ></span>
                     </div>
                     <AnimatePresence>
@@ -92,7 +91,7 @@ const MobileMenu = () => {
                     </AnimatePresence>
                   </>
                 ) : (
-                  <a href={item.link}>{item.title}</a>
+                  <Link to={item.link}>{item.title}</Link>
                 )}
               </li>
             ))}
