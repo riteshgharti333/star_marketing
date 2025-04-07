@@ -5,7 +5,7 @@ import "./MobileMenu.scss";
 const menuItems = [
   { title: "Home", link: "/" },
   { title: "Services", submenu: ["Web Design", "App Development", "SEO"] },
-  { title: "About", link: "/about" },
+  { title: "About", link: "/about-us" },
   { title: "Contact", link: "/contact" },
 ];
 

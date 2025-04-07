@@ -11,7 +11,6 @@ function HomeBanner() {
       <div className="homeBanner-video">
         <div className="homeBanner-video-left">
           <p>
-            {" "}
             <div className="dot"></div>Your digital partner
           </p>
           <h3>We accelerate ambition, grow brands</h3>

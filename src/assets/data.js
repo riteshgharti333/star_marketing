@@ -196,3 +196,80 @@ export const reviewCards = [
     location: "Tokyo West, Japan",
   },
 ];
+
+/// about images
+const about_img1 =
+  "https://www.bluefrontier.co.uk/images/about-us/630-390/digital-social.jpg";
+const about_img2 =
+  "https://www.bluefrontier.co.uk/images/about-us/400x500/sammy-sports-day.jpg";
+
+export const aboutSlide = [
+  {
+    img: about_img1,
+  },
+  {
+    img: about_img2,
+  },
+  {
+    img: about_img1,
+  },
+  {
+    img: about_img2,
+  },
+  {
+    img: about_img1,
+  },
+  {
+    img: about_img2,
+  },
+  {
+    img: about_img1,
+  },
+  {
+    img: about_img2,
+  },
+  {
+    img: about_img1,
+  },
+  {
+    img: about_img2,
+  },
+  {
+    img: about_img1,
+  },
+  {
+    img: about_img2,
+  },
+];
+
+
+
+///// choose us
+
+export const chooseData = [
+  {
+    title: "Expertise You Can Trust",
+    desc:
+      "With years of industry experience, our team brings unmatched knowledge and proven results to every project we take on.",
+  },
+  {
+    title: "Customer-Centric Approach",
+    desc:
+      "We listen first and act second. Your goals become our mission, and we’re dedicated to delivering exactly what you need.",
+  },
+  {
+    title: "Innovative Solutions",
+    desc:
+      "We stay ahead of the curve with modern technology and creative thinking to solve problems smarter and faster.",
+  },
+  {
+    title: "Quality Without Compromise",
+    desc:
+      "We take pride in delivering exceptional work — no shortcuts, no excuses. Just high standards, every time.",
+  },
+  {
+    title: "Reliable Support",
+    desc:
+      "We’re here when you need us — before, during, and after your project. Count on us for timely help and ongoing partnership.",
+  },
+];

@@ -57,7 +57,7 @@
           margin-top: 20px;
         }
 
-        @include sm{
+        @include sm {
           font-size: 30px;
         }
       }
@@ -92,7 +92,7 @@
       font-weight: 400;
       line-height: 1.5;
 
-      @include sm{
+      @include sm {
         font-size: 30px;
       }
     }

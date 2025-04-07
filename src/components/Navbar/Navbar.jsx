@@ -35,7 +35,10 @@ const Navbar = () => {
       <div className="navbar-center">
         <ul>
           <li>
-            <Link onClick={() => setOpenCard(!openCard)}>About</Link>
+            <Link to={"/about-us"}>About</Link>
+          </li>
+          <li>
+            <Link onClick={() => setOpenCard(!openCard)}>Conect</Link>
 
             {openCard && (
               <div className="nav-card">
