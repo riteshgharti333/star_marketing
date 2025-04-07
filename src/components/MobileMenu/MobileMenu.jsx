@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./MobileMenu.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const menuItems = [
   { title: "Home", link: "/" },
@@ -19,6 +19,12 @@ const MobileMenu = () => {
   const toggleSubmenu = (index) =>
     setActiveSubmenu(activeSubmenu === index ? null : index);
 
+  const location = useLocation();
+
+  useEffect(() => {
+    setActiveSubmenu(false);
+    setIsOpen(false);
+  }, [location]);
   // 🔥 Close on outside click or scroll
   useEffect(() => {
     const handleClickOutside = (e) => {
