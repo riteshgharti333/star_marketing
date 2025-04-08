@@ -1,0 +1,206 @@
+@use "../../../styles/responsive.scss" as *;
+
+.webDesign {
+  background: #f1f1f1;
+  .webDesign-content {
+    padding: 100px 0px;
+    max-width: 1200px;
+    margin: auto;
+
+    @include xl {
+      padding: 100px 10px;
+    }
+
+    .webDesign-content2 {
+      padding: 100px 0px 0px 0px;
+
+      .webDesign-content2-top {
+        display: flex;
+        @include lg {
+          display: block;
+        }
+        .webDesign-content2-top-left {
+          flex: 1;
+        }
+        .webDesign-content2-top-right {
+          flex: 1;
+
+          p {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            flex: 3;
+            font-size: 16px;
+            color: #b3b3b3;
+            text-transform: uppercase;
+            font-weight: 500;
+            .dot {
+              height: 10px;
+              width: 10px;
+              background: #ff3c78;
+              border-radius: 50%;
+            }
+          }
+
+          h2 {
+            font-size: 30px;
+            font-family: $heading-font;
+            margin-top: 20px;
+            line-height: 1.5;
+
+            @include sm {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+
+      .webDesign-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        button {
+          border: 1px solid #ddd;
+          padding: 15px 30px;
+          font-size: 18px;
+          transition: all 0.3s ease-in-out;
+          border-radius: 5px;
+          font-weight: 500;
+          margin-top: 30px;
+          cursor: pointer;
+          &:hover {
+            background: #121212;
+            color: #fff;
+          }
+        }
+      }
+
+      .webDesign-content2-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+        margin-top: 40px;
+
+        @include lg {
+          gap: 30px;
+        }
+
+        @include md {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 70px;
+        }
+
+        .webDesign-content2-card {
+          position: relative;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+          overflow: hidden;
+          border-radius: 20px;
+
+          &:hover {
+            border-radius: 20px;
+            img {
+              transform: translateY(-10px);
+            }
+          }
+          img {
+            display: block;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+          }
+
+          h2 {
+            font-size: 28px;
+            margin-top: 20px;
+            font-weight: 500;
+
+            @include sm {
+              font-size: 24px;
+            }
+          }
+
+          .webDesign-content2-card-desc {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+
+            @include sm {
+            }
+
+            span {
+              background: #000;
+              color: #fff;
+              padding: 15px 25px;
+              border-radius: 40px;
+              font-family: $heading-font;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .webDesign-user {
+    background: #121212;
+    border-radius: 30px;
+    .webDesign-user-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 0px;
+      display: flex;
+      gap: 10%;
+
+      @include lg {
+        padding: 100px 10px;
+        flex-direction: column;
+        max-width: 750px;
+        gap: 40px;
+      }
+
+      .webDesign-user-left {
+        flex: 1;
+
+        color: #fff;
+        h2 {
+          font-size: 30px;
+          font-family: $heading-font;
+          margin-top: 20px;
+          line-height: 1.5;
+
+          @include sm {
+            font-size: 22px;
+          }
+        }
+
+        p {
+          color: #b3b3b3;
+          line-height: 1.7;
+          font-size: 18px;
+          font-weight: 500;
+          margin-top: 40px;
+
+          @include sm {
+            font-size: 16px;
+          }
+        }
+      }
+      .webDesign-user-right {
+        flex: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

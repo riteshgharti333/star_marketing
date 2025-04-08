@@ -242,34 +242,76 @@ export const aboutSlide = [
   },
 ];
 
-
-
 ///// choose us
 
 export const chooseData = [
   {
     title: "Expertise You Can Trust",
-    desc:
-      "With years of industry experience, our team brings unmatched knowledge and proven results to every project we take on.",
+    desc: "With years of industry experience, our team brings unmatched knowledge and proven results to every project we take on.",
   },
   {
     title: "Customer-Centric Approach",
-    desc:
-      "We listen first and act second. Your goals become our mission, and we’re dedicated to delivering exactly what you need.",
+    desc: "We listen first and act second. Your goals become our mission, and we’re dedicated to delivering exactly what you need.",
   },
   {
     title: "Innovative Solutions",
-    desc:
-      "We stay ahead of the curve with modern technology and creative thinking to solve problems smarter and faster.",
+    desc: "We stay ahead of the curve with modern technology and creative thinking to solve problems smarter and faster.",
   },
   {
     title: "Quality Without Compromise",
-    desc:
-      "We take pride in delivering exceptional work — no shortcuts, no excuses. Just high standards, every time.",
+    desc: "We take pride in delivering exceptional work — no shortcuts, no excuses. Just high standards, every time.",
   },
   {
     title: "Reliable Support",
-    desc:
-      "We’re here when you need us — before, during, and after your project. Count on us for timely help and ongoing partnership.",
+    desc: "We’re here when you need us — before, during, and after your project. Count on us for timely help and ongoing partnership.",
   },
 ];
+
+////////////////////////// service card
+
+export const webCards = [
+  {
+    title: "Responsive Design",
+    desc: "Give users a consistent experience with your website no matter what device they use, with fully responsive functionality.",
+  },
+
+  {
+    title: "Accessible Web Design",
+    desc: "Give users a consistent experience with your website no matter what device they use, with fully responsive functionality.",
+  },
+  {
+    title: "UX Design",
+    desc: "Give users a consistent experience with your website no matter what device they use, with fully responsive functionality.",
+  },
+];
+
+/// graphic cards
+
+const img =
+  "https://www.bluefrontier.co.uk/images/case-studies/neighbourly/neighbourly-cs-header.jpg";
+
+export const graphicCards = [
+  {
+    img: img,
+    title: "TK Producton Film",
+    desc: "TK Producton Film",
+  },
+  {
+    img: img,
+    title: "TK Producton Film",
+    desc: "TK Producton Film",
+  }, {
+    img: img,
+    title: "TK Producton Film",
+    desc: "TK Producton Film",
+  }, {
+    img: img,
+    title: "TK Producton Film",
+    desc: "TK Producton Film",
+  },
+];
+
+
+
+////////////
+

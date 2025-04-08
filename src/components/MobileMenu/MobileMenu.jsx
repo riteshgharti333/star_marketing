@@ -5,7 +5,15 @@ import { Link, useLocation } from "react-router-dom";
 
 const menuItems = [
   { title: "Home", link: "/" },
-  { title: "Services", submenu: ["Web Design", "App Development", "SEO"] },
+  {
+    title: "Design",
+    submenu: [
+      { title: "Web Design", link: "/design/web-design" },
+      { title: "Graphic Design", link: "/design/graphic-design" },
+      { title: "Branding", link: "/design/branding" },
+      { title: "Production", link: "/design/production" },
+    ],
+  },
   { title: "About", link: "/about-us" },
   { title: "Contact", link: "/contact" },
 ];
@@ -90,7 +98,9 @@ const MobileMenu = () => {
                           transition={{ duration: 0.3 }}
                         >
                           {item.submenu.map((sub, j) => (
-                            <li key={j}>{sub}</li>
+                            <li key={j} className="submenu-item">
+                              <Link to={sub.link}>{sub.title}</Link>
+                            </li>
                           ))}
                         </motion.ul>
                       )}

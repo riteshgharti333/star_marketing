@@ -1,7 +1,8 @@
 import "./Navbar.scss";
+
 import logo from "../../assets/images/logo.png";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 const Navbar = () => {
@@ -24,27 +25,55 @@ const Navbar = () => {
     };
   }, []);
 
+  const location = useLocation();
+
+  useEffect(() => {
+    setOpenCard(false);
+  }, [location.pathname]);
+
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (cardRef.current && !cardRef.current.contains(e.target)) {
+        setOpenCard(false);
+      }
+    };
+
+    if (openCard) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [openCard]);
+
   return (
     <div className={`navbar ${isScrolled ? "blurred" : ""}`}>
       <div className="navbar-left">
         <img src={logo} alt="" />
       </div>
+
       <div className="nav-mobile-menu">
         <MobileMenu />
       </div>
+
       <div className="navbar-center">
         <ul>
           <li>
             <Link to={"/about-us"}>About</Link>
           </li>
           <li>
-            <Link onClick={() => setOpenCard(!openCard)}>Conect</Link>
+            <Link onClick={() => setOpenCard(!openCard)}>Design</Link>
 
             {openCard && (
-              <div className="nav-card">
+              <div className="nav-card" ref={cardRef}>
                 <div className="nav-card-left">
                   <div className="nav-card-left-top">
-                    <p>All About Us</p>
+                    <p>All Design</p>
                     <p>
                       Find out more about who we are, our values and culture,
                       our history, and our incredible team.
@@ -54,9 +83,21 @@ const Navbar = () => {
                   <div className="nav-card-left-bottom">
                     <p>Explore</p>
                     <div className="nav-card-links">
-                      <span>Our Work</span>
-                      <span>Latest News</span>
-                      <span>Meet the Team</span>
+                      <Link to={"/design/web-design"} className="nav-card-link">
+                        <span>Web Design</span>
+                      </Link>
+                      <Link
+                        to={"/design/graphic-design"}
+                        className="nav-card-link"
+                      >
+                        <span>Graphic Design</span>
+                      </Link>
+                      <Link to={"/design/branding"} className="nav-card-link">
+                        <span>Branding</span>
+                      </Link>
+                      <Link to={"/design/production"} className="nav-card-link">
+                        <span>Production</span>
+                      </Link>
                     </div>
                   </div>
                 </div>
