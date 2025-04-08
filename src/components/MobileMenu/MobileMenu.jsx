@@ -14,6 +14,26 @@ const menuItems = [
       { title: "Production", link: "/design/production" },
     ],
   },
+
+  {
+    title: "Development",
+    submenu: [
+      { title: "Web Development", link: "/development/web-development" },
+      {
+        title: "Software Development",
+        link: "/development/software-development",
+      },
+      { title: "e Commerce", link: "/development/e-commerce" },
+      { title: "App Developement", link: "/development/app-development" },
+      {
+        title: "Support & Maintenance",
+        link: "/development/support-and-maintenance",
+      },
+
+      { title: "Testing", link: "/development/testing" },
+      { title: "Wordpress", link: "/development/wordpress-development" },
+    ],
+  },
   { title: "About", link: "/about-us" },
   { title: "Contact", link: "/contact" },
 ];

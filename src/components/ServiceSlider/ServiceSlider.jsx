@@ -9,9 +9,11 @@ import { useRef, useState } from "react";
 import { webCards } from "../../assets/data";
 
 const ServiceSlider = () => {
+
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
+
   return (
     <div className="serviceSlider">
       <div className="serviceSlider-top">
@@ -29,16 +31,16 @@ const ServiceSlider = () => {
           spaceBetween={30}
           slidesPerView={1}
           slidesPerGroup={1}
-          // onSwiper={(swiper) => (swiperRef.current = swiper)}
-          // onReachBeginning={() => setIsBeginning(true)}
-          // onReachEnd={() => setIsEnd(true)}
-          // onFromEdge={() => {
-          //   setIsBeginning(false);
-          //   setIsEnd(false);
-          // }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onReachBeginning={() => setIsBeginning(true)}
+          onReachEnd={() => setIsEnd(true)}
+          onFromEdge={() => {
+            setIsBeginning(false);
+            setIsEnd(false);
+          }}
           navigation={{
-            prevEl: ".web-button-prev-custom",
-            nextEl: ".web-button-next-custom",
+            prevEl: ".service-button-prev-custom",
+            nextEl: ".service-button-next-custom",
           }}
           speed={1000}
           breakpoints={{
@@ -62,9 +64,9 @@ const ServiceSlider = () => {
         </Swiper>
 
         {/* Custom Arrows */}
-        <div className="web-nav-buttons">
+        <div className="service-nav-buttons">
           <div
-            className={`web-button-prev-custom ${
+            className={`service-button-prev-custom ${
               isBeginning ? "disabled" : ""
             }`}
             onClick={() => swiperRef.current?.slidePrev()}
@@ -72,7 +74,7 @@ const ServiceSlider = () => {
             <GoArrowLeft />
           </div>
           <div
-            className={`web-button-next-custom ${isEnd ? "disabled" : ""}`}
+            className={`service-button-next-custom ${isEnd ? "disabled" : ""}`}
             onClick={() => swiperRef.current?.slideNext()}
           >
             <GoArrowRight />

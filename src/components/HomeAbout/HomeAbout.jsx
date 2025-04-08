@@ -72,13 +72,13 @@ const HomeAbout = () => {
               spaceBetween={30}
               slidesPerView={1}
               slidesPerGroup={1}
-              // onSwiper={(swiper) => (swiperRef.current = swiper)}
-              // onReachBeginning={() => setIsBeginning(true)}
-              // onReachEnd={() => setIsEnd(true)}
-              // onFromEdge={() => {
-              //   setIsBeginning(false);
-              //   setIsEnd(false);
-              // }}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onReachBeginning={() => setIsBeginning(true)}
+              onReachEnd={() => setIsEnd(true)}
+              onFromEdge={() => {
+                setIsBeginning(false);
+                setIsEnd(false);
+              }}
               navigation={{
                 prevEl: ".swiper-button-prev-custom",
                 nextEl: ".swiper-button-next-custom",

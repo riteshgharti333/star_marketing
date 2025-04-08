@@ -283,6 +283,10 @@ export const webCards = [
     title: "UX Design",
     desc: "Give users a consistent experience with your website no matter what device they use, with fully responsive functionality.",
   },
+  {
+    title: "UX Design",
+    desc: "Give users a consistent experience with your website no matter what device they use, with fully responsive functionality.",
+  },
 ];
 
 /// graphic cards

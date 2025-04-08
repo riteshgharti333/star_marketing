@@ -10,6 +10,7 @@
       font-size: 30px;
       font-family: $heading-font;
 
+      line-height: 1.5;
       @include sm {
         font-size: 22px;
       }
@@ -80,15 +81,15 @@
 }
 
 /* Custom Nav Buttons */
-.web-nav-buttons {
+.service-nav-buttons {
   display: flex;
   z-index: 10;
   margin-top: 20px;
   gap: 30px;
 }
 
-.web-button-prev-custom,
-.web-button-next-custom {
+.service-button-prev-custom,
+.service-button-next-custom {
   background-color: transparent;
   border: 1px solid #ddd;
   border-radius: 50%;
@@ -108,8 +109,8 @@
   }
 }
 
-.web-button-prev-custom:hover,
-.web-button-next-custom:hover {
+.service-button-prev-custom:hover,
+.service-button-next-custom:hover {
   background-color: #000;
   color: #fff;
 }

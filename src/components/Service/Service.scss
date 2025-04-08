@@ -7,6 +7,10 @@
     max-width: 1200px;
     margin: auto;
     padding: 60px 20px;
+
+    @include sm{
+      padding: 60px 10px;
+    }
     .service-top {
       h2 {
         color: #fff;

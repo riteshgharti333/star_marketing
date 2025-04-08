@@ -5,15 +5,15 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
-const ServiceTeam = () => {
+const ServiceTeam = ({ dev }) => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
   return (
-    <div className="serviceTeam">
+    <div className={`serviceTeam ${dev ? "dev" : ""}`}>
       <h2>Who you'll be working with</h2>
 
       <div className="graphicDesign-slider-cards">
@@ -22,13 +22,13 @@ const ServiceTeam = () => {
           spaceBetween={30}
           slidesPerView={1}
           slidesPerGroup={1}
-          // onSwiper={(swiper) => (swiperRef.current = swiper)}
-          // onReachBeginning={() => setIsBeginning(true)}
-          // onReachEnd={() => setIsEnd(true)}
-          // onFromEdge={() => {
-          //   setIsBeginning(false);
-          //   setIsEnd(false);
-          // }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onReachBeginning={() => setIsBeginning(true)}
+          onReachEnd={() => setIsEnd(true)}
+          onFromEdge={() => {
+            setIsBeginning(false);
+            setIsEnd(false);
+          }}
           navigation={{
             prevEl: ".web-button-prev-custom",
             nextEl: ".web-button-next-custom",

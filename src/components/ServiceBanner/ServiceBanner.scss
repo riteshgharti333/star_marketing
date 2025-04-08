@@ -2,8 +2,8 @@
 
 .service-banner {
   background: #121212;
+  border-radius: 0px 0px 30px 30px;
   .service-top {
-    border-radius: 0px 10px 30px 30px;
 
     &::after {
       content: "";
