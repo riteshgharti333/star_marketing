@@ -44,9 +44,11 @@
     top: 90px;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 1200;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
 
     .mobile-link {
       padding: 15px 10px;

@@ -59,6 +59,7 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [openCardIndex]);
+  
 
   return (
     <div className={`navbar ${isScrolled ? "blurred" : ""}`}>

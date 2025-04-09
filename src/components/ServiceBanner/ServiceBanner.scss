@@ -4,7 +4,6 @@
   background: #121212;
   border-radius: 0px 0px 30px 30px;
   .service-top {
-
     &::after {
       content: "";
       position: absolute;
@@ -90,7 +89,7 @@
     }
   }
   .service-video {
-    padding: 50px 0px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
 
@@ -102,7 +101,7 @@
     }
 
     @include md {
-      padding: 50px 10px;
+      padding: 0px 10px 50px 10px;
     }
 
     .service-video-img {

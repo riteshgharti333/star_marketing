@@ -62,6 +62,7 @@ const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const menuRef = useRef(null);
+  const scrollBlockRef = useRef(document.body); // default to body
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const toggleSubmenu = (index) =>
@@ -73,7 +74,7 @@ const MobileMenu = () => {
     setActiveSubmenu(false);
     setIsOpen(false);
   }, [location]);
-  // 🔥 Close on outside click or scroll
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -95,6 +96,21 @@ const MobileMenu = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // 💡 Prevent background scroll
+  useEffect(() => {
+    const el = scrollBlockRef.current;
+
+    if (isOpen) {
+      el.style.overflow = "hidden";
+    } else {
+      el.style.overflow = "auto";
+    }
+
+    return () => {
+      el.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <div className="mobileMenu" ref={menuRef}>
@@ -157,5 +173,6 @@ const MobileMenu = () => {
     </div>
   );
 };
+
 
 export default MobileMenu;
