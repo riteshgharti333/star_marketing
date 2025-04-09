@@ -34,6 +34,26 @@ const menuItems = [
       { title: "Wordpress", link: "/development/wordpress-development" },
     ],
   },
+  {
+    title: "Marketing",
+    submenu: [
+      { title: "Marketing Strategy", link: "/marketing/marketing-strategy" },
+      { title: "Holistic Marketing", link: "/marketing/holistic-marketing" },
+      { title: "SEO", link: "/marketing/seo" },
+      { title: "Paid Advertising", link: "/marketing/paid-advertising" },
+      { title: "Social Media", link: "/marketing/social-media" },
+      { title: "Content", link: "/marketing/content" },
+      {
+        title: "Conversion Rate Optimisation",
+        link: "/marketing/conversion-rate-optimisation",
+      },
+      {
+        title: "Data Analytics & Reporting",
+        link: "/marketing/data-analytics-and-reporting",
+      },
+    ],
+  },
+
   { title: "About", link: "/about-us" },
   { title: "Contact", link: "/contact" },
 ];

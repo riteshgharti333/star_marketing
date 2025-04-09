@@ -4,6 +4,11 @@ import logo from "../../assets/images/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import {
+  designData,
+  developmentData,
+  marketingData,
+} from "../../assets/navData";
 
 const Navbar = () => {
   const [openCardIndex, setOpenCardIndex] = useState(null);
@@ -80,31 +85,22 @@ const Navbar = () => {
               <div className="nav-card" ref={cardRef}>
                 <div className="nav-card-left">
                   <div className="nav-card-left-top">
-                    <p>All Design</p>
-                    <p>
-                      Find out more about who we are, our values and culture,
-                      our history, and our incredible team.
-                    </p>
+                    <p>{designData.title}</p>
+                    <p>{designData.desc}</p>
                   </div>
                   <hr />
                   <div className="nav-card-left-bottom">
                     <p>Explore</p>
                     <div className="nav-card-links">
-                      <Link to={"/design/web-design"} className="nav-card-link">
-                        <span>Web Design</span>
-                      </Link>
-                      <Link
-                        to={"/design/graphic-design"}
-                        className="nav-card-link"
-                      >
-                        <span>Graphic Design</span>
-                      </Link>
-                      <Link to={"/design/branding"} className="nav-card-link">
-                        <span>Branding</span>
-                      </Link>
-                      <Link to={"/design/production"} className="nav-card-link">
-                        <span>Production</span>
-                      </Link>
+                      {designData.submenu.map((item, index) => (
+                        <Link
+                          to={`${item.link}`}
+                          className="nav-card-link"
+                          key={index}
+                        >
+                          <span>{item.title}</span>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -131,58 +127,22 @@ const Navbar = () => {
               <div className="nav-card" ref={cardRef}>
                 <div className="nav-card-left">
                   <div className="nav-card-left-top">
-                    <p>All Development</p>
-                    <p>
-                      Find out more about who we are, our values and culture,
-                      our history, and our incredible team.
-                    </p>
+                    <p>{developmentData.title}</p>
+                    <p>{developmentData.desc}</p>
                   </div>
                   <hr />
                   <div className="nav-card-left-bottom">
                     <p>Explore</p>
                     <div className="nav-card-links">
-                      <Link
-                        to={"/development/web-development"}
-                        className="nav-card-link"
-                      >
-                        <span>Web Development</span>
-                      </Link>
-                      <Link
-                        to={"/development/software-development"}
-                        className="nav-card-link"
-                      >
-                        <span>Software Development</span>
-                      </Link>
-                      <Link
-                        to={"/development/e-commerce"}
-                        className="nav-card-link"
-                      >
-                        <span>e Commerce</span>
-                      </Link>
-                      <Link
-                        to={"/development/app-development"}
-                        className="nav-card-link"
-                      >
-                        <span>App Developement</span>
-                      </Link>
-                      <Link
-                        to={"/development/support-and-maintenance"}
-                        className="nav-card-link"
-                      >
-                        <span>Support & Maintenance</span>
-                      </Link>
-                      <Link
-                        to={"/development/testing"}
-                        className="nav-card-link"
-                      >
-                        <span>Testing</span>
-                      </Link>
-                      <Link
-                        to={"/development/wordpress-development"}
-                        className="nav-card-link"
-                      >
-                        <span>Wordpress</span>
-                      </Link>
+                      {developmentData.submenu.map((item, index) => (
+                        <Link
+                          to={`${item.link}`}
+                          className="nav-card-link"
+                          key={index}
+                        >
+                          <span>{item.title}</span>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -202,14 +162,48 @@ const Navbar = () => {
               </div>
             )}
           </li>
+
           <li>
-            <Link>Design</Link>
-          </li>
-          <li>
-            <Link>Development</Link>
-          </li>
-          <li>
-            <Link>Marketing</Link>
+            <Link onClick={() => toggleCard(3)}>Marketing</Link>
+
+            {openCardIndex === 3 && (
+              <div className="nav-card" ref={cardRef}>
+                <div className="nav-card-left">
+                  <div className="nav-card-left-top">
+                    <p>{marketingData.title}</p>
+                    <p>{marketingData.desc}</p>
+                  </div>
+                  <hr />
+                  <div className="nav-card-left-bottom">
+                    <p>Explore</p>
+                    <div className="nav-card-links">
+                      {marketingData.submenu.map((item, index) => (
+                        <Link
+                          to={`${item.link}`}
+                          className="nav-card-link"
+                          key={index}
+                        >
+                          <span>{item.title}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="nav-card-right">
+                  <img
+                    src="https://www.bluefrontier.co.uk/images/menu/digital-horizons-menu-block.jpg"
+                    alt=""
+                  />
+                  <p>Download our latest free whitepaper</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nostrum impedit doloribus nihil, quos quam totam quod, ipsum
+                    quas, sit natu
+                  </p>
+                  <span>Download Today</span>
+                </div>
+              </div>
+            )}
           </li>
           <li>
             <Link>Technical</Link>

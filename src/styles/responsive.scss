@@ -8,7 +8,8 @@ $xxl: 1400px;
 $xxxl: 1600px;
 
 $primary-color: #2671fe;
-$heading-font:"Martian Mono", monospace;
+$heading-font: "Martian Mono", monospace;
+$secondary-color: #7c7c7c;
 
 @mixin EEsm {
   @media screen and (max-width: ($sm)) {

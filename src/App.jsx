@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 import Homepage from "./pages/Homepage/Homepage";
 import Navbar from "./components/Navbar/Navbar";
@@ -16,11 +16,31 @@ import AppDevelopement from "./pages/Developement/AppDevelopement/AppDevelopemen
 import Support from "./pages/Developement/Support/Support";
 import Testing from "./pages/Developement/Testing/Testing";
 import Wordpress from "./pages/Developement/Wordpress/Wordpress";
+import Marketing from "./pages/Marketing/Marketing/Marketing";
+import Holistic from "./pages/Marketing/Holistic/Holistic";
+import Seo from "./pages/Marketing/Seo/Seo";
+import Advertising from "./pages/Marketing/Advertising/Advertising";
+import Social from "./pages/Marketing/Social/Social";
+import Content from "./pages/Marketing/Content/Content";
+import Cro from "./pages/Marketing/Cro/Cro";
+import Analytics from "./pages/Marketing/Analytics/Analytics";
+import { useEffect } from "react";
 
 function App() {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  };
+
   return (
     <div className="app">
       <BrowserRouter>
+      <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -53,6 +73,21 @@ function App() {
 
           <Route path="/development/testing" element={<Testing />} />
           <Route path="/development/wordpress-development" element={<Wordpress />} />
+
+          {/* Marketing */}
+          <Route path="/marketing/marketing-strategy" element={<Marketing />} />
+          <Route path="/marketing/holistic-marketing" element={<Holistic />} />
+          <Route path="/marketing/seo" element={<Seo />} />
+          <Route path="/marketing/seo" element={<Seo />} />
+          <Route path="/marketing/paid-advertising" element={<Advertising />} />
+          <Route path="/marketing/social-media" element={<Social />} />
+          <Route path="/marketing/content" element={<Content />} />
+          <Route path="/marketing/conversion-rate-optimisation" element={<Cro />} />
+          <Route path="/marketing/data-analytics-and-reporting" element={<Analytics />} />
+
+
+
+
 
         </Routes>
 

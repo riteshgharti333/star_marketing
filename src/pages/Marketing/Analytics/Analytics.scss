@@ -1,0 +1,260 @@
+@use "../../../styles/responsive.scss" as *;
+
+.analytics {
+  background: #f1f1f1;
+  .analytics-top {
+    padding: 100px 0px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .analytics-approach {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 10%;
+    @include xl {
+      padding: 0px 40px;
+    }
+
+    @include lg {
+      flex-direction: column;
+      max-width: 750px;
+      gap: 40px;
+      padding: 0px 20px;
+    }
+
+    @include sm {
+      padding: 0px 10px;
+    }
+    .analytics-approach-left {
+      flex: 1;
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    .analytics-approach-right {
+      flex: 1;
+
+      h2 {
+        font-size: 30px;
+        font-family: $heading-font;
+        line-height: 1.5;
+
+        @include sm {
+          font-size: 22px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        color: $secondary-color;
+        line-height: 1.5;
+        margin-top: 30px;
+        font-weight: 500;
+
+        @include sm {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+ 
+
+  .analytics-info {
+    padding: 100px 0px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    width: 100%;
+
+
+    @include xl{
+      padding: 100px 10px;
+    }
+    @include lg {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .analytics-info-left {
+      flex: 4;
+      position: sticky;
+      top: 100px;
+      align-self: self-start;
+
+      @include lg {
+        position: static;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-family: $heading-font;
+        line-height: 1.5;
+
+        @include sm {
+          font-size: 22px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        color: $secondary-color;
+        line-height: 1.5;
+        margin-top: 30px;
+        font-weight: 500;
+
+        @include sm {
+          font-size: 16px;
+        }
+      }
+    }
+    .analytics-info-right {
+      flex: 6;
+      padding-left: 60px;
+
+      @include lg {
+        padding-left: 0px;
+      }
+      .analytics-info-right-items {
+        .analytics-info-right-item {
+          border-bottom: 1px solid #ddd;
+          transition: all 0.3s ease-in-out;
+          margin-bottom: 50px;
+
+          @include md {
+            margin-bottom: 30px;
+          }
+
+          &:hover {
+            border-bottom: 1px solid $primary-color;
+            .analytics-info-right-item-top {
+              color: $primary-color;
+            }
+          }
+          .analytics-info-right-item-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 22px;
+            color: #000;
+            padding-bottom: 10px;
+            cursor: pointer;
+
+            .icon {
+              font-size: 30px;
+              transition: transform 0.3s ease;
+              margin-top: 5px;
+            }
+
+            h3 {
+              font-weight: 600;
+              transition: all 0.3s ease-in-out;
+
+              @include md {
+                font-size: 22px;
+              }
+
+              @include sm {
+                font-size: 18px;
+              }
+            }
+          }
+
+          .analytics-info-right-item-desc {
+            p {
+              padding: 15px 0px 20px 0px;
+              font-size: 17px;
+              color: $secondary-color;
+              line-height: 1.7;
+              font-weight: 500;
+
+              @include sm {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .analytics-teams {
+    background: #121212;
+    margin-top: 100px;
+    border-radius: 30px;
+    .analytics-teams-container {
+      padding: 100px 0px;
+      max-width: 1200px;
+      margin: auto;
+
+      @include xl {
+        padding: 100px 40px;
+      }
+
+      @include sm {
+        padding: 100px 10px;
+      }
+
+
+      .analytics-teams-reporting {
+        padding: 0px 0px 100px 0px;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        gap: 10%;
+    
+        @include lg {
+          flex-direction: column;
+          max-width: 750px;
+          gap: 40px;
+        }
+
+        .analytics-teams-reporting-left {
+          flex: 1;
+    
+          img {
+            width: 100%;
+            border-radius: 20px;
+          }
+        }
+    
+        .analytics-teams-reporting-right {
+          flex: 1;
+    
+          h2 {
+            font-size: 30px;
+            font-family: $heading-font;
+            line-height: 1.5;
+            color: #fff;
+    
+            @include sm {
+              font-size: 22px;
+            }
+          }
+    
+          p {
+            font-size: 18px;
+            color: $secondary-color;
+            line-height: 1.5;
+            margin-top: 30px;
+            font-weight: 500;
+            color: #b3b3b3;
+    
+            @include sm {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .marketing-empty{
+    padding: 100px 0px;
+  }
+}
