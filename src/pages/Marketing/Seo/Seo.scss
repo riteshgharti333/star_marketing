@@ -2,6 +2,9 @@
 
 .seo {
   background: #f1f1f1;
+  @include lg{
+    overflow: hidden;
+  }
   .seo-top {
     padding: 100px 0px;
     max-width: 1200px;

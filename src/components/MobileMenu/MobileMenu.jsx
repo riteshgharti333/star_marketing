@@ -55,7 +55,7 @@ const menuItems = [
   },
 
   { title: "About", link: "/about-us" },
-  { title: "Contact", link: "/contact" },
+  { title: "Contact", link: "/contact-us" },
 ];
 
 const MobileMenu = () => {
@@ -173,6 +173,5 @@ const MobileMenu = () => {
     </div>
   );
 };
-
 
 export default MobileMenu;

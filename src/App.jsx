@@ -25,6 +25,8 @@ import Content from "./pages/Marketing/Content/Content";
 import Cro from "./pages/Marketing/Cro/Cro";
 import Analytics from "./pages/Marketing/Analytics/Analytics";
 import { useEffect } from "react";
+import Contact from "./pages/Contact/Contact";
+import Founder from "./pages/Founder/Founder";
 
 function App() {
   const ScrollToTop = () => {
@@ -45,6 +47,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about-us" element={<About />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/founder" element={<Founder />} />
+
+
 
           {/* Design */}
           <Route path="/design/web-design" element={<WebDesign />} />
@@ -84,6 +90,7 @@ function App() {
           <Route path="/marketing/content" element={<Content />} />
           <Route path="/marketing/conversion-rate-optimisation" element={<Cro />} />
           <Route path="/marketing/data-analytics-and-reporting" element={<Analytics />} />
+          
 
 
 

@@ -59,10 +59,14 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [openCardIndex]);
-  
 
+  const contact_nav = location.pathname;
   return (
-    <div className={`navbar ${isScrolled ? "blurred" : ""}`}>
+    <div
+      className={`navbar ${isScrolled ? "blurred" : ""} ${
+        contact_nav === "/contact-us" && "contact-nav"
+      }`}
+    >
       <div className="navbar-left">
         <img src={logo} alt="" />
       </div>
@@ -207,12 +211,14 @@ const Navbar = () => {
             )}
           </li>
           <li>
-            <Link>Technical</Link>
+            <Link to={"/founder"}>Founder</Link>
           </li>
         </ul>
       </div>
       <div className="navbar-right">
-        <button>Contact Us</button>
+        <Link to={"/contact-us"}>
+          <button>Contact Us</button>
+        </Link>
       </div>
     </div>
   );

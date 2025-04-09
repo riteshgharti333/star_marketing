@@ -2,7 +2,9 @@
 
 .social {
   background: #f1f1f1;
-  overflow: hidden;
+  @include lg{
+    overflow: hidden;
+  }
   .social-top {
     padding: 100px 0px;
     max-width: 1200px;
