@@ -40,7 +40,7 @@ export const bannerCards = [
   },
 ];
 
-/////////////
+////////////
 const service_img =
   "https://www.bluefrontier.co.uk/images/services/development/discovery-and-planning.jpg";
 
