@@ -55,6 +55,8 @@ const menuItems = [
   },
 
   { title: "About", link: "/about-us" },
+  { title: "Founder", link: "/founder" },
+
   { title: "Contact", link: "/contact-us" },
 ];
 
