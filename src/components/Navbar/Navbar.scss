@@ -25,8 +25,17 @@
         li {
           color: #000;
 
-          &:hover{
+          &:hover {
             color: #fff;
+          }
+        }
+      }
+    }
+    .nav-mobile-menu {
+      .mobileMenu {
+        .burger {
+          span {
+            background: #000;
           }
         }
       }

@@ -1,7 +1,10 @@
+import "./Homepage.scss";
+
 import HomeAbout from "../../components/HomeAbout/HomeAbout";
 import HomeBanner from "../../components/HomeBanner/HomeBanner";
+import Partner from "../../components/Partner/Partner";
 import Service from "../../components/Service/Service";
-import "./Homepage.scss";
+
 
 const Homepage = () => {
   return (
@@ -9,6 +12,7 @@ const Homepage = () => {
       <HomeBanner />
       <Service />
       <HomeAbout />
+      <Partner />
     </div>
   );
 };

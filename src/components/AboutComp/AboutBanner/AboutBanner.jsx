@@ -16,7 +16,7 @@ const AboutBanner = () => {
             We strongly believe in the power of creativity and forward thinking
           </h1>
           <p>
-            Blue Frontier specialises in a full range of digital services for
+            Star Marketing specialises in a full range of digital services for
             businesses. We have a dynamic group of exceptionally talented
             individuals who are all driven by a shared passion for what we do.
           </p>

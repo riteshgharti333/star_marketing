@@ -86,6 +86,33 @@
         }
       }
     }
+
+
+    .footer-address{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .footer-address-item{
+        .address-top {
+          p {
+            margin-bottom: 10px;
+            &:nth-child(1) {
+              color: #fff;
+              font-size: 18px;
+            }
+            &:nth-child(2) {
+              font-size: 16px;
+              color: #b3b3b3;
+            }
+            &:nth-child(3) {
+              font-size: 16px;
+              color: #b3b3b3;
+            }
+          }
+        }
+      }
+    }
+
   }
 
   .footer-center {
@@ -99,8 +126,7 @@
 
     .footer-center-item {
       color: #fff;
-      &:nth-child(1),
-      &:nth-child(2) {
+      &:nth-child(1) {
         p {
           font-size: 18px;
         }
@@ -111,7 +137,7 @@
         }
       }
 
-      &:nth-child(3) {
+      &:nth-child(2) {
         ul {
           list-style: none;
           display: flex;

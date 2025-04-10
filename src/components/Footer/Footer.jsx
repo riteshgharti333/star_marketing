@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -9,29 +10,50 @@ const Footer = () => {
             <li>Design</li>
             <li>Development</li>
             <li>Marketing</li>
-            <li>Technical</li>
-            <li>Consultancy</li>
-            <li>MedTech</li>
           </ul>
         </div>
         <div className="footer-top-item">
           <ul>
-            <li>Our work</li>
-            <li>Latest News</li>
-            <li>Blog</li>
-            <li>Contact</li>
-            <li>Design</li>
-            <li>Meet the Team</li>
+            <li>
+              <Link to={"/about-us"}>About Us</Link>
+            </li>
+            <li>
+              <Link to={"/founder"}>Founder's Massage</Link>{" "}
+            </li>
+            <li>
+              <Link to={"/contact-us"}>Contact Us</Link>
+            </li>
+            <li>
+              <Link to={"/design/web-design"}>Design</Link>
+            </li>
+            <li>
+              <Link to={"/marketing/seo"}>Seo</Link>
+            </li>
           </ul>
         </div>
+        <div className="footer-address">
+          <div className="footer-address-item">
+            <div className="address-top">
+              <p>Head Office </p>
+              <p>
+                Near by Fatima masjid Fathepur road, Sikar, 332001, Rajasthan
+              </p>
+              <p>+91 8209326351</p>
+            </div>
+          </div>
 
-        <div className="footer-top-item">
-          <div className="address-top">
-            <p>Head Office</p>
-            <p>
-              Unit 1, The Woodford Centre, Lysander Way, Salisbury, SP4 6BU, UK
-            </p>
-            <p>+91 1234567899</p>
+          <div className="footer-address-item">
+            <div className="address-top">
+              <p>Branch 01 London</p>
+              <p>506a Ladymargret Road Southall Ub1 2np</p>
+            </div>
+          </div>
+
+          <div className="footer-address-item">
+            <div className="address-top">
+              <p>Branch 02 Mumbai</p>
+              <p>Opp Gcc club Mira Road, Est, Mumbai</p>
+            </div>
           </div>
         </div>
       </div>
@@ -40,10 +62,6 @@ const Footer = () => {
         <div className="footer-center-item">
           <p>Discover our creative side</p>
           <h5>Star Studio</h5>
-        </div>
-        <div className="footer-center-item">
-          <p>Visit our cyber security experts</p>
-          <h5>Star Studion</h5>
         </div>
         <div className="footer-center-item">
           <ul>

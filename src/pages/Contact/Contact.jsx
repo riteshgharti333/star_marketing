@@ -16,17 +16,17 @@ const Contact = () => {
           <div className="contact-top-left-items">
             <div className="contact-top-left-item">
               <p>General Enquries</p>
-              <p>starmarketing@gmail.com</p>
+              <p>Hr@wingstarnarketing.com</p>
             </div>
 
             <div className="contact-top-left-item">
               <p>Support Enquries</p>
-              <p>starmarketing@gmail.com</p>
+              <p>Hr@wingstarnarketing.com</p>
             </div>
 
             <div className="contact-top-left-item">
               <p>Intersting in joining team?</p>
-              <p>starmarketing@gmail.com</p>
+              <p>Hr@wingstarnarketing.com</p>
             </div>
           </div>
 
@@ -92,8 +92,13 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
+              <label htmlFor="">How much is your budget? *</label>
+              <input type="text" name="" id=""/>
+            </div>
+
+            <div className="form-group">
               <label htmlFor="">
-                How did you hear about us? <span>(Optional)</span>
+                How did you hear about us? <span className="optional">(Optional)</span>
               </label>
 
               <select name="" id="">
@@ -129,9 +134,9 @@ const Contact = () => {
       <div className="contact-bottom">
         <h2>Find Us</h2>
         <div className="contact-bottom-address">
-          <p>Delhi, West East, Sector 123, 1711101</p>
+          {/* <p>Delhi, West East, Sector 123, 1711101</p>
 
-          <p>+91 1234567899</p>
+          <p>+91 1234567899</p> */}
         </div>
 
         <div className="contact-bottom-map">

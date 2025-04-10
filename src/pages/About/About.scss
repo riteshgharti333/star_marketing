@@ -1,6 +1,9 @@
 @use "../../styles/responsive.scss" as *;
 
 .about {
-    overflow: hidden;
-}
+  overflow: hidden;
 
+  .about-empty {
+    padding: 100px 0px;
+  }
+}

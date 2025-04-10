@@ -1,0 +1,36 @@
+@use "../../styles/responsive.scss" as *;
+
+.partner {
+  padding-bottom: 100px;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+
+  @include xl{
+    padding: 0px 10px 100px 10px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.5;
+    font-family: $heading-font;
+
+    @include sm{
+        font-size: 22px;
+    }
+  }
+
+
+  .partner-slider-cards {
+    margin-top: 40px;
+    .partner-slider-card {
+      img {
+        border-radius: 20px;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+    }
+  }
+}

@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState, useEffect } from "react";
+import { reviewData } from "../../assets/reviewData";
 
 const HomeAbout = () => {
   const [isBeginning, setIsBeginning] = useState(true);
@@ -91,15 +92,15 @@ const HomeAbout = () => {
                 1024: { slidesPerView: 2.2 },
               }}
             >
-              {reviewCards.map((item, index) => (
+              {reviewData.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="homeAbout-bottom-card">
-                    <h4>" {item.title} "</h4>
+                    <h4>" {item.review} "</h4>
                     <div className="homeAbout-bottom-card-profile">
                       <img src={item.img} alt={item.name} />
                       <div className="homeAbout-bottom-card-profile-right">
-                        <p>{item.name}</p>
-                        <p>{item.location}</p>
+                        <p>{item.title}</p>
+                        <p>{item.desc}</p>
                       </div>
                     </div>
                   </div>

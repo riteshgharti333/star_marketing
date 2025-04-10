@@ -27,6 +27,7 @@
 
     .about-mission-desc {
       display: flex;
+      margin-top: 60px;
 
       @include md {
         flex-direction: column;
@@ -48,6 +49,8 @@
             background: $primary-color;
             border-radius: 50%;
           }
+
+
         }
       }
       .about-mission-desc-right {
@@ -65,6 +68,11 @@
 
           @include sm {
             font-size: 16px;
+          }
+
+
+          &:last-child{
+          margin-top: 30px;
           }
         }
       }

@@ -2,6 +2,7 @@ import { serviceCards } from "../../assets/data";
 import "./Service.scss";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { servieHomeData } from "../../assets/serviceData";
 
 const Service = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -46,7 +47,7 @@ const Service = () => {
       setActiveIndex(closestIndex);
     };
 
-    handleScroll(); // trigger once on mount
+    handleScroll(); 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -55,7 +56,7 @@ const Service = () => {
     <div className="service">
       <div className="service-contaniner">
         <div className="service-top">
-          <h2>Our collaborative approach</h2>
+          <h2>Our Services</h2>
           <p>
             We believe in a personalised and partnership-driven approach to web
             development. Our team will work closely with you to gain a deep
@@ -65,7 +66,7 @@ const Service = () => {
         </div>
 
         <div className="service-cards">
-          {serviceCards.map((item, index) => {
+          {servieHomeData.map((item, index) => {
             const isActive = index === activeIndex;
             const isBeforeActive = index < activeIndex;
 

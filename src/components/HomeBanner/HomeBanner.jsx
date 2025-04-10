@@ -38,9 +38,9 @@ function HomeBanner() {
             </p>
             <p>
               With one of the largest ranges of services under one roof in the
-              UK, we are your trusted partner for all things digital. Tell us
+              UK, Mumbai, Sikar. we are your trusted partner for all things digital. Tell us
               about your goals and we’ll show you how we can achieve them.
-              Whatever your project, we’d love to be involved.{" "}
+              Whatever your project, we’d love to be involved.
             </p>
           </div>
         </div>
