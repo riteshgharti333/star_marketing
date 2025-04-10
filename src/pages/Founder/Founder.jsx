@@ -61,7 +61,7 @@ const Founder = () => {
                 faced betrayal and fraud, but never gave up. These experiences
                 only made his vision clearer and his determination stronger.
               </p>
-              <Link to={"/contact-us"} className="founder-btn">Connect With Us</Link>
+              
             </div>
             <div className="founder-content-right">
               <img src={founder_img} alt="" />
@@ -97,6 +97,8 @@ const Founder = () => {
               Sohel’s story is more than just a success tale—it’s a testament to
               passion, perseverance, and purpose.
             </p>
+
+            <Link to={"/contact-us"} className="founder-btn">Connect With Us</Link>
           </div>
         </div>
         <div class="custom-wave"></div>

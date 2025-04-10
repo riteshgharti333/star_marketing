@@ -11,12 +11,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
+import { graphicServiceData } from "../../../assets/serviceSliderData/serviceSliderData";
 
 const GraphicDesign = () => {
   const title =
-    "Catch the eye of your users with clever and creative graphic design";
+    "Bring your brand to life with impactful and modern graphic design";
   const desc =
-    "From enhancing your brand identity to creating professional packaging and print designs, we provide bespoke graphic design services for businesses in every sector.";
+    "As a full-service digital agency, we deliver high-quality visuals—from branding to marketing assets—that resonate with your audience and elevate your brand identity.";
+
   const smdesc = "Graphic Design";
 
   const [selectedProject, setSelectedProject] = useState("Lila");
@@ -30,7 +32,7 @@ const GraphicDesign = () => {
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
 
       <div className="graphicDesign-content">
-        <ServiceSlider />
+        <ServiceSlider serviceData={graphicServiceData} />
       </div>
       <div className="graphicDesign-works">
         <div className="graphicDesign-works-container">
@@ -84,23 +86,22 @@ const GraphicDesign = () => {
       <div className="graphicDesign-user">
         <div className="graphicDesign-user-container">
           <div className="graphicDesign-user-left">
-            <h2>Designing for the end user</h2>
+            <h2>Design That Speaks Your Brand</h2>
             <p>
-              A website should be engaging, easy to navigate and focused on your
-              target audience.
+              Graphic design is more than just aesthetics — it’s a powerful
+              communication tool that shapes how your audience perceives your
+              brand.
             </p>
             <p>
-              The user journey dictates whether you will be successful in
-              converting a prospect into a profitable customer, and each
-              decision you make about the design of your website will affect how
-              a user interacts with your brand. Alongside an eye-catching
-              design, you’ve got to include the right information so that users
-              can make informed decisions, and your calls to action should drive
-              them toward a key goal. Our web designers can create a website
-              that puts your users first. We’ll guide you on the best features
-              and create user-focused designs with smooth navigation, working
-              closely with our content writers and marketing team to make sure
-              your website converts.
+              From color palettes to typography, every design element plays a
+              role in telling your story and influencing user behavior. Our
+              graphic designers craft visuals that are not only eye-catching but
+              purposeful — aligning with your brand values and resonating with
+              your target audience. Whether it’s a logo, marketing material, or
+              social media content, we create designs that make a lasting
+              impression. We work collaboratively with your team to ensure every
+              visual touchpoint is consistent, impactful, and strategically
+              designed to elevate your brand.
             </p>
           </div>
           <div className="graphicDesign-user-right">
@@ -127,8 +128,6 @@ const GraphicDesign = () => {
           </div>
         </div>
       </div>
-
-      <ServiceTeam />
 
       <div className="graphicDesign-studies">
         <div className="graphicDesign-studies-top">
@@ -197,7 +196,7 @@ const GraphicDesign = () => {
 
         <div className="bottom-btn">
           <button>View all case studies</button>
-          </div>
+        </div>
       </div>
     </div>
   );

@@ -54,6 +54,14 @@
           width: 10px;
           background: #ff3c78;
           border-radius: 50%;
+
+          &.development{
+            background: #5AC1C7;
+          }
+
+          &.mark{
+            background: #008000;
+          }
         }
       }
 

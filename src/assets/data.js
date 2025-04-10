@@ -40,44 +40,51 @@ export const bannerCards = [
   },
 ];
 
-////////////
-const service_img =
-  "https://www.bluefrontier.co.uk/images/services/development/discovery-and-planning.jpg";
+//////////// home service
 
-export const serviceCards = [
-  {
-    img: service_img,
-    title: "Discovery and Planning",
-    desc: " We'll conduct a thorough analysis of your business goals, target audience, and current online presence. We'll create a detailed project plan outlining the scope, timeline, and budget",
-    no: "01",
-  },
+export const homeServiceData = {
+  title: "Our Services",
+  desc: "We believe in a personalised and partnership-driven approach to web development. Our team will work closely with you to gain a deep understanding of your business objectives, target audience, and brand identity.",
 
+  approchCards: [
+    {
+      title: "Design",
+      desc: "We crafted a sleek, user-friendly website using Figma and Adobe XD, ensuring top-notch UI/UX design for seamless navigation and an engaging experience.",
+    },
+    {
+      title: "Development",
+      desc: "Our website was developed with cutting-edge technology, delivering a fast, responsive, and intuitive experience across devices, seamlessly integrated with the app & website for optimal performance.",
+    },
+    {
+      title: "Marketing",
+      desc: "Our website marketing harnesses SEO, social media, email campaigns, PPC ads, and content strategies to maximize reach, engagement, and conversions across all digital channels.",
+    },
+  ],
+};
+
+////////
+
+import partner_img1 from "../assets/images/partnerImage/partner1.png";
+import partner_img2 from "../assets/images/partnerImage/partner2.png";
+import partner_img3 from "../assets/images/partnerImage/partner3.png";
+import partner_img4 from "../assets/images/partnerImage/partner4.png";
+
+export const partnerCards = [
   {
-    img: service_img,
-    title: "Discovery and Planning",
-    desc: " We'll conduct a thorough analysis of your business goals, target audience, and current online presence. We'll create a detailed project plan outlining the scope, timeline, and budget",
-    no: "01",
+    img: partner_img1,
   },
   {
-    img: service_img,
-    title: "Discovery and Planning",
-    desc: " We'll conduct a thorough analysis of your business goals, target audience, and current online presence. We'll create a detailed project plan outlining the scope, timeline, and budget",
-    no: "01",
+    img: partner_img2,
   },
   {
-    img: service_img,
-    title: "Discovery and Planning",
-    desc: " We'll conduct a thorough analysis of your business goals, target audience, and current online presence. We'll create a detailed project plan outlining the scope, timeline, and budget",
-    no: "01",
+    img: partner_img3,
   },
   {
-    img: service_img,
-    title: "Discovery and Planning",
-    desc: " We'll conduct a thorough analysis of your business goals, target audience, and current online presence. We'll create a detailed project plan outlining the scope, timeline, and budget",
-    no: "01",
+    img: partner_img4,
   },
 ];
-/////////////////////////
+
+////////////
 
 export const aboutCards = [
   {
@@ -284,7 +291,7 @@ export const webCards = [
     desc: "Give users a consistent experience with your website no matter what device they use, with fully responsive functionality.",
   },
   {
-    title: "UX Design",
+    title: "UI Design",
     desc: "Give users a consistent experience with your website no matter what device they use, with fully responsive functionality.",
   },
 ];
@@ -304,18 +311,17 @@ export const graphicCards = [
     img: img,
     title: "TK Producton Film",
     desc: "TK Producton Film",
-  }, {
+  },
+  {
     img: img,
     title: "TK Producton Film",
     desc: "TK Producton Film",
-  }, {
+  },
+  {
     img: img,
     title: "TK Producton Film",
     desc: "TK Producton Film",
   },
 ];
 
-
-
 ////////////
-

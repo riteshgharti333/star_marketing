@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />

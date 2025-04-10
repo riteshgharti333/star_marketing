@@ -14,12 +14,15 @@ import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
 import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
+import { ecommerceServiceData } from "../../../assets/serviceSliderData/devSliderData";
+import { ecommerceDevelopmentApproachData } from "../../../assets/approachData/devApprochData";
 
 const ECommerce = () => {
   const title =
-    "Build your digital home, designed to welcome visitors and keep them coming back";
+    "Launch high-converting eCommerce platforms that drive sales and scale";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "We build seamless, secure, and user-friendly online stores optimized for performance—designed to grow your brand and deliver a smooth shopping experience across all devices.";
+
   const smdesc = "Custom eCommerce Development";
 
   const [isBeginning, setIsBeginning] = useState(true);
@@ -28,26 +31,37 @@ const ECommerce = () => {
 
   return (
     <div className="eCommerce">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner
+        title={title}
+        desc={desc}
+        smdesc={smdesc}
+        dot="development"
+      />
 
       <div className="eCommerce-top">
-        <h2>Custom eCommerce solutions</h2>
+        <h2>Future-Ready eCommerce Solutions</h2>
         <p>
-          A custom eCommerce website solution empowers businesses to build a
-          site that aligns perfectly with their specific operational
-          requirements and brand vision. Unlike standard templated options, a
-          custom-built website offers true flexibility, enabling seamless system
-          integration, and payment gateways. This adaptability allows for
-          enhanced user experience, paving the way for improved scalability as
-          the business grows.{" "}
+          At Star Marketing, we craft custom eCommerce experiences designed to
+          drive sales, streamline operations, and scale with your business. Our
+          bespoke platforms go beyond cookie-cutter templates — we develop
+          purpose-built online stores that reflect your brand, connect
+          seamlessly with your backend systems, and deliver a frictionless
+          shopping journey for your customers.
+        </p>
+        <p>
+          From secure payment gateway integration to inventory management and
+          personalised user flows, every element is engineered for performance
+          and conversion. Whether you're launching a D2C brand or expanding B2B
+          sales online, our eCommerce solutions give you the agility and control
+          needed to thrive in a fast-evolving digital marketplace.
         </p>
       </div>
 
       <div className="eCommerce-service-slider">
-        <ServiceSlider />
+        <ServiceSlider serviceData={ecommerceServiceData} dot="development" />
       </div>
 
-      <Service />
+      <Service approachData={ecommerceDevelopmentApproachData} />
 
       <div className="eCommerce-teams">
         <div className="eCommerce-teams-container">
@@ -64,26 +78,25 @@ const ECommerce = () => {
               </div>
             ))}
           </div>
-          <ServiceTeam dev="dev" />
         </div>
       </div>
 
       <div className="eCommerce-user">
         <div className="eCommerce-user-left">
-          <h2>Providing holistic support for your eCommerce business</h2>
+          <h2>Holistic eCommerce Support for Sustainable Growth</h2>
           <p>
-            As the Holistic Plus+TM Digital Agency, we can go beyond website
-            development to support your eCommerce business in a range of other
-            ways. From app development through to branding and ongoing digital
-            marketing support, we can help ensure to the growth and success of
-            your business. By partnering with Blue Frontier, you gain access to
-            a team of over 100 experts across every digital specialism,
-            including eCommerce SEO, graphic design, video production, and paid
-            advertising.
+            At Star Marketing, we don’t just build eCommerce websites — we
+            become your long-term growth partner. Our holistic approach means we
+            support your business at every stage, from intuitive UX design and
+            mobile app development to brand identity, performance marketing, and
+            beyond.
           </p>
           <p>
-            If you'd like to find out more about our holistic working
-            methodology, then please visit our Digital Partner page..
+            Our cross-functional team brings together specialists in eCommerce
+            SEO, paid media, graphic design, content marketing, and analytics to
+            create a powerful ecosystem around your store. With our end-to-end
+            support, your business gains the digital edge it needs to thrive in
+            a competitive market.
           </p>
 
           <button>Your Digital Partner</button>
@@ -98,7 +111,6 @@ const ECommerce = () => {
 
       <div className="eCommerce-content">
         <div className="eCommerce-content-top">
-          <div className="eCommerce-content-top-left"></div>
           <div className="eCommerce-content-top-right">
             <p>
               <div className="dot"></div>Selected Works

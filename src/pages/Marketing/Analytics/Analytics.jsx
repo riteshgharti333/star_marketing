@@ -8,11 +8,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { chooseData } from "../../../assets/data";
 import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
+import { dataAnalyticsReportingServiceData } from "../../../assets/serviceSliderData/markSliderData";
+import { analyticApproachData } from "../../../assets/approachData/marketingApproachData";
+import ServiceOption from "../../../components/ServiceOption/ServiceOption";
+import { dataAnalyticsServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
 
 const Analytics = () => {
-  const title = "Driving businesses forward to meet their ambitions";
+  const title = "Unlock actionable insights with data analytics and reporting";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "We transform raw data into clear, strategic insights—delivering custom dashboards, performance reports, and analytics that guide smarter decisions and drive measurable business outcomes.";
+
   const smdesc = "Data Analytics & Reporting";
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -23,10 +28,13 @@ const Analytics = () => {
 
   return (
     <div className="analytics">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="analytics-top">
-        <ServiceSlider />
+        <ServiceSlider
+          serviceData={dataAnalyticsReportingServiceData}
+          dot="mark"
+        />
       </div>
 
       <div className="analytics-approach">
@@ -37,113 +45,68 @@ const Analytics = () => {
           />
         </div>
         <div className="analytics-approach-right">
-          <h2>Why analytics marketing matters </h2>
+          <h2>Data Analytics & Reporting That Drives Growth</h2>
           <p>
-            analytics is an essential tool in your wider marketing strategy,
-            whether you’re looking to get your social media soaring or support
-            your SEO.
+            In today’s digital landscape, data is more than just numbers — it’s
+            the foundation for impactful decision-making. Our Data Analytics and
+            Reporting services turn raw metrics into actionable insights,
+            helping you understand user behavior, campaign performance, and
+            business trends.
           </p>
           <p>
-            Behind every successful piece of analytics is careful planning and a
-            strong strategy to ensure it meets the requirements of not just your
-            business, but of the end user. Our team is experienced in planning
-            analytics and uncovering audience demand through keyword and
-            competitor research.
+            From tracking website traffic and conversion rates to monitoring
+            social media engagement and paid ad performance, we provide
+            comprehensive analytics solutions. Our team leverages
+            industry-leading tools to ensure accuracy, clarity, and relevance in
+            every report.
           </p>
           <p>
-            We create unique and compelling analytics, which can be shared via
-            your marketing channels, including on your website, social media,
-            brochures, and beyond. We are also able to assist in updating
-            existing analytics to enhance any untapped SEO potential.
+            We don’t just deliver reports — we offer strategic interpretations.
+            Whether you're aiming to optimize marketing ROI, refine customer
+            journeys, or identify growth opportunities, our data-driven approach
+            ensures your decisions are backed by reliable insights.
           </p>
         </div>
       </div>
 
-      <div className="analytics-info">
-        <div className="analytics-info-left">
-          <h2>Tailored application services</h2>
-          <p>
-            At Blue Frontier, we specialise in mobile app development across
-            leading frameworks such as React Native, Maui, and Flutter. Our
-            experienced team harnesses advanced technologies to deliver
-            high-performing applications that are customised to your specific
-            requirements. With a strong emphasis on user experience and
-            functionality, we ensure your app excels in a competitive landscape.
-          </p>
-        </div>
-
-        <div className="analytics-info-right">
-          <div className="analytics-info-right-items">
-            {chooseData.map((item, index) => {
-              const isOpen = openIndex === index;
-
-              return (
-                <div className="analytics-info-right-item" key={index}>
-                  <div
-                    className="analytics-info-right-item-top"
-                    onClick={() => toggleDesc(index)}
-                  >
-                    <h3>{item.title}</h3>
-
-                    <motion.span
-                      initial={false}
-                      animate={{
-                        rotate: isOpen ? 180 : 0,
-                        scale: isOpen ? 1.2 : 1,
-                      }}
-                      transition={{ duration: 0.3 }}
-                      className="icon"
-                    >
-                      {isOpen ? "-" : "+"}
-                    </motion.span>
-                  </div>
-
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        className="analytics-info-right-item-desc"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <p>{item.desc}</p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      <Service />
+      <Service approachData={analyticApproachData} />
 
       <div className="analytics-teams">
         <div className="analytics-teams-container">
+          <ServiceOption serviceOption={dataAnalyticsServiceOption} />
+
           <div className="analytics-teams-reporting">
             <div className="analytics-teams-reporting-left">
-            <img
+              <img
                 src="https://www.bluefrontier.co.uk/images/services/digital/analyticsreporting/integrated-report.jpg"
                 alt=""
               />
             </div>
 
             <div className="analytics-teams-reporting-right">
-              <h2>Integrated reporting</h2>
-              <p>Streamline your data with integrated Looker Studio reporting, a powerful tool we offer at Blue Frontier to bring your marketing performance into sharp focus. We create custom, interactive dashboards that consolidate data from all your digital marketing channels, giving you insights at your fingertips.</p>
-              <p>Our tailored reports provide a clear, comprehensive view of your campaigns, helping you track KPIs, identify trends, and make data-driven decisions with ease. No more sifting through spreadsheets, our Looker Studio reporting makes complex data simple, actionable, and visually engaging, empowering you to optimise your strategies for greater success.</p>
+              <h2>Integrated Analytics & Custom Dashboards</h2>
+              <p>
+                Unlock the full potential of your marketing data with integrated
+                reporting solutions powered by Looker Studio. At Blue Frontier,
+                we build dynamic, easy-to-navigate dashboards that centralise
+                metrics from all your digital channels—delivering performance
+                insights in one place.
+              </p>
+              <p>
+                Our bespoke reporting tools go beyond surface-level stats.
+                Designed to align with your unique KPIs, they simplify complex
+                data into visually rich, actionable reports. Whether you're
+                monitoring campaign efficiency or uncovering growth
+                opportunities, our integrated analytics provide the clarity
+                needed to refine your strategy and drive measurable
+                results—without the need for endless spreadsheets.
+              </p>
             </div>
           </div>
-
-          <ServiceTeam dev="dev" />
         </div>
       </div>
 
-      <div className="marketing-empty">
-        
-      </div>
+      <div className="marketing-empty"></div>
     </div>
   );
 };

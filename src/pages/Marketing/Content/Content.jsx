@@ -8,11 +8,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { chooseData } from "../../../assets/data";
 import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
+import { contentMarketingServiceData } from "../../../assets/serviceSliderData/markSliderData";
+import { contentMarketingApproachData } from "../../../assets/approachData/marketingApproachData";
+import ServiceOption from "../../../components/ServiceOption/ServiceOption";
+import { contentMarketingServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
 
 const Content = () => {
-  const title = "Driving businesses forward to meet their ambitions";
+  const title =
+    "Fuel your brand with strategic content that informs, engages, and converts";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "As a content marketing agency, we create high-impact blogs, videos, and campaigns tailored to your audience—driving organic growth, building authority, and boosting customer loyalty across every channel.";
+
   const smdesc = "Content Marketing Agency";
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -23,12 +29,11 @@ const Content = () => {
 
   return (
     <div className="content">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="content-top">
-        <ServiceSlider />
+        <ServiceSlider serviceData={contentMarketingServiceData} dot="mark" />
       </div>
-
 
       <div className="content-approach">
         <div className="content-approach-left">
@@ -38,24 +43,26 @@ const Content = () => {
           />
         </div>
         <div className="content-approach-right">
-          <h2>Why content marketing matters </h2>
+          <h2>The power of content marketing</h2>
           <p>
-            Content is an essential tool in your wider marketing strategy,
-            whether you’re looking to get your social media soaring or support
-            your SEO.
+            Content sits at the heart of every successful marketing strategy.
+            Whether you're aiming to boost your social media engagement,
+            strengthen your SEO efforts, or educate your audience, great content
+            drives meaningful connections.
           </p>
           <p>
-            Behind every successful piece of content is careful planning and a
-            strong strategy to ensure it meets the requirements of not just your
-            business, but of the end user. Our team is experienced in planning
-            content and uncovering audience demand through keyword and
-            competitor research.
+            Effective content doesn’t happen by chance — it’s backed by
+            research, strategy, and a deep understanding of your audience’s
+            needs. Our team crafts data-driven content plans built on keyword
+            analysis, competitive insights, and user intent to ensure your
+            message lands where it matters most.
           </p>
           <p>
-            We create unique and compelling content, which can be shared via
-            your marketing channels, including on your website, social media,
-            brochures, and beyond. We are also able to assist in updating
-            existing content to enhance any untapped SEO potential.
+            From blog articles and website copy to social media posts,
+            brochures, and more, we produce high-quality, original content
+            tailored to your brand. We can also help refine and optimise your
+            existing content to unlock hidden SEO opportunities and enhance
+            overall performance.
           </p>
         </div>
       </div>
@@ -95,98 +102,36 @@ const Content = () => {
         </div>
       </div>
 
-      <Service />
+      <Service approachData={contentMarketingApproachData} />
 
       <div className="content-teams">
         <div className="content-teams-container">
-          <div className="content-info">
-            <div className="content-info-left">
-              <h2>Tailored application services</h2>
-              <p>
-                At Blue Frontier, we specialise in mobile app development across
-                leading frameworks such as React Native, Maui, and Flutter. Our
-                experienced team harnesses advanced technologies to deliver
-                high-performing applications that are customised to your
-                specific requirements. With a strong emphasis on user experience
-                and functionality, we ensure your app excels in a competitive
-                landscape.
-              </p>
-            </div>
-
-            <div className="content-info-right">
-              <div className="content-info-right-items">
-                {chooseData.map((item, index) => {
-                  const isOpen = openIndex === index;
-
-                  return (
-                    <div className="content-info-right-item" key={index}>
-                      <div
-                        className="content-info-right-item-top"
-                        onClick={() => toggleDesc(index)}
-                      >
-                        <h3>{item.title}</h3>
-
-                        <motion.span
-                          initial={false}
-                          animate={{
-                            rotate: isOpen ? 180 : 0,
-                            scale: isOpen ? 1.2 : 1,
-                          }}
-                          transition={{ duration: 0.3 }}
-                          className="icon"
-                        >
-                          {isOpen ? "-" : "+"}
-                        </motion.span>
-                      </div>
-
-                      <AnimatePresence>
-                        {isOpen && (
-                          <motion.div
-                            className="content-info-right-item-desc"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <p>{item.desc}</p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <ServiceTeam dev="dev" />
+          <ServiceOption serviceOption={contentMarketingServiceOption} />
         </div>
       </div>
 
       <div className="content-user">
         <div className="content-user-left">
-       
-
-          <h2>Content strategies that deliver results</h2>
+          <h2>Strategic content that drives impact</h2>
           <p>
-            Success in content marketing requires data-backed planning and a
-            cross-channel approach, from whitepapers and guest posts to podcasts
-            and videos. The real value of content comes from formulating a
-            structured strategy to reach audiences far and wide.
+            Achieving success with content marketing means more than simply
+            creating content — it requires a well-planned, data-driven strategy
+            that spans multiple channels. From whitepapers and guest articles to
+            video content and podcasts, we help you engage the right audiences
+            at every touchpoint.
           </p>
           <p>
-            We pride ourselves on working closely with brands to support their
-            strategy so that it aligns with their business goals, whether that
-            be building brand awareness or establishing thought leadership. Our
-            experts can provide a complete content marketing strategy for your
-            brand, from the initial research through to ongoing content creation
-            and outreach. We further combine our expertise with advanced
-            software and AI technologies to provide insight-led strategies
-            designed to deliver results.
+            We collaborate closely with your team to ensure your content
+            strategy aligns with your business goals—whether it’s increasing
+            brand visibility, generating leads, or establishing thought
+            leadership. Our approach blends in-depth market research, creative
+            content development, and intelligent distribution backed by
+            cutting-edge tools and AI-powered insights to maximise your reach
+            and return on investment.
           </p>
         </div>
         <div className="content-user-right">
-        <img
+          <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
             alt=""
           />

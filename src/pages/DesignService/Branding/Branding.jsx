@@ -11,12 +11,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
+import { brandingServiceData } from "../../../assets/serviceSliderData/serviceSliderData";
 
 const Branding = () => {
-  const title =
-    "Catch the eye of your users with clever and creative graphic design";
+  const title = "Build a brand that stands out and speaks volumes";
   const desc =
-    "From enhancing your brand identity to creating professional packaging and print designs, we provide bespoke graphic design services for businesses in every sector.";
+    "We craft distinctive brand identities that reflect your vision, connect with your audience, and create lasting impact across digital and print platforms.";
+
   const smdesc = "Branding";
 
   const [selectedProject, setSelectedProject] = useState("Lila");
@@ -30,7 +31,7 @@ const Branding = () => {
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
 
       <div className="branding-content">
-        <ServiceSlider />
+        <ServiceSlider serviceData={brandingServiceData} />
       </div>
       <div className="branding-works">
         <div className="branding-works-container">
@@ -84,23 +85,22 @@ const Branding = () => {
       <div className="branding-user">
         <div className="branding-user-container">
           <div className="branding-user-left">
-            <h2>Designing for the end user</h2>
+            <h2>Building a Brand That Lasts</h2>
             <p>
-              A website should be engaging, easy to navigate and focused on your
-              target audience.
+              Your brand is more than just a logo — it's the complete identity
+              of your business and the first impression you leave with your
+              audience.
             </p>
             <p>
-              The user journey dictates whether you will be successful in
-              converting a prospect into a profitable customer, and each
-              decision you make about the design of your website will affect how
-              a user interacts with your brand. Alongside an eye-catching
-              design, you’ve got to include the right information so that users
-              can make informed decisions, and your calls to action should drive
-              them toward a key goal. Our web designers can create a website
-              that puts your users first. We’ll guide you on the best features
-              and create user-focused designs with smooth navigation, working
-              closely with our content writers and marketing team to make sure
-              your website converts.
+              Effective branding builds trust, creates recognition, and
+              emotionally connects with your target audience. Our branding
+              experts work with you to define your brand’s voice, values, and
+              visual identity, ensuring every touchpoint communicates a
+              consistent and compelling message. From brand strategy and naming
+              to logo design and brand guidelines, we craft identities that are
+              memorable, authentic, and built to grow with your business.
+              Whether you're starting fresh or rebranding, we'll help you tell
+              your story with clarity and confidence.
             </p>
           </div>
           <div className="branding-user-right">
@@ -111,8 +111,6 @@ const Branding = () => {
           </div>
         </div>
       </div>
-
-      <ServiceTeam />
 
       <div className="branding-studies">
         <div className="branding-studies-top">

@@ -1,13 +1,14 @@
-import { serviceCards } from "../../assets/data";
 import "./Service.scss";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { servieHomeData } from "../../assets/serviceData";
 
-const Service = () => {
+const Service = ({ approachData }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("down");
   const cardRefs = useRef([]);
+
+  console.log(approachData)
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -47,7 +48,7 @@ const Service = () => {
       setActiveIndex(closestIndex);
     };
 
-    handleScroll(); 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -56,17 +57,12 @@ const Service = () => {
     <div className="service">
       <div className="service-contaniner">
         <div className="service-top">
-          <h2>Our Services</h2>
-          <p>
-            We believe in a personalised and partnership-driven approach to web
-            development. Our team will work closely with you to gain a deep
-            understanding of your business objectives, target audience, and
-            brand identity.
-          </p>
+          <h2>{approachData.title}</h2>
+          <p>{approachData.desc}</p>
         </div>
 
         <div className="service-cards">
-          {servieHomeData.map((item, index) => {
+          {approachData.approchCards.map((item, index) => {
             const isActive = index === activeIndex;
             const isBeforeActive = index < activeIndex;
 
@@ -102,7 +98,10 @@ const Service = () => {
                   <p>{item.desc}</p>
                 </div>
                 <div className="service-card-right">
-                  <img src={item.img} alt="" />
+                  <img
+                    src="https://www.bluefrontier.co.uk/images/services/development/discovery-and-planning.jpg"
+                    alt=""
+                  />
                 </div>
               </motion.div>
             );

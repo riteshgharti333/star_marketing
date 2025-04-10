@@ -7,21 +7,24 @@ import Service from "../../../components/Service/Service";
 import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
 
 import { FaArrowUpLong } from "react-icons/fa6";
+import { croServiceData } from "../../../assets/serviceSliderData/markSliderData";
+import { croApproachData } from "../../../assets/approachData/marketingApproachData";
 
 const Cro = () => {
-  const title = "Driving businesses forward to meet their ambitions";
+  const title =
+    "Turn traffic into revenue with smart conversion rate optimization";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "We analyze user behavior, test strategically, and optimize every element of your digital experience—boosting conversions, lowering bounce rates, and increasing ROI without increasing ad spend.";
+
   const smdesc = "Conversion Rate Optimisiation";
 
   return (
     <div className="cro">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="cro-top">
-        <ServiceSlider />
+        <ServiceSlider serviceData={croServiceData} dot="mark" />
       </div>
-
 
       <div className="cro-approach">
         <div className="cro-approach-left">
@@ -31,24 +34,24 @@ const Cro = () => {
           />
         </div>
         <div className="cro-approach-right">
-          <h2>Why cro marketing matters </h2>
+          <h2>Why CRO marketing matters</h2>
           <p>
-            cro is an essential tool in your wider marketing strategy,
-            whether you’re looking to get your social media soaring or support
-            your SEO.
+            CRO plays a vital role in maximizing the value of your website
+            traffic. Whether your goal is to increase sales, generate leads, or
+            encourage user actions, conversion rate optimization ensures your
+            site is working smarter to achieve results.
           </p>
           <p>
-            Behind every successful piece of cro is careful planning and a
-            strong strategy to ensure it meets the requirements of not just your
-            business, but of the end user. Our team is experienced in planning
-            cro and uncovering audience demand through keyword and
-            competitor research.
+            Successful CRO is driven by insights, user behavior patterns, and
+            continuous testing. Our team focuses on understanding how users
+            interact with your site and uses that knowledge to fine-tune key
+            elements for better performance and higher conversions.
           </p>
           <p>
-            We create unique and compelling cro, which can be shared via
-            your marketing channels, including on your website, social media,
-            brochures, and beyond. We are also able to assist in updating
-            existing cro to enhance any untapped SEO potential.
+            From refining landing pages and improving call-to-actions to
+            simplifying user journeys, we deliver customized CRO strategies that
+            support your growth. We also revisit existing pages to uncover
+            hidden opportunities for better engagement and improved results.
           </p>
         </div>
       </div>
@@ -57,39 +60,42 @@ const Cro = () => {
         <div className="cro-user-left">
           <h2>The impact of CRO</h2>
           <p>
-          If you're looking to grow your business by increasing sales and revenue, then conversion rate optimisation is a crucial step to success. 
+            If you're looking to grow your business by increasing sales and
+            revenue, then conversion rate optimisation is a crucial step to
+            success.
           </p>
         </div>
         <div className="cro-user-right">
           <div className="cro-user-right-items">
             <div className="cro-user-right-item">
-              <h2>30% <FaArrowUpLong className="up-arrow"/></h2>
+              <h2>
+                30% <FaArrowUpLong className="up-arrow" />
+              </h2>
               <p>billion active social media users in 2024</p>
             </div>
 
             <div className="cro-user-right-item">
-              <h2>60% <FaArrowUpLong className="up-arrow"/></h2>
+              <h2>
+                60% <FaArrowUpLong className="up-arrow" />
+              </h2>
               <p>
                 different social media platforms used per person (on average)
               </p>
             </div>
 
             <div className="cro-user-right-item">
-              <h2>90% <FaArrowUpLong className="up-arrow"/></h2>
+              <h2>
+                90% <FaArrowUpLong className="up-arrow" />
+              </h2>
               <p>billion monthly active users on Facebook in 2024</p>
             </div>
           </div>
         </div>
       </div>
 
-      <Service />
+      <Service approachData={croApproachData} />
 
-      <div className="cro-teams">
-        <div className="cro-teams-container">
-    
-          <ServiceTeam  />
-        </div>
-      </div>
+      <div className="empty-div" style={{ paddingTop: "100px" }}></div>
     </div>
   );
 };

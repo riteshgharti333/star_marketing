@@ -7,12 +7,18 @@ import { aboutCards, chooseData } from "../../../assets/data";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
+import { testingServiceData } from "../../../assets/serviceSliderData/devSliderData";
+import { wordpressDevelopmentApproachData } from "../../../assets/approachData/devApprochData";
+import ServiceOption from "../../../components/ServiceOption/ServiceOption";
+import { wordpressServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
 
 const Wordpress = () => {
   const title =
-    "Keep your digital assets running smoothly, providing users with the best experience";
+    "Custom WordPress solutions tailored for performance and flexibility";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "From theme customization to full-scale development, we build responsive, SEO-friendly WordPress websites that are easy to manage and built to grow with your business.";
+
   const smdesc = "WordPress Development";
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -23,22 +29,37 @@ const Wordpress = () => {
 
   return (
     <div className="wordpress">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner
+        title={title}
+        desc={desc}
+        smdesc={smdesc}
+        dot="development"
+      />
 
       <div className="wordpress-top">
-        <h2>Custom wordpress solutions</h2>
+        <h2>Tailored WordPress Solutions for Scalable Growth</h2>
         <p>
-          A custom wordpress website solution empowers businesses to build a
-          site that aligns perfectly with their specific operational
-          requirements and brand vision. Unlike standard templated options, a
-          custom-built website offers true flexibility, enabling seamless system
-          integration, and payment gateways. This adaptability allows for
-          enhanced user experience, paving the way for improved scalability as
-          the business grows.{" "}
+          Our custom WordPress solutions are designed to meet your unique
+          business goals while maintaining the flexibility and performance your
+          brand demands. Unlike off-the-shelf themes, we build bespoke WordPress
+          websites that align seamlessly with your operational needs and visual
+          identity.
+        </p>
+        <p>
+          With full control over design, functionality, and integrations—from
+          plugins and APIs to payment gateways—our custom approach delivers a
+          smooth user experience and sets the foundation for future scalability.
+          Whether you're launching an eCommerce store, portfolio, or business
+          site, our WordPress experts will help you bring your vision to life
+          with precision and purpose.
         </p>
       </div>
 
-      <Service />
+      <div className="wordpress-service-slider">
+        <ServiceSlider serviceData={testingServiceData} dot="development" />
+      </div>
+
+      <Service approachData={wordpressDevelopmentApproachData} />
 
       <div className="wordpress-sollution">
         <div className="wordpress-sollution-left">
@@ -48,83 +69,27 @@ const Wordpress = () => {
           />
         </div>
         <div className="wordpress-sollution-right">
-          <h2>Tailored WordPress solutions </h2>
+          <h2>Expert WordPress Development & Ongoing Support</h2>
           <p>
-            Our expert team offers comprehensive WordPress development services,
-            including custom designs, plugin integrations, and ongoing support.
-            We create websites that are not only visually stunning but also
-            optimised for performance and security.
+            At Star Marketing, we specialise in delivering high-quality
+            WordPress solutions tailored to your brand and business goals. From
+            custom themes and plugin development to SEO optimisation and
+            responsive design, we ensure your website not only looks exceptional
+            but also performs seamlessly across all devices.
           </p>
           <p>
-            With dedicated WordPress hosting and routine backups, we ensure your
-            site remains reliable and efficient. Whether you need a new website
-            or support for your existing one, we provide the expertise and
-            solutions to meet your needs.
+            We also offer managed WordPress hosting, routine maintenance, and
+            security updates to keep your site fast, secure, and dependable.
+            Whether you're building a new WordPress site or looking to elevate
+            an existing one, our team provides end-to-end support to help you
+            grow confidently online.
           </p>
         </div>
       </div>
 
       <div className="wordpress-teams">
         <div className="wordpress-teams-container">
-          <div className="wordpress-info">
-            <div className="wordpress-info-left">
-              <h2>Tailored application services</h2>
-              <p>
-                At Blue Frontier, we specialise in mobile app development across
-                leading frameworks such as React Native, Maui, and Flutter. Our
-                experienced team harnesses advanced technologies to deliver
-                high-performing applications that are customised to your
-                specific requirements. With a strong emphasis on user experience
-                and functionality, we ensure your app excels in a competitive
-                landscape.
-              </p>
-            </div>
-
-            <div className="wordpress-info-right">
-              <div className="wordpress-info-right-items">
-                {chooseData.map((item, index) => {
-                  const isOpen = openIndex === index;
-
-                  return (
-                    <div className="wordpress-info-right-item" key={index}>
-                      <div
-                        className="wordpress-info-right-item-top"
-                        onClick={() => toggleDesc(index)}
-                      >
-                        <h3>{item.title}</h3>
-
-                        <motion.span
-                          initial={false}
-                          animate={{
-                            rotate: isOpen ? 180 : 0,
-                            scale: isOpen ? 1.2 : 1,
-                          }}
-                          transition={{ duration: 0.3 }}
-                          className="icon"
-                        >
-                          {isOpen ? "-" : "+"}
-                        </motion.span>
-                      </div>
-
-                      <AnimatePresence>
-                        {isOpen && (
-                          <motion.div
-                            className="wordpress-info-right-item-desc"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <p>{item.desc}</p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+          <ServiceOption serviceOption={wordpressServiceOption} />
           <div className="wordpress-teams-top">
             <p>
               <div className="dot"></div>Our Values Clients
@@ -138,25 +103,25 @@ const Wordpress = () => {
               </div>
             ))}
           </div>
-          <ServiceTeam dev="dev" />
         </div>
       </div>
 
       <div className="wordpress-user">
         <div className="wordpress-user-left">
-          <h2>Expert WordPress support</h2>
+          <h2>Reliable & Ongoing WordPress Support</h2>
           <p>
-            Our WordPress support services include everything from routine
-            backups to plugin development and security enhancements. We ensure
-            your website operates smoothly and remains up to date with the
-            latest technologies.
+            We provide end-to-end WordPress support designed to keep your
+            website secure, stable, and running at peak performance. From
+            regular updates and plugin management to advanced security
+            monitoring and performance tuning, our support ensures your site
+            stays ahead of the curve.
           </p>
           <p>
-            Our team’s expertise in handling various WordPress components means
-            that no matter the issue, we provide swift and effective solutions.
-            Trust us to keep your site secure, optimised, and fully functional.
+            Whether you're facing technical challenges or simply need peace of
+            mind, our dedicated team is here to deliver fast, reliable
+            solutions. With Star Marketing as your WordPress partner, you can
+            focus on growing your business while we handle the rest.
           </p>
-
         </div>
         <div className="wordpress-user-right">
           <img

@@ -8,11 +8,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { chooseData } from "../../../assets/data";
 import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
+import { paidSocialMediaServiceData } from "../../../assets/serviceSliderData/markSliderData";
+import { socialMediaApproachData } from "../../../assets/approachData/marketingApproachData";
+import ServiceOption from "../../../components/ServiceOption/ServiceOption";
+import { socialMediaServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
+import ServiceBanefits from "../../../components/ServiceBanefits/ServiceBanefits";
+import { socialMediaAdvertisingBenefitData } from "../../../assets/serviceBenefitData/serviceBenefitData";
 
 const Social = () => {
-  const title = "Driving businesses forward to meet their ambitions";
+  const title =
+    "Drive engagement and conversions with paid social media campaigns";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "We craft strategic, creative ad campaigns across platforms like Instagram, Facebook, and LinkedIn—designed to reach your ideal audience and deliver measurable results at every stage of the funnel.";
+
   const smdesc = "Paid social";
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -23,29 +31,13 @@ const Social = () => {
 
   return (
     <div className="social">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="social-top">
-        <ServiceSlider />
+        <ServiceSlider serviceData={paidSocialMediaServiceData} dot="mark" />
       </div>
 
-      <div className="social-strategy">
-        <h2>Benefits of having a social strategy </h2>
-
-        <div className="social-strategy-cards">
-          {Array(6)
-            .fill()
-            .map((_, index) => (
-              <div className="social-strategy-card" key={index}>
-                <h5>See shifts in your market</h5>
-                <p>
-                  Don’t be caught off guard by shifts in your market; find them
-                  early and adapt where needed.
-                </p>
-              </div>
-            ))}
-        </div>
-      </div>
+      <ServiceBanefits benefitsData={socialMediaAdvertisingBenefitData} />
 
       <div className="social-approach">
         <div className="social-approach-left">
@@ -55,22 +47,22 @@ const Social = () => {
           />
         </div>
         <div className="social-approach-right">
-          <h2>Where do we get our data? </h2>
+          <h2>How do we power our social media strategies?</h2>
           <p>
-            We are proud to be partnered with industry-leading research and data
-            platforms, including Brandwatch Consumer Research. Using these
-            platforms, we are able to gather both first-party and third-party
-            data and insights to guide our strategic recommendations. The data
-            we use is fully GDPR compliant, with our team working meticulously
-            to validate sources for reliability, recency, and relevancy.
+            Our social media strategies are built on a strong foundation of
+            insights sourced from leading analytics and listening tools such as
+            Brandwatch, Sprout Social, and native platform data like Meta
+            Insights and Twitter Analytics. These platforms allow us to gather
+            both first-party and third-party data to guide every content
+            decision, campaign, and engagement strategy.
           </p>
           <p>
-            We are proud to be partnered with industry-leading research and data
-            platforms, including Brandwatch Consumer Research. Using these
-            platforms, we are able to gather both first-party and third-party
-            data and insights to guide our strategic recommendations. The data
-            we use is fully GDPR compliant, with our team working meticulously
-            to validate sources for reliability, recency, and relevancy.
+            All insights we use are GDPR compliant and verified for accuracy,
+            relevance, and timeliness. Our team carefully analyses audience
+            behavior, platform trends, and performance metrics to ensure that
+            your social media presence not only resonates with your audience but
+            also drives meaningful results across channels like Instagram,
+            LinkedIn, Facebook, X, and TikTok.
           </p>
         </div>
       </div>
@@ -78,99 +70,39 @@ const Social = () => {
       <div className="social-user">
         <div className="social-user-left">
           <h2>The power of social media </h2>
-          <p>Social media is the most-used marketing channel, with over two-thirds of the world's population being active on at least one social platform. </p>
+          <p>
+            Social media is the most-used marketing channel, with over
+            two-thirds of the world's population being active on at least one
+            social platform.{" "}
+          </p>
         </div>
         <div className="social-user-right">
           <div className="social-user-right-items">
             <div className="social-user-right-item">
               <h2>5.17</h2>
-              <p>
-              billion active social media users in 2024
-              </p>
+              <p>billion active social media users in 2024</p>
             </div>
 
             <div className="social-user-right-item">
               <h2>7</h2>
               <p>
-              different social media platforms used per person (on average)
+                different social media platforms used per person (on average)
               </p>
             </div>
 
             <div className="social-user-right-item">
               <h2>3</h2>
-              <p>
-              billion monthly active users on Facebook in 2024
-              </p>
+              <p>billion monthly active users on Facebook in 2024</p>
             </div>
           </div>
         </div>
       </div>
 
-      <Service />
+      <Service approachData={socialMediaApproachData} />
 
       <div className="social-teams">
         <div className="social-teams-container">
-          <div className="social-info">
-            <div className="social-info-left">
-              <h2>Tailored application services</h2>
-              <p>
-                At Blue Frontier, we specialise in mobile app development across
-                leading frameworks such as React Native, Maui, and Flutter. Our
-                experienced team harnesses advanced technologies to deliver
-                high-performing applications that are customised to your
-                specific requirements. With a strong emphasis on user experience
-                and functionality, we ensure your app excels in a competitive
-                landscape.
-              </p>
-            </div>
-
-            <div className="social-info-right">
-              <div className="social-info-right-items">
-                {chooseData.map((item, index) => {
-                  const isOpen = openIndex === index;
-
-                  return (
-                    <div className="social-info-right-item" key={index}>
-                      <div
-                        className="social-info-right-item-top"
-                        onClick={() => toggleDesc(index)}
-                      >
-                        <h3>{item.title}</h3>
-
-                        <motion.span
-                          initial={false}
-                          animate={{
-                            rotate: isOpen ? 180 : 0,
-                            scale: isOpen ? 1.2 : 1,
-                          }}
-                          transition={{ duration: 0.3 }}
-                          className="icon"
-                        >
-                          {isOpen ? "-" : "+"}
-                        </motion.span>
-                      </div>
-
-                      <AnimatePresence>
-                        {isOpen && (
-                          <motion.div
-                            className="social-info-right-item-desc"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <p>{item.desc}</p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <ServiceTeam dev="dev" />
+          <ServiceOption serviceOption={socialMediaServiceOption} />
         </div>
       </div>
       <div className="marketing-empty"></div>

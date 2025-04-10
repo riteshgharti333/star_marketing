@@ -8,11 +8,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { chooseData } from "../../../assets/data";
 import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
+import { marketingStrategyServiceData } from "../../../assets/serviceSliderData/markSliderData";
+import { marketingStrategyApproachData } from "../../../assets/approachData/marketingApproachData";
+import ServiceOption from "../../../components/ServiceOption/ServiceOption";
+import { marketingStrategyServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
+import ServiceBanefits from "../../../components/ServiceBanefits/ServiceBanefits";
+import { marketingBanefitData } from "../../../assets/serviceBenefitData/serviceBenefitData";
 
 const Marketing = () => {
-  const title = "Driving businesses forward to meet their ambitions";
+  const title = "Strategic marketing that drives growth and maximizes ROI";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "We craft data-driven marketing strategies tailored to your goals—combining creativity, analytics, and channel expertise to help your brand attract, convert, and retain customers effectively.";
+
   const smdesc = "Marketing Strategy";
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -23,29 +30,13 @@ const Marketing = () => {
 
   return (
     <div className="marketing">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="marketing-top">
-        <ServiceSlider />
+        <ServiceSlider serviceData={marketingStrategyServiceData} dot="mark" />
       </div>
 
-      <div className="marketing-strategy">
-        <h2>Benefits of having a marketing strategy </h2>
-
-        <div className="marketing-strategy-cards">
-          {Array(6)
-            .fill()
-            .map((_, index) => (
-              <div className="marketing-strategy-card" key={index}>
-                <h5>See shifts in your market</h5>
-                <p>
-                  Don’t be caught off guard by shifts in your market; find them
-                  early and adapt where needed.
-                </p>
-              </div>
-            ))}
-        </div>
-      </div>
+      <ServiceBanefits benefitsData={marketingBanefitData} />
 
       <div className="marketing-user">
         <div className="marketing-user-left">
@@ -55,108 +46,54 @@ const Marketing = () => {
           />
         </div>
         <div className="marketing-user-right">
-          <h2>Where do we get our data? </h2>
+          <h2>Where do we get our marketing insights?</h2>
           <p>
-            We are proud to be partnered with industry-leading research and data
-            platforms, including Brandwatch Consumer Research. Using these
-            platforms, we are able to gather both first-party and third-party
-            data and insights to guide our strategic recommendations. The data
-            we use is fully GDPR compliant, with our team working meticulously
-            to validate sources for reliability, recency, and relevancy.
+            Our marketing strategies are driven by data from trusted,
+            industry-leading platforms such as Google Analytics, SEMrush, and
+            Meta Business Suite. We combine both first-party and third-party
+            insights to ensure our campaigns are grounded in audience behaviour,
+            trends, and performance analytics.
           </p>
           <p>
-            We are proud to be partnered with industry-leading research and data
-            platforms, including Brandwatch Consumer Research. Using these
-            platforms, we are able to gather both first-party and third-party
-            data and insights to guide our strategic recommendations. The data
-            we use is fully GDPR compliant, with our team working meticulously
-            to validate sources for reliability, recency, and relevancy.
+            All data we use is fully GDPR compliant, and we apply strict
+            validation processes to ensure accuracy, relevance, and timeliness.
+            This data-centric approach allows us to craft tailored marketing
+            strategies that deliver measurable results and long-term impact for
+            your brand.
           </p>
         </div>
       </div>
 
-      <Service />
+      <Service approachData={marketingStrategyApproachData} />
 
       <div className="marketing-teams">
         <div className="marketing-teams-container">
-          <div className="marketing-info">
-            <div className="marketing-info-left">
-              <h2>Tailored application services</h2>
-              <p>
-                At Blue Frontier, we specialise in mobile app development across
-                leading frameworks such as React Native, Maui, and Flutter. Our
-                experienced team harnesses advanced technologies to deliver
-                high-performing applications that are customised to your
-                specific requirements. With a strong emphasis on user experience
-                and functionality, we ensure your app excels in a competitive
-                landscape.
-              </p>
-            </div>
-
-            <div className="marketing-info-right">
-              <div className="marketing-info-right-items">
-                {chooseData.map((item, index) => {
-                  const isOpen = openIndex === index;
-
-                  return (
-                    <div className="marketing-info-right-item" key={index}>
-                      <div
-                        className="marketing-info-right-item-top"
-                        onClick={() => toggleDesc(index)}
-                      >
-                        <h3>{item.title}</h3>
-
-                        <motion.span
-                          initial={false}
-                          animate={{
-                            rotate: isOpen ? 180 : 0,
-                            scale: isOpen ? 1.2 : 1,
-                          }}
-                          transition={{ duration: 0.3 }}
-                          className="icon"
-                        >
-                          {isOpen ? "-" : "+"}
-                        </motion.span>
-                      </div>
-
-                      <AnimatePresence>
-                        {isOpen && (
-                          <motion.div
-                            className="marketing-info-right-item-desc"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <p>{item.desc}</p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <ServiceTeam dev="dev" />
+          <ServiceOption serviceOption={marketingStrategyServiceOption} />
         </div>
       </div>
 
       <div className="marketing-service">
         <div className="marketing-service-left">
           <span>
-            <div className="dot"></div>Strategy Services
+            <div className="dot"></div>Marketing Strategy
           </span>
-          <h2>Our other strategy offerings</h2>
+          <h2>Elevating your brand with tailored marketing strategies</h2>
           <p>
-            We can provide audit and strategy services outside of digital
-            marketing to benefit your wider business. From Website UX Audits, to
-            Brand Audit & Strategies, to Digital Transformation Roadmaps, we
-            have specialists across Blue Frontier who can bring data-backed
-            recommendations to the forefront in a range of business
-            applications.{" "}
+            Our marketing strategy services are designed to help businesses
+            navigate the ever-changing digital landscape. We focus on building
+            long-term value through targeted audience segmentation, positioning
+            analysis, and brand messaging that resonates. Whether you're
+            launching a new product, entering a new market, or refining your
+            brand voice, our strategic approach ensures your marketing efforts
+            deliver measurable impact.
           </p>
+          <p>
+            At Blue Frontier, we blend creativity with performance data to shape
+            strategies that not only attract attention but also drive real
+            business growth. From campaign roadmaps to performance forecasting,
+            we’re here to guide your next move with confidence.
+          </p>
+
           <button>Get in touch</button>
         </div>
         <div className="marketing-service-right">

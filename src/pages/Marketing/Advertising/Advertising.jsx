@@ -8,11 +8,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { chooseData } from "../../../assets/data";
 import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
+import { paidAdvertisingServiceData } from "../../../assets/serviceSliderData/markSliderData";
+import { paidAdvertisingApproachData } from "../../../assets/approachData/marketingApproachData";
+import ServiceOption from "../../../components/ServiceOption/ServiceOption";
+import { paidAdvertisingServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
+import ServiceBanefits from "../../../components/ServiceBanefits/ServiceBanefits";
+import { paidAdvertisingBenefitData } from "../../../assets/serviceBenefitData/serviceBenefitData";
 
 const Advertising = () => {
-  const title = "Driving businesses forward to meet their ambitions";
+  const title = "Maximize your ROI with data-driven paid advertising campaigns";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "We create and manage targeted ad strategies across Google, Meta, and more—designed to attract the right audience, increase conversions, and scale your growth efficiently.";
+
   const smdesc = "Paid Advertising";
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -23,30 +30,13 @@ const Advertising = () => {
 
   return (
     <div className="advertising">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="advertising-top">
-        <ServiceSlider />
+        <ServiceSlider serviceData={paidAdvertisingServiceData} dot="mark" />
       </div>
 
-      <div className="advertising-strategy">
-        <h2>Benefits of having a advertising strategy </h2>
-
-        <div className="advertising-strategy-cards">
-          {Array(6)
-            .fill()
-            .map((_, index) => (
-              <div className="advertising-strategy-card" key={index}>
-                <h5>See shifts in your market</h5>
-                <p>
-                  Don’t be caught off guard by shifts in your market; find them
-                  early and adapt where needed.
-                </p>
-              </div>
-            ))}
-        </div>
-      </div>
-
+      <ServiceBanefits benefitsData={paidAdvertisingBenefitData} />
 
       <div className="advertising-approach">
         <div className="advertising-approach-left">
@@ -56,22 +46,20 @@ const Advertising = () => {
           />
         </div>
         <div className="advertising-approach-right">
-          <h2>Where do we get our data? </h2>
+          <h2>How do we drive our paid advertising strategies?</h2>
           <p>
-            We are proud to be partnered with industry-leading research and data
-            platforms, including Brandwatch Consumer Research. Using these
-            platforms, we are able to gather both first-party and third-party
-            data and insights to guide our strategic recommendations. The data
-            we use is fully GDPR compliant, with our team working meticulously
-            to validate sources for reliability, recency, and relevancy.
+            Our paid advertising strategies are powered by data from top-tier ad
+            platforms and analytics tools, including Google Ads, Meta Business
+            Suite, and programmatic networks. By utilizing both first-party and
+            third-party insights, we craft targeted campaigns that maximize ROI
+            and reach the right audience at the right time.
           </p>
           <p>
-            We are proud to be partnered with industry-leading research and data
-            platforms, including Brandwatch Consumer Research. Using these
-            platforms, we are able to gather both first-party and third-party
-            data and insights to guide our strategic recommendations. The data
-            we use is fully GDPR compliant, with our team working meticulously
-            to validate sources for reliability, recency, and relevancy.
+            Every campaign is built on a foundation of accurate, GDPR-compliant
+            data. Our specialists continuously monitor performance metrics, A/B
+            testing results, and audience behaviors to refine and optimize your
+            ads. This ensures your budget is spent efficiently while driving
+            measurable results across search, social, and display networks.
           </p>
         </div>
       </div>
@@ -81,95 +69,43 @@ const Advertising = () => {
           <h2>Why is paid advertising so important?</h2>
         </div>
         <div className="advertising-user-right">
-         <div className="advertising-user-right-items">
+          <div className="advertising-user-right-items">
             <div className="advertising-user-right-item">
               <h2>30%</h2>
-              <p>Average click-through-rate for the first organic result on Google</p>
-            </div>  
-
-             <div className="advertising-user-right-item">
-              <h2>60%</h2>
-              <p>Average click-through-rate for the first organic result on Google</p>
-            </div>  
-
-             <div className="advertising-user-right-item">
-              <h2>70%</h2>
-              <p>Average click-through-rate for the first organic result on Google</p>
-            </div>          
-         </div>
-        </div>
-      </div>
-
-      <Service />
-
-      <div className="advertising-teams">
-        <div className="advertising-teams-container">
-          <div className="advertising-info">
-            <div className="advertising-info-left">
-              <h2>Tailored application services</h2>
               <p>
-                At Blue Frontier, we specialise in mobile app development across
-                leading frameworks such as React Native, Maui, and Flutter. Our
-                experienced team harnesses advanced technologies to deliver
-                high-performing applications that are customised to your
-                specific requirements. With a strong emphasis on user experience
-                and functionality, we ensure your app excels in a competitive
-                landscape.
+                Average click-through-rate for the first organic result on
+                Google
               </p>
             </div>
 
-            <div className="advertising-info-right">
-              <div className="advertising-info-right-items">
-                {chooseData.map((item, index) => {
-                  const isOpen = openIndex === index;
+            <div className="advertising-user-right-item">
+              <h2>60%</h2>
+              <p>
+                Average click-through-rate for the first organic result on
+                Google
+              </p>
+            </div>
 
-                  return (
-                    <div className="advertising-info-right-item" key={index}>
-                      <div
-                        className="advertising-info-right-item-top"
-                        onClick={() => toggleDesc(index)}
-                      >
-                        <h3>{item.title}</h3>
-
-                        <motion.span
-                          initial={false}
-                          animate={{
-                            rotate: isOpen ? 180 : 0,
-                            scale: isOpen ? 1.2 : 1,
-                          }}
-                          transition={{ duration: 0.3 }}
-                          className="icon"
-                        >
-                          {isOpen ? "-" : "+"}
-                        </motion.span>
-                      </div>
-
-                      <AnimatePresence>
-                        {isOpen && (
-                          <motion.div
-                            className="advertising-info-right-item-desc"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <p>{item.desc}</p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-              </div>
+            <div className="advertising-user-right-item">
+              <h2>70%</h2>
+              <p>
+                Average click-through-rate for the first organic result on
+                Google
+              </p>
             </div>
           </div>
-
-          <ServiceTeam dev="dev" />
         </div>
       </div>
-      <div className="marketing-empty">
 
+      <Service approachData={paidAdvertisingApproachData} />
+
+      <div className="advertising-teams">
+        <div className="advertising-teams-container">
+          <ServiceOption serviceOption={paidAdvertisingServiceOption} />
+
+        </div>
       </div>
+      <div className="marketing-empty"></div>
     </div>
   );
 };

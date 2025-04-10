@@ -10,27 +10,35 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import { useRef, useState } from "react"
+import { useRef, useState } from "react";
+import { softwareDevelopmentServiceData } from "../../../assets/serviceSliderData/devSliderData";
 
 const SweDevelopment = () => {
   const title =
-    "Build your digital home, designed to welcome visitors and keep them coming back";
+    "Custom software solutions built to solve real business challenges";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "From web apps to enterprise platforms, we develop scalable, secure, and high-performing software tailored to your unique needs and growth goals.";
+
   const smdesc = "Software Development";
 
-  
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
-
   return (
     <div className="sweDevelopment">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner
+        title={title}
+        desc={desc}
+        smdesc={smdesc}
+        dot="development"
+      />
 
       <div className="development-top">
-        <ServiceSlider />
+        <ServiceSlider
+          serviceData={softwareDevelopmentServiceData}
+          dot="development"
+        />
       </div>
 
       <div className="sweDevelopment-user">
@@ -41,23 +49,25 @@ const SweDevelopment = () => {
           />
         </div>
         <div className="sweDevelopment-user-right">
-          <h2>Comprehensive development and integration services</h2>
+          <h2>End-to-End Software Development Solutions</h2>
           <p>
-            Blue Frontier specialises in delivering comprehensive software
-            solutions, combining deep expertise in .NET and React for robust
-            application development and custom portal creation. Our dedicated
-            team excels in languages such as C, Ruby, SQL, and Python, using
-            powerful frameworks like .NET and Rails to transform your concepts
-            into fully realised commercial products, ready to scale.
+            At Star Marketing, we deliver comprehensive software development
+            services tailored to solve complex business challenges. Our expert
+            developers work across a variety of languages and platforms,
+            including JavaScript, Python, C#, and Ruby, building scalable
+            applications with cutting-edge frameworks like React, Node.js, and
+            .NET. Whether you're launching a SaaS product, automating
+            operations, or creating a custom enterprise tool — we turn your
+            vision into functional, future-ready software.
           </p>
           <p>
-            In addition to development, we provide seamless integration and
-            complete API development services, ensuring your various systems
-            communicate smoothly and efficiently. Supported by our in-house
-            testing, security, and DevOps teams, we rigorously test and
-            fine-tune every solution to guarantee the deployment of secure,
-            high-performance applications tailored precisely to your business
-            goals, ensuring ongoing success and technical stability.
+            Beyond development, we specialise in seamless system integration and
+            full API development to ensure all your platforms work together
+            harmoniously. Every solution undergoes thorough testing, security
+            checks, and performance optimization led by our QA and DevOps
+            specialists. From strategy and architecture to launch and
+            maintenance, our goal is to deliver reliable, secure, and scalable
+            software that empowers your business to grow.
           </p>
         </div>
       </div>
@@ -77,7 +87,6 @@ const SweDevelopment = () => {
               </div>
             ))}
           </div>
-          <ServiceTeam dev="dev" />
         </div>
       </div>
 

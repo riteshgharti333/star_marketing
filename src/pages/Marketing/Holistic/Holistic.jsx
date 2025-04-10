@@ -8,12 +8,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { chooseData } from "../../../assets/data";
 import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
+import { holisticMarketingServiceData } from "../../../assets/serviceSliderData/markSliderData";
+import ServiceOption from "../../../components/ServiceOption/ServiceOption";
+import { holisticMarketingServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
+import ServiceBanefits from "../../../components/ServiceBanefits/ServiceBanefits";
+import { holisticMarketingBenefitData } from "../../../assets/serviceBenefitData/serviceBenefitData";
 
 const Holistic = () => {
-  const title = "All your holistic needs under one roof";
+  const title =
+    "Connect every touchpoint with a unified holistic marketing approach";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
-  const smdesc = "Holistic holistic";
+    "We align your brand’s messaging, channels, and customer experience into one cohesive strategy—driving deeper engagement, stronger loyalty, and sustainable growth across all platforms.";
+
+  const smdesc = "Holistic Marketing";
 
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -23,29 +30,13 @@ const Holistic = () => {
 
   return (
     <div className="holistic">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="holistic-top">
-        <ServiceSlider />
+        <ServiceSlider serviceData={holisticMarketingServiceData} dot="mark" />
       </div>
 
-      <div className="holistic-strategy">
-        <h2>Benefits of having a holistic strategy </h2>
-
-        <div className="holistic-strategy-cards">
-          {Array(6)
-            .fill()
-            .map((_, index) => (
-              <div className="holistic-strategy-card" key={index}>
-                <h5>See shifts in your market</h5>
-                <p>
-                  Don’t be caught off guard by shifts in your market; find them
-                  early and adapt where needed.
-                </p>
-              </div>
-            ))}
-        </div>
-      </div>
+      <ServiceBanefits benefitsData={holisticMarketingBenefitData} />
 
       <div className="holistic-user">
         <div className="holistic-user-left">
@@ -55,92 +46,32 @@ const Holistic = () => {
           />
         </div>
         <div className="holistic-user-right">
-          <h2>Where do we get our data? </h2>
+          <h2>How do we power our holistic marketing approach?</h2>
           <p>
-            We are proud to be partnered with industry-leading research and data
-            platforms, including Brandwatch Consumer Research. Using these
-            platforms, we are able to gather both first-party and third-party
-            data and insights to guide our strategic recommendations. The data
-            we use is fully GDPR compliant, with our team working meticulously
-            to validate sources for reliability, recency, and relevancy.
+            Our holistic marketing strategies are built on a deep understanding
+            of consumer behavior, market trends, and brand positioning. We
+            leverage insights from multiple trusted data platforms and marketing
+            analytics tools to create unified, impactful campaigns across all
+            channels. This ensures every element — from SEO to social media to
+            offline touchpoints — works together seamlessly to support your
+            business goals.
           </p>
           <p>
-            We are proud to be partnered with industry-leading research and data
-            platforms, including Brandwatch Consumer Research. Using these
-            platforms, we are able to gather both first-party and third-party
-            data and insights to guide our strategic recommendations. The data
-            we use is fully GDPR compliant, with our team working meticulously
-            to validate sources for reliability, recency, and relevancy.
+            With a commitment to transparency and data integrity, our team
+            ensures all marketing insights are derived from ethically sourced,
+            GDPR-compliant data. Every recommendation we make is backed by
+            real-time analytics, behavioral research, and industry benchmarks to
+            give you confidence in both the strategy and the results.
           </p>
         </div>
       </div>
 
       <div className="holistic-teams">
         <div className="holistic-teams-container">
-          <div className="holistic-info">
-            <div className="holistic-info-left">
-              <h2>Tailored application services</h2>
-              <p>
-                At Blue Frontier, we specialise in mobile app development across
-                leading frameworks such as React Native, Maui, and Flutter. Our
-                experienced team harnesses advanced technologies to deliver
-                high-performing applications that are customised to your
-                specific requirements. With a strong emphasis on user experience
-                and functionality, we ensure your app excels in a competitive
-                landscape.
-              </p>
-            </div>
-
-            <div className="holistic-info-right">
-              <div className="holistic-info-right-items">
-                {chooseData.map((item, index) => {
-                  const isOpen = openIndex === index;
-
-                  return (
-                    <div className="holistic-info-right-item" key={index}>
-                      <div
-                        className="holistic-info-right-item-top"
-                        onClick={() => toggleDesc(index)}
-                      >
-                        <h3>{item.title}</h3>
-
-                        <motion.span
-                          initial={false}
-                          animate={{
-                            rotate: isOpen ? 180 : 0,
-                            scale: isOpen ? 1.2 : 1,
-                          }}
-                          transition={{ duration: 0.3 }}
-                          className="icon"
-                        >
-                          {isOpen ? "-" : "+"}
-                        </motion.span>
-                      </div>
-
-                      <AnimatePresence>
-                        {isOpen && (
-                          <motion.div
-                            className="holistic-info-right-item-desc"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <p>{item.desc}</p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <ServiceTeam dev="dev" />
+          <ServiceOption serviceOption={holisticMarketingServiceOption} />
         </div>
       </div>
-    <div className="holistic-empty"></div>
+      <div className="holistic-empty"></div>
     </div>
   );
 };

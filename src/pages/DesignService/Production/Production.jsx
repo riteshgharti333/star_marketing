@@ -11,12 +11,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
+import { productionServiceData } from "../../../assets/serviceSliderData/serviceSliderData";
 
 const Production = () => {
   const title =
-    "Creating dynamic content that engages, informs, inspires, and gets your audience to take action";
+    "Create powerful content that captures attention and drives engagement";
   const desc =
-    "Our in-house production team delivers creative assets that tell the story of your brand. Whether you need photography, video production, or animation, our expert team will bring your vision to life.";
+    "From concept to final cut, our production team delivers high-quality visuals that tell your story, elevate your brand, and perform across all platforms.";
   const smdesc = "Production";
 
   const [selectedProject, setSelectedProject] = useState("Lila");
@@ -35,7 +36,7 @@ const Production = () => {
       />
 
       <div className="production-content">
-        <ServiceSlider />
+        <ServiceSlider serviceData={productionServiceData} />
       </div>
 
       <div className="production-user">
@@ -48,23 +49,21 @@ const Production = () => {
           </div>
           <div className="production-user-container-bottom">
             <div className="production-user-left">
-              <h2>Designing for the end user</h2>
+              <h2>From Concept to Final Delivery</h2>
               <p>
-                A website should be engaging, easy to navigate and focused on
-                your target audience.
+                Production is where your ideas come to life. Whether it’s video,
+                animation, photography, or multimedia content, our team ensures
+                every detail is crafted with precision and purpose.
               </p>
               <p>
-                The user journey dictates whether you will be successful in
-                converting a prospect into a profitable customer, and each
-                decision you make about the design of your website will affect
-                how a user interacts with your brand. Alongside an eye-catching
-                design, you’ve got to include the right information so that
-                users can make informed decisions, and your calls to action
-                should drive them toward a key goal. Our web designers can
-                create a website that puts your users first. We’ll guide you on
-                the best features and create user-focused designs with smooth
-                navigation, working closely with our content writers and
-                marketing team to make sure your website converts.
+                We manage the entire production process — from pre-production
+                planning and storyboarding to shooting, editing, and
+                post-production — delivering high-quality content that resonates
+                with your audience. With cutting-edge tools and a creative
+                mindset, we transform your vision into impactful visuals that
+                strengthen your brand and drive engagement. Our goal is to
+                deliver production assets that not only look stunning but also
+                align perfectly with your marketing strategy.
               </p>
             </div>
             <div className="production-user-right">
@@ -76,8 +75,6 @@ const Production = () => {
           </div>
         </div>
       </div>
-
-      <ServiceTeam />
 
       <div className="production-studies">
         <div className="production-studies-top">

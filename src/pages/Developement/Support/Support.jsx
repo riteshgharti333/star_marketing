@@ -14,12 +14,15 @@ import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
 import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
+import { supportAndMaintenanceServiceData } from "../../../assets/serviceSliderData/devSliderData";
+import { supportAndMaintenanceApproachData } from "../../../assets/approachData/devApprochData";
 
 const Support = () => {
   const title =
-    "Keep your digital assets running smoothly, providing users with the best experience";
+    "Keep your digital products running smoothly with expert support & maintenance";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "From regular updates to performance monitoring and issue resolution, we provide ongoing support to ensure your website, app, or software stays secure, efficient, and up-to-date.";
+
   const smdesc = "Support & Maintenance";
 
   const [isBeginning, setIsBeginning] = useState(true);
@@ -28,26 +31,39 @@ const Support = () => {
 
   return (
     <div className="support">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner
+        title={title}
+        desc={desc}
+        smdesc={smdesc}
+        dot="development"
+      />
 
       <div className="support-top">
-        <h2>Custom support solutions</h2>
+        <h2>Dedicated Support & Maintenance Solutions</h2>
         <p>
-          A custom support website solution empowers businesses to build a
-          site that aligns perfectly with their specific operational
-          requirements and brand vision. Unlike standard templated options, a
-          custom-built website offers true flexibility, enabling seamless system
-          integration, and payment gateways. This adaptability allows for
-          enhanced user experience, paving the way for improved scalability as
-          the business grows.{" "}
+          Your digital product doesn’t end at launch — that’s where ongoing
+          support becomes critical. Our tailored Support & Maintenance services
+          ensure your platform stays secure, updated, and running at peak
+          performance. Whether it’s routine updates, bug fixes, or system
+          monitoring, we provide responsive and reliable assistance to keep your
+          digital presence smooth and uninterrupted.
+        </p>
+        <p>
+          Unlike off-the-shelf solutions, our custom support plans are designed
+          around your unique business needs, with flexible service levels,
+          proactive improvements, and seamless integration with your existing
+          infrastructure. As your business grows, our support scales with you.
         </p>
       </div>
 
       <div className="support-service-slider">
-        <ServiceSlider />
+        <ServiceSlider
+          dot="development"
+          serviceData={supportAndMaintenanceServiceData}
+        />
       </div>
 
-      <Service />
+      <Service approachData={supportAndMaintenanceApproachData} />
 
       <div className="support-teams">
         <div className="support-teams-container">
@@ -64,26 +80,30 @@ const Support = () => {
               </div>
             ))}
           </div>
-          <ServiceTeam dev="dev" />
         </div>
       </div>
 
       <div className="support-user">
         <div className="support-user-left">
-          <h2>Providing holistic support for your support business</h2>
+          <h2>End-to-End Support & Maintenance for Your Digital Solutions</h2>
           <p>
-            As the Holistic Plus+TM Digital Agency, we can go beyond website
-            development to support your support business in a range of other
-            ways. From app development through to branding and ongoing digital
-            marketing support, we can help ensure to the growth and success of
-            your business. By partnering with Blue Frontier, you gain access to
-            a team of over 100 experts across every digital specialism,
-            including support SEO, graphic design, video production, and paid
-            advertising.
+            At Star Marketing, we believe long-term success comes from
+            consistent care and attention. Our holistic Support & Maintenance
+            services go far beyond simple fixes—we offer proactive monitoring,
+            regular updates, security patching, performance optimization, and
+            on-demand troubleshooting to keep your systems running smoothly.
           </p>
           <p>
-            If you'd like to find out more about our holistic working
-            methodology, then please visit our Digital Partner page..
+            Whether it’s a custom-built website, mobile app, or enterprise
+            software, our experienced team ensures stability, speed, and
+            security through every stage of your digital journey. With access to
+            over 100 specialists across development, design, SEO, and marketing,
+            we deliver integrated support that evolves with your business needs.
+          </p>
+          <p>
+            Want to learn more about how our all-in-one support approach can
+            drive long-term reliability and performance? Visit our Digital
+            Partner page or speak with our team today.
           </p>
 
           <button>Your Digital Partner</button>
@@ -95,7 +115,6 @@ const Support = () => {
           />
         </div>
       </div>
-
     </div>
   );
 };

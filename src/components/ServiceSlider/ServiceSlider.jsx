@@ -8,8 +8,7 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
 import { webCards } from "../../assets/data";
 
-const ServiceSlider = () => {
-
+const ServiceSlider = ({ serviceData,dot }) => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
@@ -17,12 +16,8 @@ const ServiceSlider = () => {
   return (
     <div className="serviceSlider">
       <div className="serviceSlider-top">
-        <h2>Covering all areas of web design</h2>
-        <p>
-          Whether you want it to convert leads, make sales, or drive traffic,
-          your website will be carefully crafted by our experts to achieve your
-          goals.
-        </p>
+        <h2>{serviceData.title}</h2>
+        <p>{serviceData.desc}</p>
       </div>
 
       <div className="serviceSlider-cards">
@@ -50,13 +45,16 @@ const ServiceSlider = () => {
             1024: { slidesPerView: 2.5 },
           }}
         >
-          {webCards.map((item, index) => (
+          {serviceData.serviceCards.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="serviceSlider-card">
+                <div className="serviceSlider-card-top">
                 <span>
-                  <div className="dot"></div>Service
+                  <div className={`dot ${dot}`}></div>Service
                 </span>
                 <h4>{item.title}</h4>
+                </div>
+                
                 <p>{item.desc}</p>
               </div>
             </SwiperSlide>

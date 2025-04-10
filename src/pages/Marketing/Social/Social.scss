@@ -2,7 +2,7 @@
 
 .social {
   background: #f1f1f1;
-  @include lg{
+  @include lg {
     overflow: hidden;
   }
   .social-top {
@@ -58,7 +58,6 @@
           border-top: 1px solid #ddd;
           border-bottom: none;
         }
-
 
         h5 {
           font-size: 22px;
@@ -161,7 +160,7 @@
     @include sm {
       padding: 0px 10px 100px 10px;
     }
-  
+
     .social-user-left {
       flex: 4;
       position: sticky;
@@ -173,26 +172,25 @@
         font-family: $heading-font;
         line-height: 1.5;
 
-        @include md{
+        @include md {
           font-size: 30px;
         }
 
-        @include sm{
+        @include sm {
           font-size: 22px;
         }
       }
 
-      p{
-       color: $secondary-color;
-       margin-top: 30px;
-       line-height: 1.5;
-       font-size: 18px;
-       font-weight: 500;
-       
-       @include sm{
-        font-size: 16px;
-       }
-     
+      p {
+        color: $secondary-color;
+        margin-top: 30px;
+        line-height: 1.5;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include sm {
+          font-size: 16px;
+        }
       }
     }
 
@@ -203,7 +201,7 @@
         flex-direction: column;
         gap: 50px;
 
-        @include sm{
+        @include sm {
           gap: 30px;
         }
         .social-user-right-item {
@@ -211,8 +209,8 @@
           align-items: center;
           border-bottom: 1px solid #ddd;
           padding-bottom: 50px;
-          
-          @include sm{
+
+          @include sm {
             flex-direction: column;
             align-items: normal;
             padding-bottom: 30px;
@@ -224,7 +222,7 @@
             font-weight: 500;
             flex: 1;
 
-            @include sm{
+            @include sm {
               font-size: 60px;
               margin: 10px;
             }
@@ -236,7 +234,7 @@
             font-weight: 500;
             flex: 1;
 
-            @include sm{
+            @include sm {
               font-size: 16px;
             }
           }
@@ -250,130 +248,21 @@
     margin-top: 100px;
     border-radius: 30px;
     .social-teams-container {
-      padding: 100px 0px;
+      padding: 100px 0px 0px 0px;
       max-width: 1200px;
       margin: auto;
 
       @include xl {
-        padding: 100px 40px;
+        padding: 100px 40px 0px 40px;
       }
 
       @include sm {
-        padding: 100px 10px;
-      }
-
-      .social-info {
-        padding-bottom: 100px;
-        display: flex;
-        width: 100%;
-
-        @include lg {
-          flex-direction: column;
-          gap: 40px;
-        }
-
-        .social-info-left {
-          flex: 4;
-          position: sticky;
-          top: 100px;
-          align-self: self-start;
-
-          h2 {
-            font-size: 30px;
-            font-family: $heading-font;
-            line-height: 1.5;
-            color: #fff;
-
-            @include sm {
-              font-size: 22px;
-            }
-          }
-
-          p {
-            font-size: 18px;
-            color: #b3b3b3;
-            line-height: 1.5;
-            margin-top: 30px;
-            font-weight: 500;
-
-            @include sm {
-              font-size: 16px;
-            }
-          }
-        }
-        .social-info-right {
-          flex: 6;
-          padding-left: 60px;
-
-          @include lg {
-            padding-left: 0px;
-          }
-          .social-info-right-items {
-            .social-info-right-item {
-              border-bottom: 2px solid #fff;
-              transition: all 0.3s ease-in-out;
-              margin-bottom: 50px;
-
-              @include md {
-                margin-bottom: 30px;
-              }
-
-              &:hover {
-                border-bottom: 2px solid $primary-color;
-
-                .social-info-right-item-top {
-                  color: $primary-color;
-                }
-              }
-              .social-info-right-item-top {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-size: 22px;
-                color: #fff;
-                padding-bottom: 10px;
-                cursor: pointer;
-
-                .icon {
-                  font-size: 30px;
-                  transition: transform 0.3s ease;
-                  margin-top: 5px;
-                }
-
-                h3 {
-                  font-weight: 300;
-                  transition: all 0.3s ease-in-out;
-
-                  @include md {
-                    font-size: 22px;
-                  }
-
-                  @include sm {
-                    font-size: 18px;
-                  }
-                }
-              }
-
-              .social-info-right-item-desc {
-                p {
-                  padding: 15px 0px 20px 0px;
-                  font-size: 17px;
-                  color: #b3b3b3;
-                  line-height: 1.7;
-
-                  @include sm {
-                    font-size: 16px;
-                  }
-                }
-              }
-            }
-          }
-        }
+        padding: 100px 10px 0px 10px;
       }
     }
   }
 
   .marketing-empty {
-    padding: 100px 0px;
+    padding-top: 100px;
   }
 }

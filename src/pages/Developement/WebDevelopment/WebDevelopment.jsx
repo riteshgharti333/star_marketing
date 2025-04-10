@@ -14,12 +14,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
+import { webDevelopmentServiceData } from "../../../assets/serviceSliderData/devSliderData";
+import { webDevelopmentApproachData } from "../../../assets/approachData/devApprochData";
+import { webParagraphData } from "../../../assets/paraData/paraData";
 
 const WebDevelopment = () => {
   const title =
-    "Build your digital home, designed to welcome visitors and keep them coming back";
+    "Build fast, scalable websites that turn ideas into digital experiences";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "We develop high-performance, responsive websites using modern technologies—engineered to grow with your business and deliver seamless user experiences.";
+
   const smdesc = "Web Development Solutions";
 
   const [isBeginning, setIsBeginning] = useState(true);
@@ -28,11 +32,20 @@ const WebDevelopment = () => {
 
   return (
     <div className="webDevelopment">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner
+        title={title}
+        desc={desc}
+        smdesc={smdesc}
+        dot="development"
+      />
       <div className="development-top">
-        <ServiceSlider />
+        <ServiceSlider
+          serviceData={webDevelopmentServiceData}
+          dot="development"
+        />
       </div>
-      <Service />
+
+      <Service approachData={webDevelopmentApproachData} />
 
       <div className="webDevelopment-teams">
         <div className="webDevelopment-teams-container">
@@ -49,7 +62,6 @@ const WebDevelopment = () => {
               </div>
             ))}
           </div>
-          <ServiceTeam dev="dev" />
         </div>
       </div>
 
@@ -61,49 +73,18 @@ const WebDevelopment = () => {
           />
         </div>
         <div className="webDevelopment-user-right">
-          <h2>Why choose Blue Frontier as your web development partner?</h2>
+          <h2>{webParagraphData.title}</h2>
 
           <ul>
-            <li>
-              <GoDotFill className="dev-icon" />
-              <p>
-                <span>Tailored websites for your business : </span> We'll craft
-                a website that reflects your unique brand and engages your
-                audience effectively.
-              </p>
-            </li>
-            <li>
-              <GoDotFill className="dev-icon" />
-              <p>
-                <span>Tailored websites for your business : </span> We'll craft
-                a website that reflects your unique brand and engages your
-                audience effectively.
-              </p>
-            </li>{" "}
-            <li>
-              <GoDotFill className="dev-icon" />
-              <p>
-                <span>Tailored websites for your business : </span> We'll craft
-                a website that reflects your unique brand and engages your
-                audience effectively.
-              </p>
-            </li>{" "}
-            <li>
-              <GoDotFill className="dev-icon" />
-              <p>
-                <span>Tailored websites for your business : </span> We'll craft
-                a website that reflects your unique brand and engages your
-                audience effectively.
-              </p>
-            </li>{" "}
-            <li>
-              <GoDotFill className="dev-icon" />
-              <p>
-                <span>Tailored websites for your business : </span> We'll craft
-                a website that reflects your unique brand and engages your
-                audience effectively.
-              </p>
-            </li>
+            {webParagraphData.paragraphDataItems.map((item, index) => (
+              <li key={index}>
+                <GoDotFill className="dev-icon" />
+                <p>
+                  <span>{item.title} : </span>
+                  {item.desc}
+                </p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

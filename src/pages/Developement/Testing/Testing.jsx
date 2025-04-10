@@ -6,37 +6,49 @@ import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
 import { aboutCards } from "../../../assets/data";
 
 import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
+import { testingServiceData } from "../../../assets/serviceSliderData/devSliderData";
+import { testingApproachData } from "../../../assets/approachData/devApprochData";
 
 const Testing = () => {
   const title =
-    "Keep your digital assets running smoothly, providing users with the best experience";
+    "Ensure flawless performance with thorough and reliable testing";
   const desc =
-    "We'll collaborate closely with you to craft a website that perfectly captures the essence of your business, showcasing your unique selling points and leaving a lasting impression on your audience.";
+    "We offer end-to-end testing services—from functionality and usability to performance and security—ensuring your digital products deliver a seamless and bug-free user experience.";
   const smdesc = "Testing";
-
 
   return (
     <div className="testing">
-      <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
+      <ServiceBanner
+        title={title}
+        desc={desc}
+        smdesc={smdesc}
+        dot="development"
+      />
 
       <div className="testing-top">
-        <h2>Custom testing solutions</h2>
+        <h2>Custom Testing Solutions for Quality Assurance</h2>
         <p>
-          A custom testing website solution empowers businesses to build a site
-          that aligns perfectly with their specific operational requirements and
-          brand vision. Unlike standard templated options, a custom-built
-          website offers true flexibility, enabling seamless system integration,
-          and payment gateways. This adaptability allows for enhanced user
-          experience, paving the way for improved scalability as the business
-          grows.{" "}
+          Our tailored testing solutions are designed to ensure your digital
+          products meet the highest standards of performance, security, and
+          reliability. Unlike off-the-shelf approaches, our testing services are
+          customized to align with your unique infrastructure and business
+          goals, helping you minimize risk and avoid costly issues post-launch.
+        </p>
+        <p>
+          Whether you're building a website, mobile app, or enterprise platform,
+          our team conducts comprehensive testing—from functionality and
+          compatibility to load and security testing—ensuring a seamless and
+          bug-free experience for your end users. With flexible integration into
+          your development process, we support smooth rollouts and long-term
+          product stability.
         </p>
       </div>
 
       <div className="testing-service-slider">
-        <ServiceSlider />
+        <ServiceSlider serviceData={testingServiceData} dot="development" />
       </div>
 
-      <Service />
+      <Service approachData={testingApproachData} />
 
       <div className="testing-teams">
         <div className="testing-teams-container">
@@ -53,26 +65,26 @@ const Testing = () => {
               </div>
             ))}
           </div>
-          <ServiceTeam dev="dev" />
         </div>
       </div>
 
       <div className="testing-user">
         <div className="testing-user-left">
-          <h2>Providing holistic support for your testing business</h2>
+          <h2>End-to-End Support for Your Testing Process</h2>
           <p>
-            As the Holistic Plus+TM Digital Agency, we can go beyond website
-            development to support your testing business in a range of other
-            ways. From app development through to branding and ongoing digital
-            marketing support, we can help ensure to the growth and success of
-            your business. By partnering with Blue Frontier, you gain access to
-            a team of over 100 experts across every digital specialism,
-            including testing SEO, graphic design, video production, and paid
-            advertising.
+            At Star Marketing, we offer comprehensive testing support that goes
+            beyond traditional methods. Our team ensures your digital platforms,
+            applications, and systems function seamlessly across all user
+            scenarios. Whether you're launching a new product or refining an
+            existing one, our testing services are designed to deliver
+            performance, accuracy, and reliability.
           </p>
           <p>
-            If you'd like to find out more about our holistic working
-            methodology, then please visit our Digital Partner page..
+            Working with us means tapping into a network of over 100 experts
+            across design, SEO, video, branding, and more. From user experience
+            testing to load and performance analysis, we tailor every solution
+            to match your unique business needs—ensuring smooth functionality,
+            optimal speed, and complete confidence in every launch.
           </p>
 
           <button>Your Digital Partner</button>
