@@ -3,7 +3,7 @@ import { SitemapStream, streamToPromise } from "sitemap";
 import { createWriteStream } from "fs";
 import { Readable } from "stream";
 
-const baseUrl = "https://www.wingstarmarketing.com";
+const baseUrl = "https://wingstarnarketing.com/";
 
 const links = [
   { url: "/", changefreq: "monthly", priority: 1.0 },

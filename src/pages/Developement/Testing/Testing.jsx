@@ -27,8 +27,8 @@ const Testing = () => {
   return (
     <div className="testing">
       <SEO
-        title="Website & App Testing | WingStar Marketing - Quality Assurance Experts India & UK"
-        description="Ensure flawless user experiences with WingStar Marketing's comprehensive testing services. We provide website and mobile app testing, QA audits, performance testing, and bug resolution across India and the UK."
+        title="Website & App Testing | Star Marketing - Quality Assurance Experts India & UK"
+        description="Ensure flawless user experiences with Star Marketing's comprehensive testing services. We provide website and mobile app testing, QA audits, performance testing, and bug resolution across India and the UK."
         keywords="website testing, app testing, quality assurance, QA services, performance testing, bug fixing, UI/UX testing, QA agency India, UK testing experts"
         url={fullUrl}
       />

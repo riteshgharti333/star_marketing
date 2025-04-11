@@ -19,9 +19,9 @@ const About = () => {
   return (
     <div className="about">
       <SEO
-        title="About Us | WingStar Marketing - Digital Marketing Experts India & UK"
-        description="Learn more about WingStar Marketing — a results-driven digital marketing agency providing expert SEO, branding, web development, and advertising solutions across India and the UK."
-        keywords="about wingstar marketing, marketing team, seo experts, web developers, branding professionals, digital agency india, digital agency UK, marketing story"
+        title="About Us | Star Marketing Marketing - Digital Marketing Experts India & UK"
+        description="Learn more about Star Marketing — a results-driven digital marketing agency providing expert SEO, branding, web development, and advertising solutions across India and the UK."
+        keywords="about Star marketing, marketing team, seo experts, web developers, branding professionals, digital agency india, digital agency UK, marketing story"
         url={fullUrl}
       />
 

@@ -2,12 +2,12 @@ import { Helmet } from "react-helmet-async";
 import logo from "../../assets/images/logo.png";
 
 const SEO = ({
-  title = "WingStar Marketing | SEO, Branding, Website Design, Development & More in India & UK",
-  description = "WingStar Marketing offers expert services in SEO, Social Media Marketing, Branding, Paid Ads (PPC), Website Design & Development, Content Marketing, Influencer Marketing, E-commerce Marketing, Local SEO & Lead Generation. Serving clients across India & UK.",
+  title = "Star Marketing: Top-Ranked SEO, Digital Marketing, Web, Software & App Development",
+  description = "Start Marketing offers expert services in SEO, Social Media Marketing, Branding, Paid Ads (PPC), Website Design & Development, Content Marketing, Influencer Marketing, E-commerce Marketing, Local SEO & Lead Generation. Serving clients across India & UK.",
   keywords = "digital marketing agency, SEO services, PPC ads, branding agency, social media marketing, website design, web development, content marketing, influencer marketing, ecommerce marketing, local SEO, lead generation, UK marketing, India marketing, Sikar agency, London SEO, Mumbai marketing, best marketing company",
   url = "https://www.wingstarmarketing.com",
   image = logo,
-  author = "WingStar Marketing",
+  author = "Star Marketing",
   type = "website", // For flexibility in case you're making pages like blogs/articles later
 }) => {
   const fullImageUrl = image?.startsWith("http")
@@ -17,7 +17,7 @@ const SEO = ({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "WingStar Marketing",
+    name: "Star Marketing",
     url,
     logo: fullImageUrl,
     email: "info@wingstarmarketing.com",
@@ -71,8 +71,8 @@ const SEO = ({
   return (
     <Helmet
       htmlAttributes={{ lang: "en" }}
-      titleTemplate="%s | WingStar Marketing"
-      defaultTitle="WingStar Marketing"
+      titleTemplate="%s | Star Marketing"
+      defaultTitle="Star Marketing"
     >
       {/* Basic Meta Tags */}
       <meta charSet="UTF-8" />
@@ -96,13 +96,13 @@ const SEO = ({
       <meta itemProp="image" content={fullImageUrl} />
 
       {/* Open Graph Meta */}
-      <meta property="og:site_name" content="WingStar Marketing" />
+      <meta property="og:site_name" content="Star Marketing" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={fullImageUrl} />
-      <meta property="og:image:alt" content="WingStar Marketing Logo" />
+      <meta property="og:image:alt" content="Star Marketing Logo" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="en_GB" />
       <meta property="og:locale:alternate" content="en_IN" />

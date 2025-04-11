@@ -38,8 +38,8 @@ const GraphicDesign = () => {
   return (
     <div className="graphicDesign">
       <SEO
-        title="Graphic Design Services | WingStar Marketing - Logos, Branding & Creatives India & UK"
-        description="WingStar Marketing delivers professional graphic design solutions including logo creation, brand identity, social media creatives, brochures, and banners. Serving businesses in India and the UK with impactful visual storytelling."
+        title="Graphic Design Services | Star Marketing - Logos, Branding & Creatives India & UK"
+        description="Star Marketing delivers professional graphic design solutions including logo creation, brand identity, social media creatives, brochures, and banners. Serving businesses in India and the UK with impactful visual storytelling."
         keywords="graphic design India, branding design UK, logo design, social media creatives, visual branding, brochure design, flyer design, poster design, creative agency India, london graphic designers, mumbai design agency, brand identity design"
         url={fullUrl}
       />

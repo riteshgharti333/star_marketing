@@ -12,9 +12,9 @@ const Contact = () => {
   return (
     <div className="contact">
       <SEO
-        title="Contact Us | WingStar Marketing - India & UK Digital Marketing Agency"
-        description="Get in touch with WingStar Marketing for SEO, branding, web development, social media marketing, and more. Reach out to our teams in India or the UK today!"
-        keywords="contact wingstar marketing, seo agency contact, digital marketing help, talk to experts, marketing agency India, UK marketing contact, web design consultation"
+        title="Contact Us | Star Marketing - India & UK Digital Marketing Agency"
+        description="Get in touch with Star Marketing for SEO, branding, web development, social media marketing, and more. Reach out to our teams in India or the UK today!"
+        keywords="contact Star marketing, seo agency contact, digital marketing help, talk to experts, marketing agency India, UK marketing contact, web design consultation"
         url={fullUrl}
       />
       <div className="contact-top">

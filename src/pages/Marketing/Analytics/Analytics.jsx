@@ -36,8 +36,8 @@ const Analytics = () => {
   return (
     <div className="analytics">
       <SEO
-        title="Data Analytics & Reporting Services | WingStar Marketing - India & UK"
-        description="Unlock powerful insights with WingStar Marketing’s data analytics and reporting solutions. We track KPIs, analyze campaign performance, and deliver actionable reports to fuel smarter marketing decisions."
+        title="Data Analytics & Reporting Services | Star Marketing - India & UK"
+        description="Unlock powerful insights with Star Marketing’s data analytics and reporting solutions. We track KPIs, analyze campaign performance, and deliver actionable reports to fuel smarter marketing decisions."
         keywords="data analytics services, marketing reporting, campaign performance, business intelligence, KPI tracking, marketing analytics India, UK data insights, digital marketing reports"
         url={fullUrl}
       />

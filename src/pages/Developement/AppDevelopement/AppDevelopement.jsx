@@ -28,8 +28,8 @@ const AppDevelopement = () => {
   return (
     <div className="appDevelopement">
       <SEO
-        title="App Development | WingStar Marketing - Android & iOS Solutions for India & UK"
-        description="WingStar Marketing offers cutting-edge mobile app development services for Android and iOS platforms. We build performance-driven, user-friendly apps tailored to your business needs across India and the UK."
+        title="App Development | Star Marketing - Android & iOS Solutions for India & UK"
+        description="Star Marketing offers cutting-edge mobile app development services for Android and iOS platforms. We build performance-driven, user-friendly apps tailored to your business needs across India and the UK."
         keywords="mobile app development, android app development, iOS app developers, cross-platform apps, custom mobile solutions, app development India, UK mobile app agency, business apps"
         url={fullUrl}
       />

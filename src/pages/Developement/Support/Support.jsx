@@ -40,8 +40,8 @@ const Support = () => {
   return (
     <div className="support">
       <SEO
-        title="Support & Maintenance | WingStar Marketing - Ongoing Website & App Care India & UK"
-        description="WingStar Marketing provides reliable support and maintenance services for websites and mobile apps. Ensure your digital platforms stay secure, updated, and fully optimized with our expert team in India and the UK."
+        title="Support & Maintenance | Star Marketing - Ongoing Website & App Care India & UK"
+        description="Star Marketing provides reliable support and maintenance services for websites and mobile apps. Ensure your digital platforms stay secure, updated, and fully optimized with our expert team in India and the UK."
         keywords="website support, app maintenance, technical support, digital platform upkeep, website care plans, mobile app support, maintenance agency India, UK web support services"
         url={fullUrl}
       />

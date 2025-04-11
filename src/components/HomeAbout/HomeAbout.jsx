@@ -28,7 +28,7 @@ const HomeAbout = () => {
             </div>
             <div className="homeAbout-top-left-bottom">
               <p>
-                Blue Frontier is a specialist digital agency offering expert
+                Star Marketing is a specialist digital agency offering expert
                 support across every area of the digital landscape. Find out
                 more about who we are, our values and culture, our history, and
                 the incredible team behind everything we offer our clients.

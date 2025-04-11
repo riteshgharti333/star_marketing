@@ -40,6 +40,37 @@ export const bannerCards = [
   },
 ];
 
+///// home brands
+
+import homeBrandImg1 from "../assets/images/homeBrandImgs/homeBrand1.png";
+import homeBrandImg2 from "../assets/images/homeBrandImgs/homeBrand2.png";
+import homeBrandImg3 from "../assets/images/homeBrandImgs/homeBrand3.png";
+import homeBrandImg4 from "../assets/images/homeBrandImgs/homeBrand4.png";
+import homeBrandImg5 from "../assets/images/homeBrandImgs/homeBrand5.png";
+import homeBrandImg6 from "../assets/images/homeBrandImgs/homeBrand6.png";
+
+// export const
+export const homeBrandCards = [
+  {
+    img: homeBrandImg1,
+  },
+  {
+    img: homeBrandImg2,
+  },
+  {
+    img: homeBrandImg3,
+  },
+  {
+    img: homeBrandImg4,
+  },
+  {
+    img: homeBrandImg5,
+  },
+  {
+    img: homeBrandImg6,
+  },
+];
+
 //////////// home service
 
 export const homeServiceData = {

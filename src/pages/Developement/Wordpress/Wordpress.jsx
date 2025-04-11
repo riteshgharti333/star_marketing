@@ -35,13 +35,13 @@ const Wordpress = () => {
     import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
   const fullUrl = `${baseUrl}${location.pathname}`;
 
-  console.log(fullUrl)
+  console.log(fullUrl);
 
   return (
     <div className="wordpress">
       <SEO
-        title="WordPress Development Services | WingStar Marketing - India & UK Experts"
-        description="WingStar Marketing offers custom WordPress development services including theme design, plugin integration, SEO optimization, and eCommerce solutions. Serving businesses across India & the UK."
+        title="WordPress Development Services | Star Marketing - India & UK Experts"
+        description="Star Marketing offers custom WordPress development services including theme design, plugin integration, SEO optimization, and eCommerce solutions. Serving businesses across India & the UK."
         keywords="wordpress development, wordpress experts, custom wordpress site, wordpress SEO, wordpress agency India, UK wordpress developers, wordpress theme design, plugin development"
         url={fullUrl}
       />

@@ -17,8 +17,8 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <SEO
-        title="WingStar Marketing | SEO, Branding, Website Design, Development & More in India & UK"
-        description="WingStar Marketing offers expert services in SEO, Social Media Marketing, Branding, Paid Ads (PPC), Website Design & Development, Content Marketing, Influencer Marketing, E-commerce Marketing, Local SEO & Lead Generation. Serving clients across India & UK."
+        title="Star Marketing: Top-Ranked SEO, Digital Marketing, Web, Software & App Development"
+        description="Star Marketing offers expert services in SEO, Social Media Marketing, Branding, Paid Ads (PPC), Website Design & Development, Content Marketing, Influencer Marketing, E-commerce Marketing, Local SEO & Lead Generation. Serving clients across India & UK."
         keywords="digital marketing agency, SEO services, PPC ads, branding agency, social media marketing, website design, web development, content marketing, influencer marketing, ecommerce marketing, local SEO, lead generation, UK marketing, India marketing, Sikar agency, London SEO, Mumbai marketing, best marketing company"
         url={fullUrl}
       />

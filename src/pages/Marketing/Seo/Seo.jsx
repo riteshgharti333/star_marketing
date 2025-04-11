@@ -39,8 +39,8 @@ const Seo = () => {
   return (
     <div className="seo">
       <SEO
-        title="SEO Services | WingStar Marketing - Rank Higher in India & UK"
-        description="Boost your online visibility with WingStar Marketing's expert SEO services. We offer on-page SEO, off-page SEO, technical SEO, and local SEO tailored for businesses in India and the UK."
+        title="SEO Services | Star Marketing - Rank Higher in India & UK"
+        description="Boost your online visibility with Star Marketing's expert SEO services. We offer on-page SEO, off-page SEO, technical SEO, and local SEO tailored for businesses in India and the UK."
         keywords="SEO services, on-page SEO, off-page SEO, technical SEO, local SEO, search engine optimization, SEO agency India, SEO company UK, rank higher on Google"
         url={fullUrl}
       />

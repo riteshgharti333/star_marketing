@@ -42,8 +42,8 @@ const WebDevelopment = () => {
   return (
     <div className="webDevelopment">
       <SEO
-        title="Web Development Services | WingStar Marketing - Scalable Websites & Web Apps India & UK"
-        description="WingStar Marketing delivers high-performance web development services including responsive websites, custom web applications, CMS integration, and e-commerce solutions. Trusted by brands in India and the UK for digital transformation."
+        title="Web Development Services | Star Marketing - Scalable Websites & Web Apps India & UK"
+        description="Star Marketing delivers high-performance web development services including responsive websites, custom web applications, CMS integration, and e-commerce solutions. Trusted by brands in India and the UK for digital transformation."
         keywords="web development India, custom website UK, responsive websites, e-commerce development, CMS solutions, frontend backend development, scalable web apps, website development company, professional web developers"
         url={fullUrl}
       />

@@ -22,8 +22,8 @@ const WebDesign = () => {
   return (
     <div className="webDesign">
       <SEO
-        title="Website Design Services | WingStar Marketing - Creative, Modern, Responsive Web Design in India & UK"
-        description="WingStar Marketing specializes in high-converting, SEO-optimized website design services. We build responsive, user-friendly, and custom websites tailored for businesses in India and the UK. Get your professional web presence with WingStar today."
+        title="Website Design Services | Star Marketing - Creative, Modern, Responsive Web Design in India & UK"
+        description="Star Marketing specializes in high-converting, SEO-optimized website design services. We build responsive, user-friendly, and custom websites tailored for businesses in India and the UK. Get your professional web presence with Star today."
         keywords="website design India, website design UK, responsive web design, custom web development, business website, UI UX design, professional website, creative web design, mobile-friendly websites, sikar web agency, london web designers, mumbai website developers"
         url={fullUrl}
       />

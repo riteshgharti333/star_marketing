@@ -36,8 +36,8 @@ const Branding = () => {
   return (
     <div className="branding">
       <SEO
-        title="Branding Services | WingStar Marketing - Build a Powerful Brand Identity in India & UK"
-        description="Elevate your brand with WingStar Marketing’s expert branding services including brand strategy, identity design, logo creation, and brand messaging. Trusted by businesses in India and the UK to craft unforgettable brand experiences."
+        title="Branding Services | Star Marketing - Build a Powerful Brand Identity in India & UK"
+        description="Elevate your brand with Star Marketing’s expert branding services including brand strategy, identity design, logo creation, and brand messaging. Trusted by businesses in India and the UK to craft unforgettable brand experiences."
         keywords="branding agency India, brand identity design, logo and branding UK, brand strategy experts, creative branding solutions, rebranding services, brand development, visual identity, business branding India, UK brand consultants"
         url={fullUrl}
       />

@@ -40,4 +40,10 @@ export const brandCards = [
   {
     img: partner_img10,
   },
+  {
+    img: partner_img1,
+  },
+  {
+    img: partner_img2,
+  },
 ];

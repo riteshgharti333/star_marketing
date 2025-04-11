@@ -37,8 +37,8 @@ const Content = () => {
   return (
     <div className="content">
       <SEO
-        title="Content Marketing Services | WingStar Marketing - India & UK"
-        description="WingStar Marketing crafts powerful content strategies to boost engagement, drive traffic, and convert leads. From blogs to branded content, we help your business grow with words that work."
+        title="Content Marketing Services | Star Marketing - India & UK"
+        description="Star Marketing crafts powerful content strategies to boost engagement, drive traffic, and convert leads. From blogs to branded content, we help your business grow with words that work."
         keywords="content marketing, blog writing, content strategy, branded content, digital storytelling, SEO content, marketing agency India, UK content experts"
         url={fullUrl}
       />

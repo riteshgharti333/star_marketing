@@ -38,8 +38,8 @@ const Advertising = () => {
   return (
     <div className="advertising">
       <SEO
-        title="Paid Advertising Services | WingStar Marketing - PPC Experts India & UK"
-        description="Maximize your ROI with WingStar Marketing’s expert paid advertising solutions. We manage Google Ads, Facebook Ads, Instagram Ads, and more to drive targeted traffic in India & the UK."
+        title="Paid Advertising Services | Star Marketing - PPC Experts India & UK"
+        description="Maximize your ROI with Star Marketing’s expert paid advertising solutions. We manage Google Ads, Facebook Ads, Instagram Ads, and more to drive targeted traffic in India & the UK."
         keywords="paid advertising, PPC services, Google Ads, Facebook Ads, Instagram Ads, online advertising, digital ads India, paid marketing UK, advertising agency"
         url={fullUrl}
       />

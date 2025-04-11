@@ -39,8 +39,8 @@ const Social = () => {
   return (
     <div className="social">
       <SEO
-        title="Social Media Marketing | WingStar Marketing - Boost Your Brand in India & UK"
-        description="Engage and grow your audience with WingStar Marketing’s expert social media marketing services. We manage campaigns on Instagram, Facebook, LinkedIn, and more for impactful brand presence."
+        title="Social Media Marketing | Star Marketing - Boost Your Brand in India & UK"
+        description="Engage and grow your audience with Star Marketing’s expert social media marketing services. We manage campaigns on Instagram, Facebook, LinkedIn, and more for impactful brand presence."
         keywords="social media marketing, Instagram marketing, Facebook ads, LinkedIn strategy, social media agency, brand awareness, SMM India, SMM UK, digital marketing"
         url={fullUrl}
       />

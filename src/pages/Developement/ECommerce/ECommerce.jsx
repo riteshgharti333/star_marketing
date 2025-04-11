@@ -40,8 +40,8 @@ const ECommerce = () => {
   return (
     <div className="eCommerce">
       <SEO
-        title="E-commerce Development | WingStar Marketing - Scalable Online Stores for India & UK"
-        description="WingStar Marketing builds powerful, scalable e-commerce websites tailored to your brand. From Shopify to custom solutions, we deliver conversion-focused online stores for businesses in India and the UK."
+        title="E-commerce Development | Star Marketing - Scalable Online Stores for India & UK"
+        description="Star Marketing builds powerful, scalable e-commerce websites tailored to your brand. From Shopify to custom solutions, we deliver conversion-focused online stores for businesses in India and the UK."
         keywords="ecommerce website development, Shopify experts India, WooCommerce stores, online shop design, ecommerce developers UK, custom online store, scalable ecommerce platform, ecommerce UX design"
         url={fullUrl}
       />

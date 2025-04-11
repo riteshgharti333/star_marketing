@@ -36,8 +36,8 @@ const Production = () => {
   return (
     <div className="production">
       <SEO
-        title="Production Services | WingStar Marketing - Video, Photo & Creative Content in India & UK"
-        description="WingStar Marketing offers high-quality production services including corporate video production, product shoots, creative content creation, and commercial photography. Serving brands across India and the UK with professional visual storytelling."
+        title="Production Services | Star Marketing - Video, Photo & Creative Content in India & UK"
+        description="Star Marketing offers high-quality production services including corporate video production, product shoots, creative content creation, and commercial photography. Serving brands across India and the UK with professional visual storytelling."
         keywords="video production India, corporate shoot UK, content creation agency, product photography, creative production house, commercial video services, professional shoots, visual content agency, marketing production services"
         url={fullUrl}
       />

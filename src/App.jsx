@@ -29,6 +29,8 @@ import Founder from "./pages/Founder/Founder";
 
 import { initGA } from "./utils/analytics";
 import ScrollToTopAndTrack from "./components/ScrollToTopAndTrack";
+import CurtainLoader from "./components/CurtainLoader/CurtainLoader";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   useEffect(() => {
@@ -37,6 +39,7 @@ function App() {
 
   return (
     <div className="app">
+      <CurtainLoader />
       <BrowserRouter>
         <ScrollToTopAndTrack />
 
@@ -46,6 +49,7 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/founder" element={<Founder />} />
+          <Route path="*" element={<NotFoundPage />} />
 
           {/* Design */}
           <Route path="/design/web-design" element={<WebDesign />} />

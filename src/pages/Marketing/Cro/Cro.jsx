@@ -28,8 +28,8 @@ const Cro = () => {
   return (
     <div className="cro">
       <SEO
-        title="Conversion Rate Optimisation (CRO) Services | WingStar Marketing - India & UK"
-        description="Maximize your website's potential with WingStar Marketing’s CRO services. We optimize user experience, design, and funnels to convert more visitors into loyal customers across India and the UK."
+        title="Conversion Rate Optimisation (CRO) Services | Star Marketing - India & UK"
+        description="Maximize your website's potential with Star Marketing’s CRO services. We optimize user experience, design, and funnels to convert more visitors into loyal customers across India and the UK."
         keywords="conversion rate optimisation, CRO services, boost conversions, website optimization, UX design, landing page optimization, digital growth, India CRO, UK marketing agency"
         url={fullUrl}
       />

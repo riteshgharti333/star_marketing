@@ -2,6 +2,7 @@ import "./HomeBanner.scss";
 
 import banner_video from "../../assets/bannerVideo/bannervideo.mp4";
 import { brandCards } from "../../assets/serviceSliderData/partnerCards";
+import { homeBrandCards } from "../../assets/data";
 
 function HomeBanner() {
   return (
@@ -45,7 +46,7 @@ function HomeBanner() {
 
       <div className="homeBanner-cards-container">
         <div className="homeBanner-cards-track">
-          {[...brandCards, ...brandCards].map((item, index) => (
+          {[...homeBrandCards, ...homeBrandCards].map((item, index) => (
             <div className="homeBanner-card" key={index}>
               <img src={item.img} alt="brand-image" loading="lazy" />
             </div>

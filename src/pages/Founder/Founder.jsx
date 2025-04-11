@@ -34,9 +34,9 @@ const Founder = () => {
   return (
     <div className="founder">
       <SEO
-        title="Founder | WingStar Marketing - Visionary Leadership Behind Our Success"
-        description="Meet the founder of WingStar Marketing — the visionary leader driving innovation, strategy, and excellence in digital marketing across India and the UK."
-        keywords="wingstar marketing founder, company leadership, digital marketing leader, visionary entrepreneur, india marketing founder, uk digital expert"
+        title="Founder | Star Marketing - Visionary Leadership Behind Our Success"
+        description="Meet the founder of Star Marketing — the visionary leader driving innovation, strategy, and excellence in digital marketing across India and the UK."
+        keywords="Star marketing founder, company leadership, digital marketing leader, visionary entrepreneur, india marketing founder, uk digital expert"
         url={fullUrl}
       />
 

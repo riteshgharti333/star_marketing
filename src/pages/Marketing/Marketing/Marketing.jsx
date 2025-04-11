@@ -39,8 +39,8 @@ const Marketing = () => {
   return (
     <div className="marketing">
       <SEO
-        title="Marketing Strategy Services | WingStar Marketing - India & UK Experts"
-        description="WingStar Marketing provides data-driven marketing strategy services to help businesses grow. From audience research to campaign planning, we craft powerful strategies for success in India and the UK."
+        title="Marketing Strategy Services | Star Marketing - India & UK Experts"
+        description="Star Marketing provides data-driven marketing strategy services to help businesses grow. From audience research to campaign planning, we craft powerful strategies for success in India and the UK."
         keywords="marketing strategy, brand strategy, digital marketing plan, campaign planning, audience research, go-to-market strategy, India marketing, UK marketing consultants"
         url={fullUrl}
       />

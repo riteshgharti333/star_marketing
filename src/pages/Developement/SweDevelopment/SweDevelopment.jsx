@@ -37,8 +37,8 @@ const SweDevelopment = () => {
   return (
     <div className="sweDevelopment">
       <SEO
-        title="Software Development Services | WingStar Marketing - Custom Solutions for Businesses India & UK"
-        description="WingStar Marketing offers end-to-end software development services including SaaS platforms, enterprise software, mobile and desktop apps. Partner with us for scalable and secure software tailored to your business needs across India and the UK."
+        title="Software Development Services | Star Marketing - Custom Solutions for Businesses India & UK"
+        description="Star Marketing offers end-to-end software development services including SaaS platforms, enterprise software, mobile and desktop apps. Partner with us for scalable and secure software tailored to your business needs across India and the UK."
         keywords="custom software development, SaaS solutions, enterprise software India, software company UK, business software, mobile app development, desktop software, scalable software solutions, software engineers"
         url={fullUrl}
       />

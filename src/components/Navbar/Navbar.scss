@@ -74,7 +74,9 @@
 
   .navbar-left {
     img {
-      width: 50px;
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
     }
   }
   .navbar-center {
