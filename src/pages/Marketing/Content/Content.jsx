@@ -12,6 +12,8 @@ import { contentMarketingServiceData } from "../../../assets/serviceSliderData/m
 import { contentMarketingApproachData } from "../../../assets/approachData/marketingApproachData";
 import ServiceOption from "../../../components/ServiceOption/ServiceOption";
 import { contentMarketingServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
+import SEO from "../../../components/SEO/SEO";
+import { useLocation } from "react-router-dom";
 
 const Content = () => {
   const title =
@@ -27,8 +29,20 @@ const Content = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="content">
+      <SEO
+        title="Content Marketing Services | WingStar Marketing - India & UK"
+        description="WingStar Marketing crafts powerful content strategies to boost engagement, drive traffic, and convert leads. From blogs to branded content, we help your business grow with words that work."
+        keywords="content marketing, blog writing, content strategy, branded content, digital storytelling, SEO content, marketing agency India, UK content experts"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="content-top">
@@ -39,7 +53,8 @@ const Content = () => {
         <div className="content-approach-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt=""
+            alt="content-image"
+            loading="lazy"
           />
         </div>
         <div className="content-approach-right">
@@ -133,7 +148,8 @@ const Content = () => {
         <div className="content-user-right">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt=""
+            alt="content-image"
+            loading="lazy"
           />
         </div>
       </div>

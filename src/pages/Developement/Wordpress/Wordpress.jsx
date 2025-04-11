@@ -12,6 +12,9 @@ import { testingServiceData } from "../../../assets/serviceSliderData/devSliderD
 import { wordpressDevelopmentApproachData } from "../../../assets/approachData/devApprochData";
 import ServiceOption from "../../../components/ServiceOption/ServiceOption";
 import { wordpressServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
+import BrandCards from "../../../components/BrandCards/BrandCards";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
 
 const Wordpress = () => {
   const title =
@@ -27,8 +30,22 @@ const Wordpress = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
+  console.log(fullUrl)
+
   return (
     <div className="wordpress">
+      <SEO
+        title="WordPress Development Services | WingStar Marketing - India & UK Experts"
+        description="WingStar Marketing offers custom WordPress development services including theme design, plugin integration, SEO optimization, and eCommerce solutions. Serving businesses across India & the UK."
+        keywords="wordpress development, wordpress experts, custom wordpress site, wordpress SEO, wordpress agency India, UK wordpress developers, wordpress theme design, plugin development"
+        url={fullUrl}
+      />
+
       <ServiceBanner
         title={title}
         desc={desc}
@@ -65,7 +82,7 @@ const Wordpress = () => {
         <div className="wordpress-sollution-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/wordpress/wordpress-tailored.jpg"
-            alt=""
+            alt="wordpress-image"
           />
         </div>
         <div className="wordpress-sollution-right">
@@ -90,19 +107,7 @@ const Wordpress = () => {
       <div className="wordpress-teams">
         <div className="wordpress-teams-container">
           <ServiceOption serviceOption={wordpressServiceOption} />
-          <div className="wordpress-teams-top">
-            <p>
-              <div className="dot"></div>Our Values Clients
-            </p>
-          </div>
-
-          <div className="wordpress-cards">
-            {aboutCards.map((item, index) => (
-              <div className="wordpress-card" key={index}>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
+          <BrandCards />
         </div>
       </div>
 
@@ -126,7 +131,7 @@ const Wordpress = () => {
         <div className="wordpress-user-right">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
-            alt=""
+            alt="wordpress-image"
           />
         </div>
       </div>

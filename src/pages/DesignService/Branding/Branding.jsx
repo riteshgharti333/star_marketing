@@ -12,6 +12,8 @@ import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
 import { brandingServiceData } from "../../../assets/serviceSliderData/serviceSliderData";
+import SEO from "../../../components/SEO/SEO";
+import { useLocation } from "react-router-dom";
 
 const Branding = () => {
   const title = "Build a brand that stands out and speaks volumes";
@@ -26,8 +28,20 @@ const Branding = () => {
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="branding">
+      <SEO
+        title="Branding Services | WingStar Marketing - Build a Powerful Brand Identity in India & UK"
+        description="Elevate your brand with WingStar Marketing’s expert branding services including brand strategy, identity design, logo creation, and brand messaging. Trusted by businesses in India and the UK to craft unforgettable brand experiences."
+        keywords="branding agency India, brand identity design, logo and branding UK, brand strategy experts, creative branding solutions, rebranding services, brand development, visual identity, business branding India, UK brand consultants"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
 
       <div className="branding-content">
@@ -61,6 +75,7 @@ const Branding = () => {
               <img
                 src="https://www.bluefrontier.co.uk/images/services/design/workexamples/lila-story-cards.jpg"
                 alt="Lila Connect"
+                loading="lazy"
               />
             )}
 
@@ -68,6 +83,7 @@ const Branding = () => {
               <img
                 src="https://www.bluefrontier.co.uk/images/services/design/workexamples/arias-science-passes.jpg"
                 alt="Aria Science"
+                loading="lazy"
               />
             )}
 
@@ -75,6 +91,7 @@ const Branding = () => {
               <img
                 src="https://www.bluefrontier.co.uk/images/services/design/workexamples/lila-story-cards.jpg"
                 alt="Greensleevless"
+                loading="lazy"
               />
             )}
           </div>
@@ -106,7 +123,8 @@ const Branding = () => {
           <div className="branding-user-right">
             <img
               src="https://www.bluefrontier.co.uk/images/services/design/graphicdesign/graphic-design-content.jpg"
-              alt=""
+              alt="branding-service-image"
+              loading="lazy"
             />
           </div>
         </div>
@@ -146,7 +164,7 @@ const Branding = () => {
             {graphicCards.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="branding-studies-card">
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt="work-image" loading="lazy" />
                   <h2>{item.title}</h2>
                   <div className="branding-studies-desc">
                     <span>{item.desc}</span>

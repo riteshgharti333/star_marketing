@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState, useEffect } from "react";
 import { reviewData } from "../../assets/reviewData";
+import BrandCards from "../BrandCards/BrandCards";
 
 const HomeAbout = () => {
   const [isBeginning, setIsBeginning] = useState(true);
@@ -38,22 +39,13 @@ const HomeAbout = () => {
           <div className="homeAbout-top-right">
             <img
               src="https://www.bluefrontier.co.uk/images/Home/about-us.png"
-              alt=""
+              alt="partner-image"
+              loading="lazy"
             />
           </div>
         </div>
         <div className="homeAbout-center">
-          <p>
-            <div className="dot"></div>Who we've partnered with
-          </p>
-
-          <div className="homeAbout-center-cards">
-            {aboutCards.map((item, index) => (
-              <div className="homeAbout-center-card" key={index}>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
+          <BrandCards />
         </div>
 
         <div className="homeAbout-bottom">
@@ -97,7 +89,7 @@ const HomeAbout = () => {
                   <div className="homeAbout-bottom-card">
                     <h4>" {item.review} "</h4>
                     <div className="homeAbout-bottom-card-profile">
-                      <img src={item.img} alt={item.name} />
+                      <img src={item.img} alt={item.title} loading="lazy" />
                       <div className="homeAbout-bottom-card-profile-right">
                         <p>{item.title}</p>
                         <p>{item.desc}</p>

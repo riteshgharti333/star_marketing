@@ -18,6 +18,10 @@ import { webDevelopmentServiceData } from "../../../assets/serviceSliderData/dev
 import { webDevelopmentApproachData } from "../../../assets/approachData/devApprochData";
 import { webParagraphData } from "../../../assets/paraData/paraData";
 
+import BrandCards from "../../../components/BrandCards/BrandCards";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
+
 const WebDevelopment = () => {
   const title =
     "Build fast, scalable websites that turn ideas into digital experiences";
@@ -30,8 +34,20 @@ const WebDevelopment = () => {
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="webDevelopment">
+      <SEO
+        title="Web Development Services | WingStar Marketing - Scalable Websites & Web Apps India & UK"
+        description="WingStar Marketing delivers high-performance web development services including responsive websites, custom web applications, CMS integration, and e-commerce solutions. Trusted by brands in India and the UK for digital transformation."
+        keywords="web development India, custom website UK, responsive websites, e-commerce development, CMS solutions, frontend backend development, scalable web apps, website development company, professional web developers"
+        url={fullUrl}
+      />
+
       <ServiceBanner
         title={title}
         desc={desc}
@@ -49,19 +65,7 @@ const WebDevelopment = () => {
 
       <div className="webDevelopment-teams">
         <div className="webDevelopment-teams-container">
-          <div className="webDevelopment-teams-top">
-            <p>
-              <div className="dot"></div>Our Values Clients
-            </p>
-          </div>
-
-          <div className="webDevelopment-cards">
-            {aboutCards.map((item, index) => (
-              <div className="webDevelopment-card" key={index}>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
+          <BrandCards />
         </div>
       </div>
 
@@ -69,7 +73,8 @@ const WebDevelopment = () => {
         <div className="webDevelopment-user-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/react-clinson.jpg"
-            alt=""
+            alt="web-image"
+            loading="lazy"
           />
         </div>
         <div className="webDevelopment-user-right">
@@ -123,7 +128,7 @@ const WebDevelopment = () => {
             {graphicCards.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="graphicDesign-studies-card">
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt="work-image" loading="lazy" />
                   <h2>{item.title}</h2>
                   <div className="graphicDesign-studies-desc">
                     <span>{item.desc}</span>

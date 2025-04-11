@@ -1,8 +1,22 @@
+import { useLocation } from "react-router-dom";
 import "./Contact.scss";
 
+import SEO from "../../components/SEO/SEO";
+
 const Contact = () => {
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="contact">
+      <SEO
+        title="Contact Us | WingStar Marketing - India & UK Digital Marketing Agency"
+        description="Get in touch with WingStar Marketing for SEO, branding, web development, social media marketing, and more. Reach out to our teams in India or the UK today!"
+        keywords="contact wingstar marketing, seo agency contact, digital marketing help, talk to experts, marketing agency India, UK marketing contact, web design consultation"
+        url={fullUrl}
+      />
       <div className="contact-top">
         <div className="contact-top-left">
           <div className="contact-top-left-top">
@@ -93,12 +107,13 @@ const Contact = () => {
 
             <div className="form-group">
               <label htmlFor="">How much is your budget? *</label>
-              <input type="text" name="" id=""/>
+              <input type="text" name="" id="" />
             </div>
 
             <div className="form-group">
               <label htmlFor="">
-                How did you hear about us? <span className="optional">(Optional)</span>
+                How did you hear about us?{" "}
+                <span className="optional">(Optional)</span>
               </label>
 
               <select name="" id="">

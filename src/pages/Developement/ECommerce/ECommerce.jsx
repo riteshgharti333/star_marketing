@@ -16,6 +16,9 @@ import { useRef, useState } from "react";
 import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
 import { ecommerceServiceData } from "../../../assets/serviceSliderData/devSliderData";
 import { ecommerceDevelopmentApproachData } from "../../../assets/approachData/devApprochData";
+import BrandCards from "../../../components/BrandCards/BrandCards";
+import SEO from "../../../components/SEO/SEO";
+import { useLocation } from "react-router-dom";
 
 const ECommerce = () => {
   const title =
@@ -29,8 +32,20 @@ const ECommerce = () => {
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="eCommerce">
+      <SEO
+        title="E-commerce Development | WingStar Marketing - Scalable Online Stores for India & UK"
+        description="WingStar Marketing builds powerful, scalable e-commerce websites tailored to your brand. From Shopify to custom solutions, we deliver conversion-focused online stores for businesses in India and the UK."
+        keywords="ecommerce website development, Shopify experts India, WooCommerce stores, online shop design, ecommerce developers UK, custom online store, scalable ecommerce platform, ecommerce UX design"
+        url={fullUrl}
+      />
+
       <ServiceBanner
         title={title}
         desc={desc}
@@ -65,19 +80,7 @@ const ECommerce = () => {
 
       <div className="eCommerce-teams">
         <div className="eCommerce-teams-container">
-          <div className="eCommerce-teams-top">
-            <p>
-              <div className="dot"></div>Our Values Clients
-            </p>
-          </div>
-
-          <div className="eCommerce-cards">
-            {aboutCards.map((item, index) => (
-              <div className="eCommerce-card" key={index}>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
+          <BrandCards />
         </div>
       </div>
 
@@ -104,7 +107,8 @@ const ECommerce = () => {
         <div className="eCommerce-user-right">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
-            alt=""
+            alt="e-commerce-image"
+            loading="lazy"
           />
         </div>
       </div>
@@ -123,7 +127,8 @@ const ECommerce = () => {
           <div className="eCommerce-content-card">
             <img
               src="https://www.bluefrontier.co.uk/images/case-studies/neighbourly/neighbourly-cs-header.jpg"
-              alt=""
+              alt="e-commerce-image"
+              loading="lazy"
             />
             <h2>TK Producton Film</h2>
             <div className="eCommerce-content-card-desc">
@@ -133,7 +138,8 @@ const ECommerce = () => {
           <div className="eCommerce-content-card">
             <img
               src="https://www.bluefrontier.co.uk/images/case-studies/neighbourly/neighbourly-cs-header.jpg"
-              alt=""
+              alt="e-commerce-image"
+              loading="lazy"
             />
             <h2>TK Producton Film</h2>
             <div className="eCommerce-content-card-desc">

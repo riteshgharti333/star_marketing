@@ -1,5 +1,7 @@
-import { aboutSlide } from "../../../assets/data";
 import "./AboutSlider.scss";
+
+import { aboutSlide } from "../../../assets/data";
+
 
 const AboutSlider = () => {
   return (
@@ -8,7 +10,7 @@ const AboutSlider = () => {
         <div className="aboutSlider-track">
           {[...aboutSlide, ...aboutSlide].map((item, index) => (
             <div className="aboutslider-img" key={index}>
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="team-image" loading="lazy" />
             </div>
           ))}
         </div>
@@ -18,7 +20,7 @@ const AboutSlider = () => {
         <div className="aboutSlider-track">
           {[...aboutSlide, ...aboutSlide].map((item, index) => (
             <div className="aboutslider-img" key={index}>
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="team-image" loading="lazy" />
             </div>
           ))}
         </div>

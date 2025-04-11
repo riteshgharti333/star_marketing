@@ -8,6 +8,9 @@ import { aboutCards } from "../../../assets/data";
 import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
 import { testingServiceData } from "../../../assets/serviceSliderData/devSliderData";
 import { testingApproachData } from "../../../assets/approachData/devApprochData";
+import BrandCards from "../../../components/BrandCards/BrandCards";
+import SEO from "../../../components/SEO/SEO";
+import { useLocation } from "react-router-dom";
 
 const Testing = () => {
   const title =
@@ -16,8 +19,20 @@ const Testing = () => {
     "We offer end-to-end testing services—from functionality and usability to performance and security—ensuring your digital products deliver a seamless and bug-free user experience.";
   const smdesc = "Testing";
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="testing">
+      <SEO
+        title="Website & App Testing | WingStar Marketing - Quality Assurance Experts India & UK"
+        description="Ensure flawless user experiences with WingStar Marketing's comprehensive testing services. We provide website and mobile app testing, QA audits, performance testing, and bug resolution across India and the UK."
+        keywords="website testing, app testing, quality assurance, QA services, performance testing, bug fixing, UI/UX testing, QA agency India, UK testing experts"
+        url={fullUrl}
+      />
+
       <ServiceBanner
         title={title}
         desc={desc}
@@ -52,19 +67,7 @@ const Testing = () => {
 
       <div className="testing-teams">
         <div className="testing-teams-container">
-          <div className="testing-teams-top">
-            <p>
-              <div className="dot"></div>Our Values Clients
-            </p>
-          </div>
-
-          <div className="testing-cards">
-            {aboutCards.map((item, index) => (
-              <div className="testing-card" key={index}>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
+          <BrandCards />
         </div>
       </div>
 
@@ -92,7 +95,8 @@ const Testing = () => {
         <div className="testing-user-right">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
-            alt=""
+            alt="testing-image"
+            loading="lazy"
           />
         </div>
       </div>

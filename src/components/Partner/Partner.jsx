@@ -30,7 +30,7 @@ const Partner = () => {
           {partnerCards.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="partner-slider-card">
-                <img src={item.img} alt="" />
+                <img src={item.img} alt="brand-image" loading="lazy" />
               </div>
             </SwiperSlide>
           ))}

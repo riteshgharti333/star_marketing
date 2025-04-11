@@ -16,6 +16,9 @@ import { useRef, useState } from "react";
 import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
 import { supportAndMaintenanceServiceData } from "../../../assets/serviceSliderData/devSliderData";
 import { supportAndMaintenanceApproachData } from "../../../assets/approachData/devApprochData";
+import BrandCards from "../../../components/BrandCards/BrandCards";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
 
 const Support = () => {
   const title =
@@ -29,8 +32,20 @@ const Support = () => {
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="support">
+      <SEO
+        title="Support & Maintenance | WingStar Marketing - Ongoing Website & App Care India & UK"
+        description="WingStar Marketing provides reliable support and maintenance services for websites and mobile apps. Ensure your digital platforms stay secure, updated, and fully optimized with our expert team in India and the UK."
+        keywords="website support, app maintenance, technical support, digital platform upkeep, website care plans, mobile app support, maintenance agency India, UK web support services"
+        url={fullUrl}
+      />
+
       <ServiceBanner
         title={title}
         desc={desc}
@@ -67,19 +82,7 @@ const Support = () => {
 
       <div className="support-teams">
         <div className="support-teams-container">
-          <div className="support-teams-top">
-            <p>
-              <div className="dot"></div>Our Values Clients
-            </p>
-          </div>
-
-          <div className="support-cards">
-            {aboutCards.map((item, index) => (
-              <div className="support-card" key={index}>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
+          <BrandCards />
         </div>
       </div>
 
@@ -111,7 +114,8 @@ const Support = () => {
         <div className="support-user-right">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
-            alt=""
+            alt="support-image"
+            loading="lazy"
           />
         </div>
       </div>

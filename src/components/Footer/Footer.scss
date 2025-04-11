@@ -116,6 +116,7 @@
   .footer-center {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @include lg {
       flex-wrap: wrap;

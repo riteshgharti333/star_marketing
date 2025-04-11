@@ -1,22 +1,19 @@
 import "./HomeBanner.scss";
 
-import banner from "../../assets/images/banner.png";
-import { bannerCards } from "../../assets/data";
+import banner_video from "../../assets/bannerVideo/bannervideo.mp4";
+import { brandCards } from "../../assets/serviceSliderData/partnerCards";
 
 function HomeBanner() {
   return (
     <div className="homeBanner">
-      <img src={banner} alt="" />
+      <div className="banner-video">
+        <video src={banner_video} autoPlay loop muted playsInline />
 
-      <div className="homeBanner-video">
-        <div className="homeBanner-video-left">
+        <div className="homeBanner-video-desc">
           <p>
             <div className="dot"></div>Your digital partner
           </p>
           <h3>We accelerate ambition, grow brands</h3>
-        </div>
-        <div className="homeBanner-video-right">
-          <img src={banner} alt="" />
         </div>
       </div>
 
@@ -38,9 +35,9 @@ function HomeBanner() {
             </p>
             <p>
               With one of the largest ranges of services under one roof in the
-              UK, Mumbai, Sikar. we are your trusted partner for all things digital. Tell us
-              about your goals and we’ll show you how we can achieve them.
-              Whatever your project, we’d love to be involved.
+              UK, Mumbai, Sikar. we are your trusted partner for all things
+              digital. Tell us about your goals and we’ll show you how we can
+              achieve them. Whatever your project, we’d love to be involved.
             </p>
           </div>
         </div>
@@ -48,9 +45,9 @@ function HomeBanner() {
 
       <div className="homeBanner-cards-container">
         <div className="homeBanner-cards-track">
-          {[...bannerCards, ...bannerCards].map((item, index) => (
+          {[...brandCards, ...brandCards].map((item, index) => (
             <div className="homeBanner-card" key={index}>
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="brand-image" loading="lazy" />
             </div>
           ))}
         </div>

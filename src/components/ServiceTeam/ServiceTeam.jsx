@@ -46,7 +46,8 @@ const ServiceTeam = ({ dev }) => {
               <div className="graphicDesign-slider-card">
                 <img
                   src="https://www.bluefrontier.co.uk/images/staff-profile-images/batch%201/Rachel%20Oliver%20List.jpg"
-                  alt=""
+                  alt="team-image"
+                  loading="lazy"
                 />
                 <h4>John Doe</h4>
                 <p>Software Engineer</p>

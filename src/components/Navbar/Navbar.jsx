@@ -68,7 +68,7 @@ const Navbar = () => {
       }`}
     >
       <div className="navbar-left">
-        <img src={logo} alt="" />
+        <img src={logo} alt="star marketing image" loading="lazy" />
       </div>
 
       <div className="nav-mobile-menu">
@@ -112,7 +112,8 @@ const Navbar = () => {
                 <div className="nav-card-right">
                   <img
                     src="https://www.bluefrontier.co.uk/images/menu/digital-horizons-menu-block.jpg"
-                    alt=""
+                    alt="nav-card"
+                    loading="lazy"
                   />
                   <p>Download our latest free whitepaper</p>
                   <p>
@@ -154,7 +155,8 @@ const Navbar = () => {
                 <div className="nav-card-right">
                   <img
                     src="https://www.bluefrontier.co.uk/images/menu/digital-horizons-menu-block.jpg"
-                    alt=""
+                    alt="nav-card"
+                    loading="lazy"
                   />
                   <p>Download our latest free whitepaper</p>
                   <p>
@@ -197,7 +199,8 @@ const Navbar = () => {
                 <div className="nav-card-right">
                   <img
                     src="https://www.bluefrontier.co.uk/images/menu/digital-horizons-menu-block.jpg"
-                    alt=""
+                    alt="nav-card"
+                    loading="lazy"
                   />
                   <p>Download our latest free whitepaper</p>
                   <p>

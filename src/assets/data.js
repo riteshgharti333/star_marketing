@@ -82,6 +82,18 @@ export const partnerCards = [
   {
     img: partner_img4,
   },
+  {
+    img: partner_img1,
+  },
+  {
+    img: partner_img2,
+  },
+  {
+    img: partner_img3,
+  },
+  {
+    img: partner_img4,
+  },
 ];
 
 ////////////

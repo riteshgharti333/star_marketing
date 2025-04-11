@@ -3,7 +3,9 @@ import "./Founder.scss";
 import founder_img from "../../assets/images/founder.jpeg";
 
 import { FaUserGraduate, FaCode, FaSmile, FaChartLine } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+import SEO from "../../components/SEO/SEO";
 
 const founderCards = [
   {
@@ -25,8 +27,19 @@ const founderCards = [
 ];
 
 const Founder = () => {
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
   return (
     <div className="founder">
+      <SEO
+        title="Founder | WingStar Marketing - Visionary Leadership Behind Our Success"
+        description="Meet the founder of WingStar Marketing — the visionary leader driving innovation, strategy, and excellence in digital marketing across India and the UK."
+        keywords="wingstar marketing founder, company leadership, digital marketing leader, visionary entrepreneur, india marketing founder, uk digital expert"
+        url={fullUrl}
+      />
+
       <section class="founder-section">
         <div class="floating-shapes">
           <div></div>
@@ -61,10 +74,9 @@ const Founder = () => {
                 faced betrayal and fraud, but never gave up. These experiences
                 only made his vision clearer and his determination stronger.
               </p>
-              
             </div>
             <div className="founder-content-right">
-              <img src={founder_img} alt="" />
+              <img src={founder_img} alt="founder-image" loading="lazy" />
             </div>
           </div>
 
@@ -98,7 +110,9 @@ const Founder = () => {
               passion, perseverance, and purpose.
             </p>
 
-            <Link to={"/contact-us"} className="founder-btn">Connect With Us</Link>
+            <Link to={"/contact-us"} className="founder-btn">
+              Connect With Us
+            </Link>
           </div>
         </div>
         <div class="custom-wave"></div>

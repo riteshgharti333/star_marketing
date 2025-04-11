@@ -8,8 +8,6 @@ const Service = ({ approachData }) => {
   const [scrollDirection, setScrollDirection] = useState("down");
   const cardRefs = useRef([]);
 
-  console.log(approachData)
-
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -100,7 +98,8 @@ const Service = ({ approachData }) => {
                 <div className="service-card-right">
                   <img
                     src="https://www.bluefrontier.co.uk/images/services/development/discovery-and-planning.jpg"
-                    alt=""
+                    alt="service-image"
+                    loading="lazy"
                   />
                 </div>
               </motion.div>

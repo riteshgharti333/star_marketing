@@ -14,6 +14,8 @@ import ServiceOption from "../../../components/ServiceOption/ServiceOption";
 import { seoServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
 import ServiceBanefits from "../../../components/ServiceBanefits/ServiceBanefits";
 import { seoBenefitData } from "../../../assets/serviceBenefitData/serviceBenefitData";
+import SEO from "../../../components/SEO/SEO";
+import { useLocation } from "react-router-dom";
 
 const Seo = () => {
   const title =
@@ -29,8 +31,20 @@ const Seo = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="seo">
+      <SEO
+        title="SEO Services | WingStar Marketing - Rank Higher in India & UK"
+        description="Boost your online visibility with WingStar Marketing's expert SEO services. We offer on-page SEO, off-page SEO, technical SEO, and local SEO tailored for businesses in India and the UK."
+        keywords="SEO services, on-page SEO, off-page SEO, technical SEO, local SEO, search engine optimization, SEO agency India, SEO company UK, rank higher on Google"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="seo-top">
@@ -43,7 +57,8 @@ const Seo = () => {
         <div className="seo-user-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/digital/seo/seo-stats.jpg"
-            alt=""
+            alt="seo-image"
+            loading="lazy"
           />
         </div>
         <div className="seo-user-right">
@@ -80,7 +95,6 @@ const Seo = () => {
       <div className="seo-teams">
         <div className="seo-teams-container">
           <ServiceOption serviceOption={seoServiceOption} />
-
         </div>
       </div>
       <div className="marketing-empty"></div>

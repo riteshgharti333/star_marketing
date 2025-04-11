@@ -9,6 +9,8 @@ import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
 import { FaArrowUpLong } from "react-icons/fa6";
 import { croServiceData } from "../../../assets/serviceSliderData/markSliderData";
 import { croApproachData } from "../../../assets/approachData/marketingApproachData";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
 
 const Cro = () => {
   const title =
@@ -18,8 +20,20 @@ const Cro = () => {
 
   const smdesc = "Conversion Rate Optimisiation";
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="cro">
+      <SEO
+        title="Conversion Rate Optimisation (CRO) Services | WingStar Marketing - India & UK"
+        description="Maximize your website's potential with WingStar Marketing’s CRO services. We optimize user experience, design, and funnels to convert more visitors into loyal customers across India and the UK."
+        keywords="conversion rate optimisation, CRO services, boost conversions, website optimization, UX design, landing page optimization, digital growth, India CRO, UK marketing agency"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="cro-top">
@@ -30,7 +44,8 @@ const Cro = () => {
         <div className="cro-approach-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt=""
+            alt="cro-image"
+            loading="lazy"
           />
         </div>
         <div className="cro-approach-right">

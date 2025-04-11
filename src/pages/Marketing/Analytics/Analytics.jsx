@@ -12,6 +12,8 @@ import { dataAnalyticsReportingServiceData } from "../../../assets/serviceSlider
 import { analyticApproachData } from "../../../assets/approachData/marketingApproachData";
 import ServiceOption from "../../../components/ServiceOption/ServiceOption";
 import { dataAnalyticsServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
 
 const Analytics = () => {
   const title = "Unlock actionable insights with data analytics and reporting";
@@ -26,8 +28,20 @@ const Analytics = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="analytics">
+      <SEO
+        title="Data Analytics & Reporting Services | WingStar Marketing - India & UK"
+        description="Unlock powerful insights with WingStar Marketing’s data analytics and reporting solutions. We track KPIs, analyze campaign performance, and deliver actionable reports to fuel smarter marketing decisions."
+        keywords="data analytics services, marketing reporting, campaign performance, business intelligence, KPI tracking, marketing analytics India, UK data insights, digital marketing reports"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="analytics-top">
@@ -41,7 +55,8 @@ const Analytics = () => {
         <div className="analytics-approach-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt=""
+            alt="analytic-image"
+            loading="lazy"
           />
         </div>
         <div className="analytics-approach-right">
@@ -79,7 +94,8 @@ const Analytics = () => {
             <div className="analytics-teams-reporting-left">
               <img
                 src="https://www.bluefrontier.co.uk/images/services/digital/analyticsreporting/integrated-report.jpg"
-                alt=""
+                alt="analytic-image"
+                loading="lazy"
               />
             </div>
 

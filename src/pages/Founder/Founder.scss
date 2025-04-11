@@ -1,5 +1,13 @@
 @use "../../styles/responsive.scss" as *;
 
+$primary: $primary-color;
+$secondary: #3a0ca3;
+$accent: #4cc9f0;
+$dark: #1a1a2e;
+$light: #f8f9fa;
+$gradient: linear-gradient(135deg, $primary, $secondary);
+$glass-effect: rgba(255, 255, 255, 0.85);
+
 .founder {
   background: #f1f1f1;
   .founder-section {
@@ -73,8 +81,6 @@
               font-size: 16px;
             }
           }
-
-       
         }
         .founder-content-right {
           flex: 1;
@@ -266,14 +272,6 @@
         font-size: 22px;
       }
     }
-
-    $primary: $primary-color;
-    $secondary: #3a0ca3;
-    $accent: #4cc9f0;
-    $dark: #1a1a2e;
-    $light: #f8f9fa;
-    $gradient: linear-gradient(135deg, $primary, $secondary);
-    $glass-effect: rgba(255, 255, 255, 0.85);
 
     .founder-choose-cards {
       gap: 2.5rem;

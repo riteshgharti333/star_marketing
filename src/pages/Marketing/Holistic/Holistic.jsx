@@ -13,6 +13,8 @@ import ServiceOption from "../../../components/ServiceOption/ServiceOption";
 import { holisticMarketingServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
 import ServiceBanefits from "../../../components/ServiceBanefits/ServiceBanefits";
 import { holisticMarketingBenefitData } from "../../../assets/serviceBenefitData/serviceBenefitData";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
 
 const Holistic = () => {
   const title =
@@ -28,8 +30,20 @@ const Holistic = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="holistic">
+      <SEO
+        title="Holistic Marketing Services | WingStar Marketing - 360° Branding & Growth"
+        description="WingStar Marketing delivers holistic marketing solutions that unify SEO, branding, social media, and content strategies for impactful and sustainable business growth across India and the UK."
+        keywords="holistic marketing, 360 marketing, integrated marketing strategy, branding and SEO, complete digital strategy, India marketing agency, UK digital growth"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="holistic-top">
@@ -42,7 +56,8 @@ const Holistic = () => {
         <div className="holistic-user-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt=""
+            alt="holistic-image"
+            loading="lazy"
           />
         </div>
         <div className="holistic-user-right">

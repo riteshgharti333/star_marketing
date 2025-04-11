@@ -12,6 +12,8 @@ import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
 import { productionServiceData } from "../../../assets/serviceSliderData/serviceSliderData";
+import SEO from "../../../components/SEO/SEO";
+import { useLocation } from "react-router-dom";
 
 const Production = () => {
   const title =
@@ -26,8 +28,20 @@ const Production = () => {
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="production">
+      <SEO
+        title="Production Services | WingStar Marketing - Video, Photo & Creative Content in India & UK"
+        description="WingStar Marketing offers high-quality production services including corporate video production, product shoots, creative content creation, and commercial photography. Serving brands across India and the UK with professional visual storytelling."
+        keywords="video production India, corporate shoot UK, content creation agency, product photography, creative production house, commercial video services, professional shoots, visual content agency, marketing production services"
+        url={fullUrl}
+      />
+
       <ServiceBanner
         title={title}
         desc={desc}
@@ -44,7 +58,8 @@ const Production = () => {
           <div className="production-user-container-top">
             <img
               src="https://www.bluefrontier.co.uk/images/services/digital/photography/photography-grid.jpg"
-              alt=""
+              alt="production-image"
+              loading="lazy"
             />
           </div>
           <div className="production-user-container-bottom">
@@ -69,7 +84,8 @@ const Production = () => {
             <div className="production-user-right">
               <img
                 src="https://www.bluefrontier.co.uk/images/services/design/graphicdesign/graphic-design-content.jpg"
-                alt=""
+                alt="production-image"
+                loading="lazy"
               />
             </div>
           </div>
@@ -110,7 +126,7 @@ const Production = () => {
             {graphicCards.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="production-studies-card">
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt="work-image" loading="lazy" />
                   <h2>{item.title}</h2>
                   <div className="production-studies-desc">
                     <span>{item.desc}</span>

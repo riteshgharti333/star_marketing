@@ -14,6 +14,8 @@ import ServiceOption from "../../../components/ServiceOption/ServiceOption";
 import { socialMediaServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
 import ServiceBanefits from "../../../components/ServiceBanefits/ServiceBanefits";
 import { socialMediaAdvertisingBenefitData } from "../../../assets/serviceBenefitData/serviceBenefitData";
+import SEO from "../../../components/SEO/SEO";
+import { useLocation } from "react-router-dom";
 
 const Social = () => {
   const title =
@@ -29,8 +31,20 @@ const Social = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="social">
+      <SEO
+        title="Social Media Marketing | WingStar Marketing - Boost Your Brand in India & UK"
+        description="Engage and grow your audience with WingStar Marketing’s expert social media marketing services. We manage campaigns on Instagram, Facebook, LinkedIn, and more for impactful brand presence."
+        keywords="social media marketing, Instagram marketing, Facebook ads, LinkedIn strategy, social media agency, brand awareness, SMM India, SMM UK, digital marketing"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="social-top">
@@ -43,7 +57,8 @@ const Social = () => {
         <div className="social-approach-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt=""
+            alt="social-image"
+            loading="lazy"
           />
         </div>
         <div className="social-approach-right">

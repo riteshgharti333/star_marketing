@@ -11,7 +11,6 @@ import Production from "./pages/DesignService/Production/Production";
 import WebDevelopment from "./pages/Developement/WebDevelopment/WebDevelopment";
 import SweDevelopment from "./pages/Developement/SweDevelopment/SweDevelopment";
 import ECommerce from "./pages/Developement/ECommerce/ECommerce";
-import AppDevelopemenr from "./pages/Developement/AppDevelopement/AppDevelopement";
 import AppDevelopement from "./pages/Developement/AppDevelopement/AppDevelopement";
 import Support from "./pages/Developement/Support/Support";
 import Testing from "./pages/Developement/Testing/Testing";
@@ -28,29 +27,25 @@ import { useEffect } from "react";
 import Contact from "./pages/Contact/Contact";
 import Founder from "./pages/Founder/Founder";
 
+import { initGA } from "./utils/analytics";
+import ScrollToTopAndTrack from "./components/ScrollToTopAndTrack";
+
 function App() {
-  const ScrollToTop = () => {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [pathname]);
-
-    return null;
-  };
+  useEffect(() => {
+    initGA();
+  }, []);
 
   return (
     <div className="app">
       <BrowserRouter>
-      {/* <ScrollToTop /> */}
+        <ScrollToTopAndTrack />
+
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/founder" element={<Founder />} />
-
-
 
           {/* Design */}
           <Route path="/design/web-design" element={<WebDesign />} />
@@ -78,7 +73,10 @@ function App() {
           />
 
           <Route path="/development/testing" element={<Testing />} />
-          <Route path="/development/wordpress-development" element={<Wordpress />} />
+          <Route
+            path="/development/wordpress-development"
+            element={<Wordpress />}
+          />
 
           {/* Marketing */}
           <Route path="/marketing/marketing-strategy" element={<Marketing />} />
@@ -88,17 +86,15 @@ function App() {
           <Route path="/marketing/paid-advertising" element={<Advertising />} />
           <Route path="/marketing/social-media" element={<Social />} />
           <Route path="/marketing/content" element={<Content />} />
-          <Route path="/marketing/conversion-rate-optimisation" element={<Cro />} />
-          <Route path="/marketing/data-analytics-and-reporting" element={<Analytics />} />
-          
-
-
-
-
-
+          <Route
+            path="/marketing/conversion-rate-optimisation"
+            element={<Cro />}
+          />
+          <Route
+            path="/marketing/data-analytics-and-reporting"
+            element={<Analytics />}
+          />
         </Routes>
-
-        
 
         <Footer />
       </BrowserRouter>

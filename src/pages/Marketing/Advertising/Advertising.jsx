@@ -14,6 +14,8 @@ import ServiceOption from "../../../components/ServiceOption/ServiceOption";
 import { paidAdvertisingServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
 import ServiceBanefits from "../../../components/ServiceBanefits/ServiceBanefits";
 import { paidAdvertisingBenefitData } from "../../../assets/serviceBenefitData/serviceBenefitData";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
 
 const Advertising = () => {
   const title = "Maximize your ROI with data-driven paid advertising campaigns";
@@ -28,8 +30,20 @@ const Advertising = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="advertising">
+      <SEO
+        title="Paid Advertising Services | WingStar Marketing - PPC Experts India & UK"
+        description="Maximize your ROI with WingStar Marketing’s expert paid advertising solutions. We manage Google Ads, Facebook Ads, Instagram Ads, and more to drive targeted traffic in India & the UK."
+        keywords="paid advertising, PPC services, Google Ads, Facebook Ads, Instagram Ads, online advertising, digital ads India, paid marketing UK, advertising agency"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="advertising-top">
@@ -42,7 +56,8 @@ const Advertising = () => {
         <div className="advertising-approach-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt=""
+            alt="marketing-image"
+            loading="lazy"
           />
         </div>
         <div className="advertising-approach-right">
@@ -102,7 +117,6 @@ const Advertising = () => {
       <div className="advertising-teams">
         <div className="advertising-teams-container">
           <ServiceOption serviceOption={paidAdvertisingServiceOption} />
-
         </div>
       </div>
       <div className="marketing-empty"></div>

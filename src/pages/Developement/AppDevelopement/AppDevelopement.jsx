@@ -9,6 +9,9 @@ import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
 import { appDevelopmentServiceData } from "../../../assets/serviceSliderData/devSliderData";
 import ServiceOption from "../../../components/ServiceOption/ServiceOption";
 import { appServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
+import BrandCards from "../../../components/BrandCards/BrandCards";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
 
 const AppDevelopement = () => {
   const title = "Turn your vision into powerful mobile apps that users love";
@@ -17,8 +20,20 @@ const AppDevelopement = () => {
 
   const smdesc = "Mobile App Development";
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="appDevelopement">
+      <SEO
+        title="App Development | WingStar Marketing - Android & iOS Solutions for India & UK"
+        description="WingStar Marketing offers cutting-edge mobile app development services for Android and iOS platforms. We build performance-driven, user-friendly apps tailored to your business needs across India and the UK."
+        keywords="mobile app development, android app development, iOS app developers, cross-platform apps, custom mobile solutions, app development India, UK mobile app agency, business apps"
+        url={fullUrl}
+      />
+
       <ServiceBanner
         title={title}
         desc={desc}
@@ -55,7 +70,8 @@ const AppDevelopement = () => {
         <div className="appDevelopement-quality-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt=""
+            alt="app-dev-image"
+            loading="lazy"
           />
         </div>
 
@@ -83,19 +99,7 @@ const AppDevelopement = () => {
         <div className="appDevelopement-teams-container">
           <ServiceOption serviceOption={appServiceOption} />
 
-          <div className="appDevelopement-teams-top">
-            <p>
-              <div className="dot"></div>Our Values Clients
-            </p>
-          </div>
-
-          <div className="appDevelopement-cards">
-            {aboutCards.map((item, index) => (
-              <div className="appDevelopement-card" key={index}>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
+          <BrandCards />
         </div>
       </div>
 
@@ -120,7 +124,8 @@ const AppDevelopement = () => {
         <div className="appDevelopement-user-right">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
-            alt=""
+            alt="app-dev-image"
+            loading="lazy"
           />
         </div>
       </div>

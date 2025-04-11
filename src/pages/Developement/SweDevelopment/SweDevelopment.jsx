@@ -13,6 +13,10 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
 import { softwareDevelopmentServiceData } from "../../../assets/serviceSliderData/devSliderData";
 
+import BrandCards from "../../../components/BrandCards/BrandCards";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
+
 const SweDevelopment = () => {
   const title =
     "Custom software solutions built to solve real business challenges";
@@ -25,8 +29,20 @@ const SweDevelopment = () => {
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="sweDevelopment">
+      <SEO
+        title="Software Development Services | WingStar Marketing - Custom Solutions for Businesses India & UK"
+        description="WingStar Marketing offers end-to-end software development services including SaaS platforms, enterprise software, mobile and desktop apps. Partner with us for scalable and secure software tailored to your business needs across India and the UK."
+        keywords="custom software development, SaaS solutions, enterprise software India, software company UK, business software, mobile app development, desktop software, scalable software solutions, software engineers"
+        url={fullUrl}
+      />
+
       <ServiceBanner
         title={title}
         desc={desc}
@@ -45,7 +61,8 @@ const SweDevelopment = () => {
         <div className="sweDevelopment-user-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/development-toby.jpg"
-            alt=""
+            alt="software-development-image"
+            loading="lazy"
           />
         </div>
         <div className="sweDevelopment-user-right">
@@ -74,19 +91,7 @@ const SweDevelopment = () => {
 
       <div className="sweDevelopment-teams">
         <div className="sweDevelopment-teams-container">
-          <div className="sweDevelopment-teams-top">
-            <p>
-              <div className="dot"></div>Our Values Clients
-            </p>
-          </div>
-
-          <div className="sweDevelopment-cards">
-            {aboutCards.map((item, index) => (
-              <div className="sweDevelopment-card" key={index}>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
+          <BrandCards />
         </div>
       </div>
 
@@ -124,7 +129,7 @@ const SweDevelopment = () => {
             {graphicCards.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="sweDevelopment-studies-card">
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt="work-image" loading="lazy" />
                   <h2>{item.title}</h2>
                   <div className="sweDevelopment-studies-desc">
                     <span>{item.desc}</span>

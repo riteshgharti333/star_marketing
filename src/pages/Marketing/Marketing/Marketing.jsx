@@ -14,6 +14,9 @@ import ServiceOption from "../../../components/ServiceOption/ServiceOption";
 import { marketingStrategyServiceOption } from "../../../assets/serviceOptionData/serviceOptionData";
 import ServiceBanefits from "../../../components/ServiceBanefits/ServiceBanefits";
 import { marketingBanefitData } from "../../../assets/serviceBenefitData/serviceBenefitData";
+import { useLocation } from "react-router-dom";
+
+import SEO from "../../../components/SEO/SEO";
 
 const Marketing = () => {
   const title = "Strategic marketing that drives growth and maximizes ROI";
@@ -28,8 +31,20 @@ const Marketing = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="marketing">
+      <SEO
+        title="Marketing Strategy Services | WingStar Marketing - India & UK Experts"
+        description="WingStar Marketing provides data-driven marketing strategy services to help businesses grow. From audience research to campaign planning, we craft powerful strategies for success in India and the UK."
+        keywords="marketing strategy, brand strategy, digital marketing plan, campaign planning, audience research, go-to-market strategy, India marketing, UK marketing consultants"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} dot="mark" />
 
       <div className="marketing-top">
@@ -42,7 +57,8 @@ const Marketing = () => {
         <div className="marketing-user-left">
           <img
             src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt=""
+            alt="marketing-image"
+            loading="lazy"
           />
         </div>
         <div className="marketing-user-right">
@@ -99,7 +115,8 @@ const Marketing = () => {
         <div className="marketing-service-right">
           <img
             src="https://www.bluefrontier.co.uk/images/services/digital/marketingstrategy/other-strategy-offerings.jpg"
-            alt=""
+            alt="marketing-image"
+            loading="lazy"
           />
         </div>
       </div>

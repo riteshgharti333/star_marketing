@@ -3,6 +3,8 @@ import "./WebDesign.scss";
 import ServiceBanner from "../../../components/ServiceBanner/ServiceBanner";
 import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
 import { webServiceData } from "../../../assets/serviceSliderData/serviceSliderData";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
 
 const WebDesign = () => {
   const title =
@@ -12,8 +14,20 @@ const WebDesign = () => {
 
   const smdesc = "Web Design";
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="webDesign">
+      <SEO
+        title="Website Design Services | WingStar Marketing - Creative, Modern, Responsive Web Design in India & UK"
+        description="WingStar Marketing specializes in high-converting, SEO-optimized website design services. We build responsive, user-friendly, and custom websites tailored for businesses in India and the UK. Get your professional web presence with WingStar today."
+        keywords="website design India, website design UK, responsive web design, custom web development, business website, UI UX design, professional website, creative web design, mobile-friendly websites, sikar web agency, london web designers, mumbai website developers"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
 
       <div className="webDesign-content">
@@ -36,7 +50,8 @@ const WebDesign = () => {
             <div className="webDesign-content2-card">
               <img
                 src="https://www.bluefrontier.co.uk/images/case-studies/neighbourly/neighbourly-cs-header.jpg"
-                alt=""
+                alt="web-design-image"
+                loading="lazy"
               />
               <h2>TK Producton Film</h2>
               <div className="webDesign-content2-card-desc">
@@ -46,7 +61,8 @@ const WebDesign = () => {
             <div className="webDesign-content2-card">
               <img
                 src="https://www.bluefrontier.co.uk/images/case-studies/neighbourly/neighbourly-cs-header.jpg"
-                alt=""
+                alt="web-design-image"
+                loading="lazy"
               />
               <h2>TK Producton Film</h2>
               <div className="webDesign-content2-card-desc">
@@ -56,7 +72,8 @@ const WebDesign = () => {
             <div className="webDesign-content2-card">
               <img
                 src="https://www.bluefrontier.co.uk/images/case-studies/neighbourly/neighbourly-cs-header.jpg"
-                alt=""
+                alt="web-design-image"
+                loading="lazy"
               />
               <h2>TK Producton Film</h2>
               <div className="webDesign-content2-card-desc">
@@ -94,7 +111,8 @@ const WebDesign = () => {
           <div className="webDesign-user-right">
             <img
               src="https://www.bluefrontier.co.uk/images/services/design/graphicdesign/graphic-design-content.jpg"
-              alt=""
+              alt="web-design-image"
+              loading="lazy"
             />
           </div>
         </div>

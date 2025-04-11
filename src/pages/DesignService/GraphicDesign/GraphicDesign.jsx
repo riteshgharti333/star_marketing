@@ -12,6 +12,9 @@ import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useRef, useState } from "react";
 import { graphicServiceData } from "../../../assets/serviceSliderData/serviceSliderData";
+import BrandCards from "../../../components/BrandCards/BrandCards";
+import { useLocation } from "react-router-dom";
+import SEO from "../../../components/SEO/SEO";
 
 const GraphicDesign = () => {
   const title =
@@ -27,8 +30,20 @@ const GraphicDesign = () => {
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
+  const location = useLocation();
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarmarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
+
   return (
     <div className="graphicDesign">
+      <SEO
+        title="Graphic Design Services | WingStar Marketing - Logos, Branding & Creatives India & UK"
+        description="WingStar Marketing delivers professional graphic design solutions including logo creation, brand identity, social media creatives, brochures, and banners. Serving businesses in India and the UK with impactful visual storytelling."
+        keywords="graphic design India, branding design UK, logo design, social media creatives, visual branding, brochure design, flyer design, poster design, creative agency India, london graphic designers, mumbai design agency, brand identity design"
+        url={fullUrl}
+      />
+
       <ServiceBanner title={title} desc={desc} smdesc={smdesc} />
 
       <div className="graphicDesign-content">
@@ -62,6 +77,7 @@ const GraphicDesign = () => {
               <img
                 src="https://www.bluefrontier.co.uk/images/services/design/workexamples/lila-story-cards.jpg"
                 alt="Lila Connect"
+                loading="lazy"
               />
             )}
 
@@ -69,6 +85,7 @@ const GraphicDesign = () => {
               <img
                 src="https://www.bluefrontier.co.uk/images/services/design/workexamples/arias-science-passes.jpg"
                 alt="Aria Science"
+                loading="lazy"
               />
             )}
 
@@ -76,6 +93,7 @@ const GraphicDesign = () => {
               <img
                 src="https://www.bluefrontier.co.uk/images/services/design/workexamples/lila-story-cards.jpg"
                 alt="Greensleevless"
+                loading="lazy"
               />
             )}
           </div>
@@ -107,26 +125,15 @@ const GraphicDesign = () => {
           <div className="graphicDesign-user-right">
             <img
               src="https://www.bluefrontier.co.uk/images/services/design/graphicdesign/graphic-design-content.jpg"
-              alt=""
+              alt="graphic-design-image"
+              loading="lazy"
             />
           </div>
         </div>
       </div>
 
       <div className="graphicDesign-partner">
-        <div className="graphicDesign-partner-container">
-          <p>
-            <div className="dot"></div>Who we've partnered with
-          </p>
-
-          <div className="graphicDesign-cards">
-            {aboutCards.map((item, index) => (
-              <div className="graphicDesign-card" key={index}>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
-        </div>
+        <BrandCards />
       </div>
 
       <div className="graphicDesign-studies">
@@ -163,7 +170,7 @@ const GraphicDesign = () => {
             {graphicCards.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="graphicDesign-studies-card">
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt="work-image" loading="lazy" />
                   <h2>{item.title}</h2>
                   <div className="graphicDesign-studies-desc">
                     <span>{item.desc}</span>

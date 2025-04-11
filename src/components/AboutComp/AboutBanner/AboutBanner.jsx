@@ -6,7 +6,7 @@ const AboutBanner = () => {
   return (
     <div className="about-banner">
       <div className="about-top">
-        <img src={about_banner} alt="" />
+        <img src={about_banner} alt="about-banner" loading="lazy" />
 
         <div className="about-banner-desc">
           <span>
@@ -21,9 +21,6 @@ const AboutBanner = () => {
             individuals who are all driven by a shared passion for what we do.
           </p>
         </div>
-      </div>
-      <div className="about-video">
-        <img src={about_banner} alt="" />
       </div>
     </div>
   );

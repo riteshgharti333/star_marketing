@@ -7,7 +7,7 @@ const ServiceBanner = ({ smdesc, title, desc, dot }) => {
   return (
     <div className="service-banner">
       <div className="service-top">
-        <img src={about_banner} alt="" />
+        <img src={about_banner} alt="service-banner" loading="lazy" />
 
         <div className="service-banner-desc">
           <span>
