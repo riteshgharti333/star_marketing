@@ -16,6 +16,11 @@ import BrandCards from "../../../components/BrandCards/BrandCards";
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+import wpImg from "../../../assets/images/servicesImgs/devImgs/wordpressImgs/wpImg.jpg";
+import wpImg2 from "../../../assets/images/servicesImgs/devImgs/wordpressImgs/wpImg2.jpg";
+
+
+
 const Wordpress = () => {
   const title =
     "Custom WordPress solutions tailored for performance and flexibility";
@@ -81,7 +86,7 @@ const Wordpress = () => {
       <div className="wordpress-sollution">
         <div className="wordpress-sollution-left">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/wordpress/wordpress-tailored.jpg"
+            src={wpImg2}
             alt="wordpress-image"
           />
         </div>
@@ -130,7 +135,7 @@ const Wordpress = () => {
         </div>
         <div className="wordpress-user-right">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
+            src={wpImg}
             alt="wordpress-image"
           />
         </div>

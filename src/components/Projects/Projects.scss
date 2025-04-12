@@ -1,0 +1,84 @@
+@use "../../styles/responsive.scss" as *;
+
+.projects {
+  max-width: 1200px;
+  margin: auto;
+
+  @include xl {
+    padding: 0px 10px;
+  }
+  h2 {
+    font-size: 30px;
+    font-family: $heading-font;
+  }
+
+  .projects-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 30px;
+
+    @include xl {
+      gap: 30px;
+    }
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .projects-card {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      border-radius: 10px;
+
+      &:hover {
+        transform: translateY(-5px);
+        border-radius: 10px;
+
+        img {
+          transform: scale(1.03);
+          filter: brightness(1.05);
+        }
+
+        .projects-card-desc {
+          h3 {
+            color: $primary-color;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-start;
+        transition: all 0.4s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        will-change: transform;
+      }
+
+      .projects-card-desc {
+        margin-top: 20px;
+        transition: all 0.3s ease;
+
+        h3 {
+          font-size: 20px;
+          margin-bottom: 10px;
+          transition: color 0.3s ease;
+        }
+
+        p {
+          line-height: 1.5;
+          font-size: 16px;
+          font-weight: 500;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

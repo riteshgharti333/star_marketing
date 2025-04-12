@@ -15,6 +15,8 @@ import { brandingServiceData } from "../../../assets/serviceSliderData/serviceSl
 import SEO from "../../../components/SEO/SEO";
 import { useLocation } from "react-router-dom";
 
+import bimg from "../../../assets/images/servicesImgs/designImgs/brandingimgs/bimg.jpg";
+
 const Branding = () => {
   const title = "Build a brand that stands out and speaks volumes";
   const desc =
@@ -121,11 +123,7 @@ const Branding = () => {
             </p>
           </div>
           <div className="branding-user-right">
-            <img
-              src="https://www.bluefrontier.co.uk/images/services/design/graphicdesign/graphic-design-content.jpg"
-              alt="branding-service-image"
-              loading="lazy"
-            />
+            <img src={bimg} alt="branding-service-image" loading="lazy" />
           </div>
         </div>
       </div>

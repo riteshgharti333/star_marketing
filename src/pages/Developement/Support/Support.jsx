@@ -20,6 +20,9 @@ import BrandCards from "../../../components/BrandCards/BrandCards";
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+import supportImg from "../../../assets/images/servicesImgs/devImgs/supportImgs/suImg.jpg";
+
+
 const Support = () => {
   const title =
     "Keep your digital products running smoothly with expert support & maintenance";
@@ -113,7 +116,7 @@ const Support = () => {
         </div>
         <div className="support-user-right">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
+            src={supportImg}
             alt="support-image"
             loading="lazy"
           />

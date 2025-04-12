@@ -99,6 +99,7 @@
       max-width: 750px;
       gap: 40px;
       padding: 100px 20px;
+      align-items: normal;
     }
 
     @include sm {
@@ -109,7 +110,13 @@
 
       img {
         width: 100%;
-        border-radius: 20px;
+          height: 600px;
+          border-radius: 20px;
+          object-fit: cover;
+
+          @include sm {
+            height: 100%;
+          }
       }
     }
 

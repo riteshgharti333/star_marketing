@@ -18,6 +18,11 @@ import { useLocation } from "react-router-dom";
 
 import SEO from "../../../components/SEO/SEO";
 
+import markImg1 from "../../../assets/images/servicesImgs/marketingImgs/marImgs/mark1.jpg";
+import markImg2 from "../../../assets/images/servicesImgs/marketingImgs/marImgs/mark2.jpg";
+
+
+
 const Marketing = () => {
   const title = "Strategic marketing that drives growth and maximizes ROI";
   const desc =
@@ -56,7 +61,7 @@ const Marketing = () => {
       <div className="marketing-user">
         <div className="marketing-user-left">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
+            src={markImg1}
             alt="marketing-image"
             loading="lazy"
           />
@@ -114,7 +119,7 @@ const Marketing = () => {
         </div>
         <div className="marketing-service-right">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/digital/marketingstrategy/other-strategy-offerings.jpg"
+            src={markImg2}
             alt="marketing-image"
             loading="lazy"
           />

@@ -13,6 +13,11 @@ import BrandCards from "../../../components/BrandCards/BrandCards";
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+import adImg from "../../../assets/images/servicesImgs/devImgs/appDevImgs/ad.jpg";
+import adImg2 from "../../../assets/images/servicesImgs/devImgs/appDevImgs/ad2.jpg";
+
+
+
 const AppDevelopement = () => {
   const title = "Turn your vision into powerful mobile apps that users love";
   const desc =
@@ -69,7 +74,7 @@ const AppDevelopement = () => {
       <div className="appDevelopement-quality">
         <div className="appDevelopement-quality-left">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
+            src={adImg}
             alt="app-dev-image"
             loading="lazy"
           />
@@ -123,7 +128,7 @@ const AppDevelopement = () => {
         </div>
         <div className="appDevelopement-user-right">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
+            src={adImg2}
             alt="app-dev-image"
             loading="lazy"
           />

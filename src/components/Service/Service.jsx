@@ -97,7 +97,7 @@ const Service = ({ approachData }) => {
                 </div>
                 <div className="service-card-right">
                   <img
-                    src="https://www.bluefrontier.co.uk/images/services/development/discovery-and-planning.jpg"
+                    src={item.img}
                     alt="service-image"
                     loading="lazy"
                   />

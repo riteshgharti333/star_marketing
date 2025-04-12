@@ -16,6 +16,13 @@ import BrandCards from "../../../components/BrandCards/BrandCards";
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+import gdImg1 from "../../../assets/images/servicesImgs/designImgs/graphicDesignImgs/gd1.jpeg";
+import gdImg2 from "../../../assets/images/servicesImgs/designImgs/graphicDesignImgs/gd2.jpeg";
+import gdImg3 from "../../../assets/images/servicesImgs/designImgs/graphicDesignImgs/gd3.jpeg";
+import gdImg4 from "../../../assets/images/servicesImgs/designImgs/graphicDesignImgs/gd4.jpeg";
+
+import gdpImg from "../../../assets/images/servicesImgs/designImgs/graphicDesignImgs/gdp.jpg";
+
 const GraphicDesign = () => {
   const title =
     "Bring your brand to life with impactful and modern graphic design";
@@ -24,7 +31,7 @@ const GraphicDesign = () => {
 
   const smdesc = "Graphic Design";
 
-  const [selectedProject, setSelectedProject] = useState("Lila");
+  const [selectedProject, setSelectedProject] = useState("demo1");
 
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
@@ -53,48 +60,45 @@ const GraphicDesign = () => {
         <div className="graphicDesign-works-container">
           <div className="graphicDesign-works-top">
             <button
-              className={selectedProject === "Lila" ? "active" : ""}
-              onClick={() => setSelectedProject("Lila")}
+              className={selectedProject === "demo1" ? "active" : ""}
+              onClick={() => setSelectedProject("demo1")}
             >
-              Lila Connect
+              Demo 1
             </button>
             <button
-              className={selectedProject === "Aria" ? "active" : ""}
-              onClick={() => setSelectedProject("Aria")}
+              className={selectedProject === "demo2" ? "active" : ""}
+              onClick={() => setSelectedProject("demo2")}
             >
-              Aria Science
+              Demo 2
             </button>
             <button
-              className={selectedProject === "Greensleeveless" ? "active" : ""}
-              onClick={() => setSelectedProject("Greensleeveless")}
+              className={selectedProject === "demo3" ? "active" : ""}
+              onClick={() => setSelectedProject("demo3")}
             >
-              Greensleevless
+              Demo 3
+            </button>
+            <button
+              className={selectedProject === "demo4" ? "active" : ""}
+              onClick={() => setSelectedProject("demo4")}
+            >
+              Demo 4
             </button>
           </div>
 
           <div className="graphicDesign-works-cards">
-            {selectedProject === "Lila" && (
-              <img
-                src="https://www.bluefrontier.co.uk/images/services/design/workexamples/lila-story-cards.jpg"
-                alt="Lila Connect"
-                loading="lazy"
-              />
+            {selectedProject === "demo1" && (
+              <img src={gdImg1} alt="demo-image" loading="lazy" />
             )}
 
-            {selectedProject === "Aria" && (
-              <img
-                src="https://www.bluefrontier.co.uk/images/services/design/workexamples/arias-science-passes.jpg"
-                alt="Aria Science"
-                loading="lazy"
-              />
+            {selectedProject === "demo2" && (
+              <img src={gdImg2} alt="demo-image" loading="lazy" />
             )}
 
-            {selectedProject === "Greensleeveless" && (
-              <img
-                src="https://www.bluefrontier.co.uk/images/services/design/workexamples/lila-story-cards.jpg"
-                alt="Greensleevless"
-                loading="lazy"
-              />
+            {selectedProject === "demo3" && (
+              <img src={gdImg3} alt="demo-image" loading="lazy" />
+            )}
+            {selectedProject === "demo4" && (
+              <img src={gdImg4} alt="demo-image" loading="lazy" />
             )}
           </div>
         </div>
@@ -124,7 +128,7 @@ const GraphicDesign = () => {
           </div>
           <div className="graphicDesign-user-right">
             <img
-              src="https://www.bluefrontier.co.uk/images/services/design/graphicdesign/graphic-design-content.jpg"
+              src={gdpImg}
               alt="graphic-design-image"
               loading="lazy"
             />

@@ -15,6 +15,9 @@ import { contentMarketingServiceOption } from "../../../assets/serviceOptionData
 import SEO from "../../../components/SEO/SEO";
 import { useLocation } from "react-router-dom";
 
+import cImg1 from "../../../assets/images/servicesImgs/marketingImgs/contentImgs/contentImg.jpg";
+import cImg2 from "../../../assets/images/servicesImgs/marketingImgs/contentImgs/contentImg2.jpg";
+
 const Content = () => {
   const title =
     "Fuel your brand with strategic content that informs, engages, and converts";
@@ -51,11 +54,7 @@ const Content = () => {
 
       <div className="content-approach">
         <div className="content-approach-left">
-          <img
-            src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt="content-image"
-            loading="lazy"
-          />
+          <img src={cImg2} alt="content-image" loading="lazy" />
         </div>
         <div className="content-approach-right">
           <h2>The power of content marketing</h2>
@@ -146,11 +145,7 @@ const Content = () => {
           </p>
         </div>
         <div className="content-user-right">
-          <img
-            src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt="content-image"
-            loading="lazy"
-          />
+          <img src={cImg1} alt="content-image" loading="lazy" />
         </div>
       </div>
     </div>

@@ -16,6 +16,9 @@ import { holisticMarketingBenefitData } from "../../../assets/serviceBenefitData
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+import hm from "../../../assets/images/servicesImgs/marketingImgs/holisticImgs/hm.jpg";
+
+
 const Holistic = () => {
   const title =
     "Connect every touchpoint with a unified holistic marketing approach";
@@ -55,7 +58,7 @@ const Holistic = () => {
       <div className="holistic-user">
         <div className="holistic-user-left">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
+            src={hm}
             alt="holistic-image"
             loading="lazy"
           />

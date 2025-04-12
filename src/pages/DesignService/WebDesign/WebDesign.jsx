@@ -6,6 +6,8 @@ import { webServiceData } from "../../../assets/serviceSliderData/serviceSliderD
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+import webdImg from "../../../assets/images/servicesImgs/designImgs/webDesignImgs/webd.jpg";
+
 const WebDesign = () => {
   const title =
     "Elevate your online presence with stunning and strategic web design";
@@ -37,7 +39,6 @@ const WebDesign = () => {
 
         <div className="webDesign-content2">
           <div className="webDesign-content2-top">
-            <div className="webDesign-content2-top-left"></div>
             <div className="webDesign-content2-top-right">
               <p>
                 <div className="dot"></div>Selected Works
@@ -109,11 +110,7 @@ const WebDesign = () => {
             </p>
           </div>
           <div className="webDesign-user-right">
-            <img
-              src="https://www.bluefrontier.co.uk/images/services/design/graphicdesign/graphic-design-content.jpg"
-              alt="web-design-image"
-              loading="lazy"
-            />
+            <img src={webdImg} alt="web-design-image" loading="lazy" />
           </div>
         </div>
       </div>

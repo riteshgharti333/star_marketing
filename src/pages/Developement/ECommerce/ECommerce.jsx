@@ -20,6 +20,8 @@ import BrandCards from "../../../components/BrandCards/BrandCards";
 import SEO from "../../../components/SEO/SEO";
 import { useLocation } from "react-router-dom";
 
+import ecImg from "../../../assets/images/servicesImgs/devImgs/ecImgs/ecImg.jpg";
+
 const ECommerce = () => {
   const title =
     "Launch high-converting eCommerce platforms that drive sales and scale";
@@ -106,7 +108,7 @@ const ECommerce = () => {
         </div>
         <div className="eCommerce-user-right">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
+            src={ecImg}
             alt="e-commerce-image"
             loading="lazy"
           />

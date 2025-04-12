@@ -17,6 +17,8 @@ import BrandCards from "../../../components/BrandCards/BrandCards";
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+import sweImg from "../../../assets/images/servicesImgs/devImgs/sweImgs/sweImg.jpg";
+
 const SweDevelopment = () => {
   const title =
     "Custom software solutions built to solve real business challenges";
@@ -59,11 +61,7 @@ const SweDevelopment = () => {
 
       <div className="sweDevelopment-user">
         <div className="sweDevelopment-user-left">
-          <img
-            src="https://www.bluefrontier.co.uk/images/services/development/development-toby.jpg"
-            alt="software-development-image"
-            loading="lazy"
-          />
+          <img src={sweImg} alt="software-development-image" loading="lazy" />
         </div>
         <div className="sweDevelopment-user-right">
           <h2>End-to-End Software Development Solutions</h2>

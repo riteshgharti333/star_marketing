@@ -17,6 +17,9 @@ import { paidAdvertisingBenefitData } from "../../../assets/serviceBenefitData/s
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+import adImg from "../../../assets/images/servicesImgs/marketingImgs/advertisingImgs/adImg.jpg";
+
+
 const Advertising = () => {
   const title = "Maximize your ROI with data-driven paid advertising campaigns";
   const desc =
@@ -55,7 +58,7 @@ const Advertising = () => {
       <div className="advertising-approach">
         <div className="advertising-approach-left">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
+            src={adImg}
             alt="marketing-image"
             loading="lazy"
           />

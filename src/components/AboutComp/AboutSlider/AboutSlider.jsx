@@ -2,7 +2,6 @@ import "./AboutSlider.scss";
 
 import { aboutSlide } from "../../../assets/data";
 
-
 const AboutSlider = () => {
   return (
     <div className="aboutSlider">

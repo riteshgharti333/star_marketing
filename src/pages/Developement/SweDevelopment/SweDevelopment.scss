@@ -33,7 +33,13 @@
       flex: 1;
       img {
         width: 100%;
+        height: 600px;
         border-radius: 20px;
+        object-fit: cover;
+
+        @include sm {
+          height: 100%;
+        }
       }
     }
     .sweDevelopment-user-right {

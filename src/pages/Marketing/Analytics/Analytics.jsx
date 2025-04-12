@@ -15,6 +15,11 @@ import { dataAnalyticsServiceOption } from "../../../assets/serviceOptionData/se
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+
+import anaImg from "../../../assets/images/servicesImgs/marketingImgs/anaImgs/anaImg.jpg"
+import anaImg2 from "../../../assets/images/servicesImgs/marketingImgs/anaImgs/anaImg2.jpg"
+
+
 const Analytics = () => {
   const title = "Unlock actionable insights with data analytics and reporting";
   const desc =
@@ -54,7 +59,7 @@ const Analytics = () => {
       <div className="analytics-approach">
         <div className="analytics-approach-left">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
+            src={anaImg2}
             alt="analytic-image"
             loading="lazy"
           />
@@ -93,7 +98,7 @@ const Analytics = () => {
           <div className="analytics-teams-reporting">
             <div className="analytics-teams-reporting-left">
               <img
-                src="https://www.bluefrontier.co.uk/images/services/digital/analyticsreporting/integrated-report.jpg"
+                src={anaImg}
                 alt="analytic-image"
                 loading="lazy"
               />

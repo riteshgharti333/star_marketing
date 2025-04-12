@@ -12,6 +12,9 @@ import BrandCards from "../../../components/BrandCards/BrandCards";
 import SEO from "../../../components/SEO/SEO";
 import { useLocation } from "react-router-dom";
 
+import testImg from "../../../assets/images/servicesImgs/devImgs/testingImgs/test.jpg";
+
+
 const Testing = () => {
   const title =
     "Ensure flawless performance with thorough and reliable testing";
@@ -94,7 +97,7 @@ const Testing = () => {
         </div>
         <div className="testing-user-right">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/custom-ecom/custom-ecom-systems.jpg"
+            src={testImg}
             alt="testing-image"
             loading="lazy"
           />

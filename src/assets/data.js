@@ -73,6 +73,10 @@ export const homeBrandCards = [
 
 //////////// home service
 
+import hsImg1 from "../assets/images/homeServiceImgs/hs1.jpg";
+import hsImg2 from "../assets/images/homeServiceImgs/hs2.jpg";
+import hsImg3 from "../assets/images/homeServiceImgs/hs3.jpg";
+
 export const homeServiceData = {
   title: "Our Services",
   desc: "We believe in a personalised and partnership-driven approach to web development. Our team will work closely with you to gain a deep understanding of your business objectives, target audience, and brand identity.",
@@ -81,14 +85,17 @@ export const homeServiceData = {
     {
       title: "Design",
       desc: "We crafted a sleek, user-friendly website using Figma and Adobe XD, ensuring top-notch UI/UX design for seamless navigation and an engaging experience.",
+      img: hsImg1,
     },
     {
       title: "Development",
       desc: "Our website was developed with cutting-edge technology, delivering a fast, responsive, and intuitive experience across devices, seamlessly integrated with the app & website for optimal performance.",
+      img: hsImg2,
     },
     {
       title: "Marketing",
       desc: "Our website marketing harnesses SEO, social media, email campaigns, PPC ads, and content strategies to maximize reach, engagement, and conversions across all digital channels.",
+      img: hsImg3,
     },
   ],
 };
@@ -248,47 +255,24 @@ export const reviewCards = [
 ];
 
 /// about images
-const about_img1 =
-  "https://www.bluefrontier.co.uk/images/about-us/630-390/digital-social.jpg";
-const about_img2 =
-  "https://www.bluefrontier.co.uk/images/about-us/400x500/sammy-sports-day.jpg";
+
+import aboutSliderImg1 from "../assets/images/aboutSliderImgs/aboutSlider1.jpeg";
+import aboutSliderImg2 from "../assets/images/aboutSliderImgs/aboutSlider2.jpeg";
+import aboutSliderImg3 from "../assets/images/aboutSliderImgs/aboutSlider3.jpeg";
+import aboutSliderImg4 from "../assets/images/aboutSliderImgs/aboutSlider4.jpeg";
 
 export const aboutSlide = [
   {
-    img: about_img1,
+    img: aboutSliderImg1,
   },
   {
-    img: about_img2,
+    img: aboutSliderImg2,
   },
   {
-    img: about_img1,
+    img: aboutSliderImg3,
   },
   {
-    img: about_img2,
-  },
-  {
-    img: about_img1,
-  },
-  {
-    img: about_img2,
-  },
-  {
-    img: about_img1,
-  },
-  {
-    img: about_img2,
-  },
-  {
-    img: about_img1,
-  },
-  {
-    img: about_img2,
-  },
-  {
-    img: about_img1,
-  },
-  {
-    img: about_img2,
+    img: aboutSliderImg4,
   },
 ];
 
@@ -368,3 +352,25 @@ export const graphicCards = [
 ];
 
 ////////////
+
+import project_img1 from "../assets/images/projectImgs/projectImg1.jpeg";
+import project_img2 from "../assets/images/projectImgs/projectImg2.jpeg";
+import project_img3 from "../assets/images/projectImgs/projectImg3.jpeg";
+
+export const projectData = [
+  {
+    img: project_img1,
+    title: "TK Production Film",
+    desc: "TK Production Film is a wedding services website built with the MERN stack, featuring a clean UI to showcase cinematic wedding moments.",
+  },
+  {
+    img: project_img2,
+    title: "Global India Travels",
+    desc: "Global India Travels is a card service website offering seamless booking and travel solutions, built with a modern tech stack and user-friendly design.",
+  },
+  {
+    img: project_img3,
+    title: "International Academy of Design",
+    desc: "International Academy of Design is a full-stack educational platform crafted to showcase creative programs and course offerings. Built with modern technologies, it delivers a seamless, user-friendly experience.",
+  },
+];

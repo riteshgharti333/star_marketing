@@ -17,6 +17,9 @@ import { seoBenefitData } from "../../../assets/serviceBenefitData/serviceBenefi
 import SEO from "../../../components/SEO/SEO";
 import { useLocation } from "react-router-dom";
 
+import seoImg1 from "../../../assets/images/servicesImgs/marketingImgs/seoImgs/seoImg.jpg";
+
+
 const Seo = () => {
   const title =
     "Boost your visibility and rank higher with powerful SEO strategies";
@@ -56,7 +59,7 @@ const Seo = () => {
       <div className="seo-user">
         <div className="seo-user-left">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/digital/seo/seo-stats.jpg"
+            src={seoImg1}
             alt="seo-image"
             loading="lazy"
           />

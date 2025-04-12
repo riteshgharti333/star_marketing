@@ -60,12 +60,20 @@
     @include md {
       flex-direction: column;
       gap: 40px;
+      align-items: normal;
     }
     .appDevelopement-quality-left {
       flex: 1;
       img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: 20px;
+
+        @include md {
+          object-fit: contain;
+          height: 100%;
+        }
       }
     }
     .appDevelopement-quality-right {
@@ -223,7 +231,13 @@
       flex: 1;
       img {
         width: 100%;
+        height: 600px;
         border-radius: 20px;
+        object-fit: cover;
+
+        @include sm {
+          height: 100%;
+        }
       }
     }
   }

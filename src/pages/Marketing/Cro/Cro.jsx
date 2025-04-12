@@ -12,6 +12,8 @@ import { croApproachData } from "../../../assets/approachData/marketingApproachD
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
+import croImg from "../../../assets/images/servicesImgs/marketingImgs/reportingImgs/croImg.jpg"
+
 const Cro = () => {
   const title =
     "Turn traffic into revenue with smart conversion rate optimization";
@@ -43,7 +45,7 @@ const Cro = () => {
       <div className="cro-approach">
         <div className="cro-approach-left">
           <img
-            src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
+            src={croImg}
             alt="cro-image"
             loading="lazy"
           />

@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import logo from "../../assets/images/logo.png";
 
 const SEO = ({
-  title = "Star Marketing: Top-Ranked SEO, Digital Marketing, Web, Software & App Development",
+  title = "Star Marketing : Top-Ranked SEO, Digital Marketing, Web, Software & App Development",
   description = "Start Marketing offers expert services in SEO, Social Media Marketing, Branding, Paid Ads (PPC), Website Design & Development, Content Marketing, Influencer Marketing, E-commerce Marketing, Local SEO & Lead Generation. Serving clients across India & UK.",
   keywords = "digital marketing agency, SEO services, PPC ads, branding agency, social media marketing, website design, web development, content marketing, influencer marketing, ecommerce marketing, local SEO, lead generation, UK marketing, India marketing, Sikar agency, London SEO, Mumbai marketing, best marketing company",
   url = "https://www.wingstarmarketing.com",

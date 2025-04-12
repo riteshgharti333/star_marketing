@@ -17,6 +17,8 @@ import { socialMediaAdvertisingBenefitData } from "../../../assets/serviceBenefi
 import SEO from "../../../components/SEO/SEO";
 import { useLocation } from "react-router-dom";
 
+import smImg from "../../../assets/images/servicesImgs/marketingImgs/socialImgs/socialImg.jpg";
+
 const Social = () => {
   const title =
     "Drive engagement and conversions with paid social media campaigns";
@@ -55,11 +57,7 @@ const Social = () => {
 
       <div className="social-approach">
         <div className="social-approach-left">
-          <img
-            src="https://www.bluefrontier.co.uk/images/services/development/mobile-app-development/mobile-application.jpg"
-            alt="social-image"
-            loading="lazy"
-          />
+          <img src={smImg} alt="social-image" loading="lazy" />
         </div>
         <div className="social-approach-right">
           <h2>How do we power our social media strategies?</h2>
@@ -77,7 +75,7 @@ const Social = () => {
             behavior, platform trends, and performance metrics to ensure that
             your social media presence not only resonates with your audience but
             also drives meaningful results across channels like Instagram,
-            LinkedIn, Facebook, X, and TikTok.
+            LinkedIn, Facebook, X.
           </p>
         </div>
       </div>

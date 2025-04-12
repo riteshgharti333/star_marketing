@@ -10,6 +10,8 @@ import { useRef, useState, useEffect } from "react";
 import { reviewData } from "../../assets/reviewData";
 import BrandCards from "../BrandCards/BrandCards";
 
+import collage_img from "../../assets/images/collage.jpeg";
+
 const HomeAbout = () => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
@@ -38,7 +40,7 @@ const HomeAbout = () => {
           </div>
           <div className="homeAbout-top-right">
             <img
-              src="https://www.bluefrontier.co.uk/images/Home/about-us.png"
+              src={collage_img}
               alt="partner-image"
               loading="lazy"
             />

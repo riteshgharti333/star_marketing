@@ -4,7 +4,7 @@ import ServiceBanner from "../../../components/ServiceBanner/ServiceBanner";
 import ServiceSlider from "../../../components/ServiceSlider/ServiceSlider";
 import Service from "../../../components/Service/Service";
 import ServiceTeam from "../../../components/ServiceTeam/ServiceTeam";
-import { aboutCards, graphicCards } from "../../../assets/data";
+import { graphicCards } from "../../../assets/data";
 
 import { GoDotFill } from "react-icons/go";
 
@@ -21,6 +21,8 @@ import { webParagraphData } from "../../../assets/paraData/paraData";
 import BrandCards from "../../../components/BrandCards/BrandCards";
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
+
+import wdImg from "../../../assets/images/servicesImgs/devImgs/webDevImgs/wdImg1.jpg";
 
 const WebDevelopment = () => {
   const title =
@@ -71,11 +73,7 @@ const WebDevelopment = () => {
 
       <div className="webDevelopment-user">
         <div className="webDevelopment-user-left">
-          <img
-            src="https://www.bluefrontier.co.uk/images/services/development/react-clinson.jpg"
-            alt="web-image"
-            loading="lazy"
-          />
+          <img src={wdImg} alt="web-image" loading="lazy" />
         </div>
         <div className="webDevelopment-user-right">
           <h2>{webParagraphData.title}</h2>

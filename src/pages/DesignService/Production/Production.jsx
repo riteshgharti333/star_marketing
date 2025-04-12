@@ -15,6 +15,9 @@ import { productionServiceData } from "../../../assets/serviceSliderData/service
 import SEO from "../../../components/SEO/SEO";
 import { useLocation } from "react-router-dom";
 
+import pdimg1 from "../../../assets/images/servicesImgs/designImgs/productionImgs/pdimg1.jpg";
+import pdimg2 from "../../../assets/images/servicesImgs/designImgs/productionImgs/pdimg2.jpg";
+
 const Production = () => {
   const title =
     "Create powerful content that captures attention and drives engagement";
@@ -56,11 +59,7 @@ const Production = () => {
       <div className="production-user">
         <div className="production-user-container">
           <div className="production-user-container-top">
-            <img
-              src="https://www.bluefrontier.co.uk/images/services/digital/photography/photography-grid.jpg"
-              alt="production-image"
-              loading="lazy"
-            />
+            <img src={pdimg1} alt="production-image" loading="lazy" />
           </div>
           <div className="production-user-container-bottom">
             <div className="production-user-left">
@@ -82,11 +81,7 @@ const Production = () => {
               </p>
             </div>
             <div className="production-user-right">
-              <img
-                src="https://www.bluefrontier.co.uk/images/services/design/graphicdesign/graphic-design-content.jpg"
-                alt="production-image"
-                loading="lazy"
-              />
+              <img src={pdimg2} alt="production-image" loading="lazy" />
             </div>
           </div>
         </div>
